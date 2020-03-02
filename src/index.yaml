@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: prime-auto
 
 PageList:
-- file: page.html
+- file: home.html

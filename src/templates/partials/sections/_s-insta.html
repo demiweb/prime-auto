@@ -1,0 +1,35 @@
+{%set
+items = [
+  { img: '1_03.jpg' },
+  { img: '1_06.jpg' },
+  { img: '1_08.jpg' },
+  { img: '1_10.jpg' },
+  { img: '1_11.jpg' },
+  { img: '1_13.jpg' },
+  { img: '1_14.jpg' },
+  { img: '1_16.jpg' },
+  { img: '1_17.jpg' },
+  { img: '1_18.jpg' },
+  { img: '1_19.jpg' },
+  { img: '1_19.jpg' }
+]
+%}
+
+<!-- begin section -->
+<section class="insta-items">
+  <div class="insta-items__inner">
+    {% for i in items %}
+    <a
+      href="#"
+      class="insta-items__item insta-item js-lazy"
+      data-background-image="./img/instagram/{{ img }}"
+    >
+      <span class="insta-item__inner">
+        {{ mixins.icon('instagram', 'insta-item__icon') }}
+        <span class="insta-item__title">Смотреть в инстаграм</span>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

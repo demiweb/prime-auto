@@ -1,5 +1,25 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__inner">
+      {{ mixins.list(
+        name = 'nav',
+        hasWrap = true,
+        modifications = { wrap: 'nav--footer footer__nav', item: '', link: '' },
+        list = [
+          { link: 'О компании' },
+          { link: 'Оплата и доставка' },
+          { link: 'политика компании' },
+          { link: 'контакты' }
+        ]
+      ) }}
+
+      <a href="#" class="footer__logo logo">
+        <img class="js-lazy" alt="" src="" data-src="./img/logo-white.png"/>
+      </a>
+
+      <div class="footer__text">prime auto -  надежное качество по лучшей цене</div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

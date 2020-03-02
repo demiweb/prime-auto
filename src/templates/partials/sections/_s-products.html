@@ -1,0 +1,109 @@
+{%set
+productsLg = [
+  {
+    upttl: 'для идеальной посадки',
+    title: 'Резиновые коврики ',
+    img: 'products/01.jpg',
+    text: 'Для максимальной прочности и надёжности напольные покрытия выполнены из высокоплотных материалов и разработаны с использованием усовершенствованной отделки поверхности, которая удаляет грязь от обуви и одежды'
+  },
+  {
+    upttl: 'максимальное наслаждение свежим воздухом',
+    title: 'Дефлекторы окон',
+    img: 'products/02.jpg',
+    text: 'Дефлекторы боковых окон обеспечивают ощущение свежего воздуха с оригинальным внешним видом оборудования, устанавливаемого внутри оконного канала. Установка быстрая и простая, без внешней ленты'
+  },
+  {
+    upttl: 'для легковых автомобилей, внедорожников и минивэнов',
+    title: 'Коврики в багажник',
+    img: 'products/03.jpg',
+    text: 'Предназначенные для предотвращения разливов, грязи и смазки вдали от салона вашего автомобиля, а также с приподнятой кромкой, которая удерживает разливы, содержащиеся в вкладыше.'
+  }
+]
+%}
+
+{%set
+products = [
+  {
+    title: 'Подставки для авто',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_08.jpg'
+  },
+  {
+    title: 'Роллеты для кузова',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_03.jpg'
+  },
+  {
+    title: 'Дефлекторы капота',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_05.jpg'
+  },
+  {
+    title: 'Чехлы для сидений',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_11.jpg'
+  },
+  {
+    title: 'Кунги, крышки кузова',
+    subttl: '',
+    img: 'products/1_18.jpg'
+  },
+  {
+    title: 'Ящики кузова',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_19.jpg'
+  },
+  {
+    title: 'Тенты для кузова',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_20.jpg'
+  },
+  {
+    title: 'Расширитель арок',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_17.jpg'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="section__word word">Prime Auto</div>
+
+  <div class="container">
+    <div class="grid">
+      {% for i in productsLg %}
+      <div class="col col--3">
+        {{ mixins.card(
+          mod = 'card--lg',
+          title = i.title,
+          upttl = i.upttl,
+          img = i.img,
+          text = i.text,
+          button = true
+        ) }}
+      </div>
+      {% endfor %}
+
+      {% for i in products %}
+      <div class="col col--4">
+        {{ mixins.card(
+          title = i.title,
+          subttl = i.subttl,
+          img = i.img,
+          button = true
+        ) }}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'Смотреть все товары',
+        mod = '',
+        href = false
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->

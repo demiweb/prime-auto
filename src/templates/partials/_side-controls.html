@@ -1,0 +1,25 @@
+<!-- begin side-controls -->
+<div class="side-controls">
+  {{ mixins.list(
+    name = 'side-btns',
+    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: '', link: '' },
+    list = [
+      { link: mixins.icon('magnifying-glass')  },
+      { link: mixins.icon('car')  },
+      { link: mixins.icon('user')  },
+      { link: mixins.icon('shopping-cart')  },
+      { link: mixins.icon('phone-call')  }
+    ]
+  ) }}
+
+  {{ mixins.list(
+    name = 'side-btns',
+    modifications = { wrap: '', list: 'side-controls__social social', item: '', link: '' },
+    list = [
+      { link: 'facebook' },
+      { link: 'instagram' }
+    ]
+  ) }}
+
+</div>
+<!-- end side-controls -->

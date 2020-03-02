@@ -14,6 +14,8 @@
 
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
+      {% include "partials/_side-controls.html" %}
+
       {% include "partials/_header.html" %}
       <!-- begin main -->
       <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">
