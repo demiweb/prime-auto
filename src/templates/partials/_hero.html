@@ -4,32 +4,37 @@
     <!-- begin slider -->
     <div class="hero-slider slider__wrap slider--hero__wrap">
       <div class="swiper-container js-slider" data-slider="hero">
-        <div class="slider-wrapper slider slider--hero">
+        <div class="swiper-wrapper slider slider--hero">
           {% for i in range(0, 4) %}
-          <div
-            class="swiper-slide slide hero-slide js-lazy"
-            data-background-image="./img/hero/home.jpg"
-          >
+          <div class="swiper-slide slide hero-slide">
+            <div
+              class="hero-slide__bg js-lazy"
+              data-background-image="./img/hero/home.jpg"
+            ></div>
             <div class="container container--lg">
               <div class="hero-slide__inner">
-                <h2 class="hero__title title">Премиум аксессуары для вашего автомобиля</h2>
-                <div class="hero__subttl">Наши клиенты - наш приоритет номер один. Мы стремимся постоянно превосходить ожидания наших клиентов, и это проявляется не только в каждом продукте, но и в нашей культуре. </div>
+                <div class="grid">
+                  <div class="col col--5">
+                    <h2 class="hero-slide__title title">Премиум <br> аксессуары для <br> вашего автомобиля</h2>
+                    <div class="hero-slide__subttl">Наши клиенты - наш приоритет номер один. Мы стремимся <br> постоянно превосходить ожидания наших клиентов, и это <br> проявляется не только в каждом продукте, но и в нашей культуре. </div>
 
-                <div class="hero__btns">
-                  <div class="hero__btn">
-                    {{ mixins.btn(
-                      title = 'Подобрать аксессуар',
-                      mod = ''
-                    ) }}
-                  </div>
+                    <div class="hero-slide__btns">
+                      <div class="hero-slide__btn">
+                        {{ mixins.btn(
+                          title = 'Подобрать аксессуар',
+                          mod = 'btn--md'
+                        ) }}
+                      </div>
 
-                  <div class="hero__btn">
-                    {{ mixins.btn(
-                      title = 'Популярные товары',
-                      mod = 'btn--transp-white'
-                    ) }}
+                      <div class="hero__btn">
+                        {{ mixins.btn(
+                          title = 'Популярные товары',
+                          mod = 'btn--md btn--transp-white'
+                        ) }}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </div>                
               </div>
             </div>
           </div>

@@ -12,6 +12,8 @@ import classNames from './classNames'
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
+import { setVhProperty } from './helpers'
+import SLider from './components/Slider/Slider'
 
 // import Menu from './components/Menu/Menu'
 
@@ -34,6 +36,8 @@ class App {
     //     menu: 'header__nav',
     //   },
     // })
+
+    this.slider = new SLider(`.${classNames.slider.container}`)
   }
 
   // updateState(state) {
@@ -48,6 +52,7 @@ class App {
       sayHello,
       setHTMLClassNames,
       setLazy,
+      setVhProperty,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -59,6 +64,8 @@ class App {
     // this.menu.init()
     // this.menu.onToggle = this.onMenuToggle.bind(this)
     // this.menu.onClose = this.onMenuClose.bind(this)
+
+    this.slider.init()
   }
 
   // onMenuToggle() {

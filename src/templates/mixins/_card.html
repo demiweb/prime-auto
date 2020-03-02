@@ -3,27 +3,29 @@
 
 {% macro card(mod, upttl, subttl, title, img, button, text) %}
 <!-- begin card -->
-<a href="#" class="card">
+<a href="#" class="card{% if mod %} {{ mod }}{% endif %}">
   <span class="card__top">
     {% if upttl %}
     <span class="card__subttl">{{ upttl | safe }}</span>
     {% endif %}
 
     {% if title %}
-    <span class="card__title title title--h3">{{ title | safe }}</span>
+    <span class="card__title title title--h3 title--ttn">{{ title | safe }}</span>
     {% endif %}
 
     {% if subttl %}
     <span class="card__subttl">{{ subttl | safe }}</span>
     {% endif %}
+  </span>
 
-    {% if img %}
-    <span
-      class="card__img js-lazy"
-      data-background-image="./img/{{ img }}"
-    ></span>
-    {% endif %}
+  {% if img %}
+  <span
+    class="card__img js-lazy"
+    data-background-image="./img/{{ img }}"
+  ></span>
+  {% endif %}
 
+  <span class="card__block">
     {% if text %}
     <span class="card__text">{{ text | safe }}</span>
     {% endif %}
@@ -32,7 +34,7 @@
     <span class="card__btn">
       {{ btn(
         title = button.title or 'Перейти к товарам',
-        mod = button.mod,
+        mod = 'btn--no-hover',
         isInline = true,
         href = false,
         attributes = button.attributes
@@ -40,6 +42,9 @@
     </span>
     {% endif %}
   </span>
+
+  
+  
 </a>
 <!-- end card -->
 {% endmacro %}

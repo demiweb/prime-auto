@@ -2,7 +2,7 @@
 <div class="side-controls">
   {{ mixins.list(
     name = 'side-btns',
-    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: '', link: '' },
+    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: 'side-controls__item', link: 'side-controls__btn' },
     list = [
       { link: mixins.icon('magnifying-glass')  },
       { link: mixins.icon('car')  },
@@ -14,7 +14,7 @@
 
   {{ mixins.list(
     name = 'side-btns',
-    modifications = { wrap: '', list: 'side-controls__social social', item: '', link: '' },
+    modifications = { wrap: '', list: 'side-controls__social social', item: 'social__item', link: 'social__link' },
     list = [
       { link: 'facebook' },
       { link: 'instagram' }

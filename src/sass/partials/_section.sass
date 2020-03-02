@@ -1,0 +1,25 @@
+.section
+  position: relative
+  z-index: 1
+  > .container
+    position: relative
+    z-index: 1
+
+  &__title
+    margin-bottom: rem(15)
+
+  &__word
+    position: absolute
+    z-index: 0
+    &--top-left
+      top: 0
+      left: $container--lg-padding
+      transform: translate(-100%, 0) rotate(-90deg)
+      transform-origin: top right
+
+  &__nmb
+    margin-bottom: rem(25)
+
+  &__btn
+    text-align: center
+    margin-top: rem(30)

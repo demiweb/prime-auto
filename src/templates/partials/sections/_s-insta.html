@@ -22,10 +22,12 @@ items = [
     <a
       href="#"
       class="insta-items__item insta-item js-lazy"
-      data-background-image="./img/instagram/{{ img }}"
+      data-background-image="./img/instagram/{{ i.img }}"
     >
       <span class="insta-item__inner">
-        {{ mixins.icon('instagram', 'insta-item__icon') }}
+        <span class="insta-item__icon">
+          <img class="js-lazy" alt="" src="" data-src="./img/instagram.svg"/>
+        </span>
         <span class="insta-item__title">Смотреть в инстаграм</span>
       </span>
     </a>

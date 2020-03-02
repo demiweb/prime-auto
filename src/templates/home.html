@@ -1,6 +1,9 @@
 ---
 title: home
 page: home
+hero: {
+  slider: true
+}
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -8,4 +11,5 @@ page: home
   {% include "partials/_hero.html" %}
   {% include "partials/sections/_s-products.html" %}
   {% include "partials/sections/_s-home-descr.html" %}
+  {% include "partials/sections/_s-insta.html" %}
 {% endblock %}

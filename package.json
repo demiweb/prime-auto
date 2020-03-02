@@ -111,6 +111,7 @@
     "intersection-observer": "^0.7.0",
     "lozad": "^1.14.0",
     "regenerator-runtime": "^0.13.3",
-    "swiper": "^5.3.6"
+    "swiper": "4.5.0",
+    "throttle-debounce": "^2.1.0"
   }
 }

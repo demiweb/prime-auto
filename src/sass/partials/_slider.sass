@@ -1,0 +1,35 @@
+.slider
+  &__wrap
+    position: relative
+    * 
+      box-sizing: border-box
+
+  &__pagination
+    .swiper-pagination-bullet
+      opacity: 1      
+      width: rem(16)
+      height: rem(16)
+
+      border-radius: 0
+      border: 2px solid  $white
+      background-color: transparent
+      +notlast
+        margin-right: rem(15)
+
+      &.swiper-pagination-bullet-active
+        background-color: $white
+
+  &--hero
+    &__wrap
+      .slider
+        &__pagination          
+          position: absolute
+          left: 0
+          right: 0
+          bottom: rem(115)
+          z-index: 1
+          
+          padding-left: $container--lg-padding
+          padding-right: $container--lg-padding
+
+    

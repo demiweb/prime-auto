@@ -1,0 +1,82 @@
+.card
+  $this: &
+
+  display: flex
+  flex-direction: column
+
+  height: 100%
+  position: relative
+  box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.15)
+
+  +hover
+    #{$this}__btn
+      max-height: rem(55)    
+
+  &__top
+    flex-grow: 1
+    display: flex
+    justify-content: center
+    flex-direction: column
+    background-color: $white    
+    padding: rem(15) rem(20)
+    +tr(background-color .3s)
+
+  &__img
+    +cover
+    background-color: $light
+    display: block
+    padding-top: percentage(280 / 330)
+
+  &__subttl
+    font-size: em(14)
+    color: #8493a9
+
+  &__block
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    padding: rem(20)
+
+  &__btn
+    display: block
+    max-height: 0
+    overflow: hidden
+    +tr(max-height .4s)
+
+  &__text
+    margin-bottom: rem(25)
+    display: block
+
+  &--lg
+    color: $white
+    +hover
+      #{$this}__top
+        background-color: $accent
+
+    #{$this}__top
+      background-color: $c-text
+
+    #{$this}__subttl
+      color: #bbc5cc
+
+    #{$this}__img
+      position: relative
+      padding-top: 100%
+      +before
+        background-image: linear-gradient(to top, rgb(56,62,71) 0%, rgba(56,62,71,0) 100%)
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        top: 50%
+        z-index: 0
+
+    #{$this}__text
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
+      height: 6.6rem
+      overflow: hidden
+      +tr(height .3s)
+

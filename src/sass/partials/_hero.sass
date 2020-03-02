@@ -1,0 +1,36 @@
+.hero
+  position: relative
+  z-index: 0
+  margin-bottom: rem(-30)
+
+.hero-slide
+  +windowHeight($header-height)
+
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+  position: relative  
+  color: $white
+
+  &__bg
+    +coverdiv
+    +cover
+
+    z-index: 0
+    background-color: $light
+
+  &__inner
+    position: relative
+    z-index: 1
+
+  &__title, &__subttl
+    margin-bottom: rem(15)
+
+  &__btns
+    display: flex
+
+  &__btn
+    +notlast
+      margin-right: rem(15)
+    

@@ -1,0 +1,55 @@
+.s-descr
+  padding-top: rem(110)
+  padding-bottom: rem(90)
+
+.insta-items
+  padding-left: rem(30)
+  padding-right: rem(30)
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    width: percentage(1 / 6)
+
+.insta-item
+  $this: &
+
+  display: block  
+   
+  padding-top: 15%
+  position: relative
+  color: $white
+  font-size: em(12)
+  text-align: center
+  background-color: $light 
+  +cover
+  +before
+    +coverdiv
+    background-color: rgba($black, .7)
+    +hidden
+    +tr(opacity .3s, visibility .3s)
+
+  +hover
+    #{$this}__inner, &::before
+      +visible
+
+
+  &__inner
+    display: block
+    +vcenter
+    z-index: 1
+    +hidden
+    +tr(opacity .3s, visibility .3s)
+
+  &__icon
+    display: block
+    max-width: rem(45)
+    font-size: 0
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: rem(15)
+
+  &__title
+    text-decoration: underline

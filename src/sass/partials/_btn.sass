@@ -1,0 +1,26 @@
+.btn
+  $this: &
+
+  display: inline-block
+  text-align: center
+  border: 2px solid  $accent
+  background-color: $accent
+  color: $white
+  font-size: em(18)
+  font-weight: 700
+  padding: rem(10) rem(25)
+  min-width: 230px
+  +tr(background-color .3s, border-color .3s, color .3s)
+
+  +hover
+    &:not(#{$this}--no-hover)
+      background-color: transparent
+      color: $accent
+      border-color: $accent
+
+  &--md
+    min-width: 255px
+
+  &--transp-white
+    border-color: $white
+    background-color: transparent

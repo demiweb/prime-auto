@@ -4,7 +4,7 @@ productsLg = [
     upttl: 'для идеальной посадки',
     title: 'Резиновые коврики ',
     img: 'products/01.jpg',
-    text: 'Для максимальной прочности и надёжности напольные покрытия выполнены из высокоплотных материалов и разработаны с использованием усовершенствованной отделки поверхности, которая удаляет грязь от обуви и одежды'
+    text: 'Для максимальной прочности и надёжности напольные покрытия выполнены из высокоплотных материалов и разработаны с использованием усовершенствованной отделки поверхности, которая удаляет грязь от обуви и одежды Для максимальной прочности и надёжности напольные покрытия выполнены из высокоплотных материалов и разработаны с использованием усовершенствованной отделки поверхности, которая удаляет грязь от обуви и одежды'
   },
   {
     upttl: 'максимальное наслаждение свежим воздухом',
@@ -68,12 +68,12 @@ products = [
 
 <!-- begin section -->
 <section class="section">
-  <div class="section__word word">Prime Auto</div>
+  <div class="section__word section__word--top-left word">Prime Auto</div>
 
   <div class="container">
     <div class="grid">
       {% for i in productsLg %}
-      <div class="col col--3">
+      <div class="col col--4">
         {{ mixins.card(
           mod = 'card--lg',
           title = i.title,
@@ -86,7 +86,7 @@ products = [
       {% endfor %}
 
       {% for i in products %}
-      <div class="col col--4">
+      <div class="col col--3">
         {{ mixins.card(
           title = i.title,
           subttl = i.subttl,

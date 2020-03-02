@@ -1,4 +1,4 @@
-// import { debounce } from 'throttle-debounce'
+import { debounce } from 'throttle-debounce'
 
 export const {
   isAndroid,
@@ -54,14 +54,14 @@ export const BEMblock = (node, block) => {
   }
 }
 
-// export function setVhProperty() {
-//   function setProperty() {
-//     const vh = window.innerHeight * 0.01
-//     document.documentElement.style.setProperty('--vh', `${vh}px`)
-//   }
+export function setVhProperty() {
+  function setProperty() {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
 
-//   const setPropertyDebounced = debounce(66, setProperty)
+  const setPropertyDebounced = debounce(66, setProperty)
 
-//   setProperty()
-//   window.addEventListener('resize', setPropertyDebounced)
-// }
+  setProperty()
+  window.addEventListener('resize', setPropertyDebounced)
+}

@@ -1,0 +1,43 @@
+.nav
+  text-transform: uppercase
+  color: $dark
+
+  ul
+    display: flex
+    align-items: center
+
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+
+    height: $header-height
+    border-right: 1px solid  $c-border
+
+    padding-left: rem(20)
+    padding-right: rem(20)
+
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+    &:first-child
+      border-left: 1px solid $c-border
+
+    .icon
+      margin-right: .3em
+      font-size: 1.5em
+
+  &--footer
+    color: inherit
+    li
+      +notlast
+        margin-right: rem(25)
+    a
+      display: inline
+      hight: auto !important
+      border: 0 !important
+      padding: 0 !important
+      +hover
+        color: inherit
+        text-decoration: underline

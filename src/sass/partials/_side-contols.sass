@@ -1,0 +1,51 @@
+.side-controls
+  position: fixed
+  z-index: 15
+  top: 0
+  right: 0
+  bottom: 0
+
+  width: $container--lg-padding
+  background-color: $white
+  border: 1px solid  $c-border
+
+  display: flex
+  flex-direction: column
+
+  &__social
+    flex-grow: 1
+    
+    .social
+      &__item
+        height: 50%
+        position: relative
+      &__link
+       position: absolute
+       top: 50%
+       left: 50%
+       transform: translate(-50%, -50%) rotate(-90deg)
+
+.side-controls
+  $this: &
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 1em
+    height: 1em
+    font-size: $container--lg-padding
+
+    color: $accent
+    border-bottom: 1px solid  $c-border
+
+    +tr(background-color .3s, color .3s)
+    +hover
+      @extend #{$this}__btn--active
+    .icon
+      font-size: rem(32)
+      &--car
+        font-size: rem(40)
+    &--active
+      color: $white
+      background-color: $accent
