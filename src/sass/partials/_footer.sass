@@ -11,13 +11,33 @@
     padding-top: rem(20)
     padding-bottom: rem(20)
 
+    +r(1599)
+      flex-direction: column
+      text-align: center
+    
+
   &__nav
     width: percentage(550 / 1410)
+    +r(1599)
+      margin-bottom: rem(15)
+      order: 1
+
   &__logo
     width: percentage((1410 - 550 - 550) / 1410)
     text-align: center
+    +r(1599)
+      margin-bottom: rem(15)
+      order: 0
+
   &__text
     width: percentage(550 / 1410)
     text-align: right
     text-transform: uppercase
+    +r(1599)
+      order: 2
+
+  &__nav, &__logo, &__text
+    +r(1599)
+      width: auto
+      text-align: center
 

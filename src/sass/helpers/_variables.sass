@@ -13,10 +13,15 @@ $accent:   #2532d9
 $light:    #a5a6aa
 $dark:     #27272b
 
-$header-height: rem(89)
+$header-height:    rem(89)
+$header-height-lg: rem(50)
 
 $container--lg-padding: rem(90)
 
 =windowHeight($offset: 0px)
   height: calc(100vh - #{$offset})
   height: calc((var(--vh, 1vh) * 100) - #{$offset})
+
+=windowMinHeight($offset: 0px)
+  min-height: calc(100vh - #{$offset})
+  min-height: calc((var(--vh, 1vh) * 100) - #{$offset})

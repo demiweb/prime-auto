@@ -1,10 +1,20 @@
 .s-descr
   padding-top: rem(110)
   padding-bottom: rem(90)
+  +lg
+    padding-top: rem(80)
+    padding-bottom: rem(80)
+  +md
+    padding-top: rem(60)
+    padding-bottom: rem(60)
+  +sm
+    padding-top: rem(30)
+    padding-bottom: rem(30)
 
 .insta-items
   padding-left: rem(30)
   padding-right: rem(30)
+  padding-bottom: rem(30)
 
   &__inner
     display: flex
@@ -12,6 +22,12 @@
 
   &__item
     width: percentage(1 / 6)
+    +lg
+      width: 20%
+    +md
+      width: 25%
+    +sm
+      width: 50%
 
 .insta-item
   $this: &
@@ -31,9 +47,16 @@
     +hidden
     +tr(opacity .3s, visibility .3s)
 
-  +hover
+  &:hover
     #{$this}__inner, &::before
       +visible
+
+  +lg
+    padding-top: 20%
+  +md
+    padding-top: 25%
+  +sm
+    padding-top: 40%
 
 
   &__inner

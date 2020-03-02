@@ -27,14 +27,27 @@ body
 
 .out
   padding-top: $header-height
+  +lg
+    padding-top: $header-height-lg
+    padding-bottom: rem(50)
 
 .container
+  max-width: none
+  +rmin(1625)
+    max-width: 1440px
+  +rmin(1400)
+    max-width: 1230px
+  +rmin(1200)
+    max-width: 1030px
   &--lg
-    max-width: none
+    max-width: none !important
     margin-left: 0
     margin-right: 0
     padding-left: $container--lg-padding
     padding-right: $container--lg-padding
+    +lg
+      padding-left: $container-padding
+      padding-right: $container-padding
 
 .word
   text-transform: uppercase
@@ -43,6 +56,14 @@ body
   line-height: .8
   opacity: .1
   white-space: nowrap
+  +lg
+    font-size: em(220)
+  +md
+    font-size: em(180)
+  +sm
+    font-size: em(150)
+  +xs
+    font-size: em(120)
 
 .number-lg
   color: $accent
@@ -50,4 +71,12 @@ body
   font-size: em(260)
   line-height: .8
   text-transform: uppercase
+  +lg
+    font-size: em(220)
+  +md
+    font-size: em(180)
+  +sm
+    font-size: em(150)
+  +xs
+    font-size: em(120)
     

@@ -4,7 +4,9 @@
   margin-bottom: rem(-30)
 
 .hero-slide
-  +windowHeight($header-height)
+  $this: &
+  
+  +windowMinHeight($header-height)
 
   display: flex
   justify-content: center
@@ -13,24 +15,47 @@
   position: relative  
   color: $white
 
+  background-color: $light
+
+  > .container
+    width: 100%
+
+  &.swiper-slide-active
+    #{$this}__bg
+      display: block
+
   &__bg
     +coverdiv
     +cover
 
     z-index: 0
-    background-color: $light
+    
+
+    display: none
 
   &__inner
     position: relative
     z-index: 1
+    padding-top: rem(40)
+    padding-bottom: rem(40)
 
   &__title, &__subttl
     margin-bottom: rem(15)
 
+  &__subttl
+    +xs
+      br
+        display: none
+
   &__btns
     display: flex
+    +xs
+      display: block
 
   &__btn
     +notlast
       margin-right: rem(15)
+      +xs
+        margin-right: 0
+        margin-bottom: rem(15)
     

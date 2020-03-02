@@ -16,6 +16,9 @@
       left: $container--lg-padding
       transform: translate(-100%, 0) rotate(-90deg)
       transform-origin: top right
+      +lg
+        // left: $container-padding
+        display: none
 
   &__nmb
     margin-bottom: rem(25)
@@ -23,3 +26,6 @@
   &__btn
     text-align: center
     margin-top: rem(30)
+
+  &__block
+    margin-bottom: rem(30)

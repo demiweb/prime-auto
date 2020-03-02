@@ -6,6 +6,9 @@
     display: flex
     align-items: center
 
+    +md
+      display: block
+
   a
     display: flex
     align-items: center
@@ -21,6 +24,9 @@
     +hover
       color: $accent
 
+    +lg
+      height: $header-height-lg
+
     &:first-child
       border-left: 1px solid $c-border
 
@@ -30,9 +36,17 @@
 
   &--footer
     color: inherit
+    ul
+      display: block !important
     li
+      display: inline-block
       +notlast
         margin-right: rem(25)
+        +xs
+          margin-right: 0
+          margin-bottom: rem(15)
+      +xs
+        display: block
     a
       display: inline
       hight: auto !important

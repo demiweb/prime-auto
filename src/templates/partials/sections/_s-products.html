@@ -71,22 +71,26 @@ products = [
   <div class="section__word section__word--top-left word">Prime Auto</div>
 
   <div class="container">
-    <div class="grid">
-      {% for i in productsLg %}
-      <div class="col col--4">
-        {{ mixins.card(
-          mod = 'card--lg',
-          title = i.title,
-          upttl = i.upttl,
-          img = i.img,
-          text = i.text,
-          button = true
-        ) }}
+    <div class="section__block">
+      <div class="grid grid--justify-content-center">
+        {% for i in productsLg %}
+        <div class="col col--md-4 col--xs-6">
+          {{ mixins.card(
+            mod = 'card--lg',
+            title = i.title,
+            upttl = i.upttl,
+            img = i.img,
+            text = i.text,
+            button = true
+          ) }}
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
+    </div>
 
+    <div class="grid">
       {% for i in products %}
-      <div class="col col--3">
+      <div class="col col--lg-3 col--sm-4 col--xxs-6">
         {{ mixins.card(
           title = i.title,
           subttl = i.subttl,
