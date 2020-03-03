@@ -20,6 +20,8 @@
 
   &__logo
     margin-right: rem(25)
+    position: relative
+    z-index: 10
     +lg
       flex: 0 0 150px
 
@@ -29,15 +31,19 @@
       top: 100%
       left: 0
       right: 0
-      z-index: 10
+      z-index: 5
       background-color: $white
       transform: translate(0, calc(-100% - #{$header-height-lg}))
       +ready
-        +tr(transform .5s, $easeInQuart)
+        +tr(transform .5s $easeInQuad)
+      &--open
+        transform: translate(0, 0)
 
   &__burger
     display: block
     margin-left: auto
+    position: relative
+    z-index: 10
     .icon
       font-size: rem(30)
     +mdmin

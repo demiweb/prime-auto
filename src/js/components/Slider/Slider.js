@@ -12,13 +12,13 @@ export default class SLider {
   _getOptions() {
     this.getOptions = ({ navigation, onInit, pagination }) => ({
       hero: {
+        slidersPerView: 1,
         fadeEffect: { crossFade: true },
+        effect: 'fade',
         autoplay: {
           delay: 4000,
           disableOnInteraction: true,
         },
-        slidersPerView: 1,
-        effect: 'fade',
         on: {
           init: onInit,
         },

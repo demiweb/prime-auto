@@ -13,9 +13,9 @@ import sayHello from './lib/sayHello'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
 import { setVhProperty } from './helpers'
-import SLider from './components/Slider/Slider'
 
-// import Menu from './components/Menu/Menu'
+import SLider from './components/Slider/Slider'
+import Menu from './components/Menu/Menu'
 
 // import { NO_SCROLL } from './constants'
 
@@ -30,12 +30,12 @@ class App {
     //   hasMenuOpen: false,
     // }
 
-    // this.menu = new Menu({
-    //   classNames: {
-    //     btn: 'burger',
-    //     menu: 'header__nav',
-    //   },
-    // })
+    this.menu = new Menu({
+      classNames: {
+        btn: 'burger',
+        menu: 'header__nav',
+      },
+    })
 
     this.slider = new SLider(`.${classNames.slider.container}`)
   }
@@ -61,7 +61,7 @@ class App {
   init() {
     this.initMethods()
 
-    // this.menu.init()
+    this.menu.init()
     // this.menu.onToggle = this.onMenuToggle.bind(this)
     // this.menu.onClose = this.onMenuClose.bind(this)
 
