@@ -2,13 +2,13 @@
 <div class="side-controls">
   {{ mixins.list(
     name = 'side-btns',
-    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: 'side-btns__item', link: 'side-btns__btn' },
+    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: 'side-btns__item', button: 'side-btns__btn' },
     list = [
-      { link: mixins.icon('magnifying-glass')  },
-      { link: mixins.icon('car')  },
-      { link: mixins.icon('user')  },
-      { link: mixins.icon('shopping-cart')  },
-      { link: mixins.icon('phone-call')  }
+      { button: mixins.icon('magnifying-glass')  },
+      { button: mixins.icon('car')  },
+      { button: mixins.icon('user')  },
+      { button: mixins.icon('shopping-cart')  },
+      { button: mixins.icon('phone-call')  }
     ]
   ) }}
 
