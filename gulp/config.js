@@ -1,7 +1,11 @@
-import util from 'gulp-util';
+import colors from 'ansi-colors'
+import log from 'fancy-log'
+const argv = require('minimist')(process.argv.slice(2))
 
-const production = util.env.production || util.env.prod || util.env._.indexOf('build') !== -1 || false;
-const destPath = 'build';
+const production =
+argv.production || argv.prod || argv._.indexOf('build') !== -1 || false
+const destPath = 'build'
+
 
 const config = {
   env: 'development',
@@ -23,6 +27,7 @@ const config = {
     iconsHTML: 'src/templates/icons',
     fonts: 'src/fonts',
     data: 'src/data',
+    languages: 'src/languages',
   },
   dest: {
     root: destPath,
@@ -36,22 +41,19 @@ const config = {
   },
 
   setEnv(env) {
-    if (typeof env !== 'string') return;
-    this.env = env;
-    this.production = env === 'production';
-    process.env.NODE_ENV = env;
+    if (typeof env !== 'string') return
+    this.env = env
+    this.production = env === 'production'
+    process.env.NODE_ENV = env
   },
 
   logEnv() {
-    util.log(
-      'Environment:',
-      util.colors.white.bgRed(` ${process.env.NODE_ENV} `),
-    );
+    log('Environment:', colors.white.bgRed(` ${process.env.NODE_ENV} `))
   },
 
   errorHandler: require('./util/handle-errors'),
-};
+}
 
-config.setEnv(production ? 'production' : 'development');
+config.setEnv(production ? 'production' : 'development')
 
-module.exports = config;
+module.exports = config

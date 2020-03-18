@@ -117,8 +117,7 @@
 <body>
   <section>
     <ol class="pagelist">
-      <% i = 0; %>
-      <% _.each(pages.PageList, function(page) { i++; %>
+      <% _.each(pages.PageList, function(page) {  %>
           <li>
             <a class="pagelist__title" target="_blank" href="<%= page.file %>">
               <em><%= _.split(page.file, '.', 1) %></em>

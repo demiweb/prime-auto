@@ -1,5 +1,3 @@
-Based on https://github.com/coderiver/generator-man
-
 ## How to use
 
 Clone this repo and then in command line type:
@@ -8,7 +6,6 @@ Clone this repo and then in command line type:
 * `gulp` - run dev-server and let magic happen, or
 * `gulp build` - build project from sources
 
---
 
 ## List of Gulp tasks
 
@@ -45,6 +42,82 @@ We have several useful flags.
 
 * `gulp --open` or `gulp server --open` - run dev server and then open preview in browser
 * `gulp [task_name] --prod` or `gulp [task_name] --production` - run task in production mode. Some of the tasks (like, sass or js compilation) have additional settings for production mode (such as code minification), so with this flag you can force production mode. `gulp build` uses this mode by default.
+
+## Multilanguage version
+
+If you need a multilanguage version of project, you can create folder `languages` in `src` directory, then create subdirectories with data files.  
+Each subdirectory requires `global.json` file, with some general data. Optionaly, you can add other `json` files, with data to specific page. The names of the files has to be equivalent to project pages names. 
+Data from `json` files can be used in page template as variables.  
+In build folder would be generated files with different language versions. Amount of pages would be equivalent to amount of `languages` folder subdirectories, filenames would have suffix, equivalent to subdirection name.  
+
+### Structure example
+
+#### Source:
+    .
+    ├── ...
+    ├── src                    
+    │   ├── languages             
+    │   │   ├── en             
+    │   │   │   ├── global.json
+    │   │   │   ├── page.json
+    │   │   ├── ru             
+    │   │   │   ├── global.json
+    │   │   │   ├── page.json
+    │   ├── templates             
+    │   │   ├── page.html
+    │   │   └── ...
+    │   └── ...
+    └── ...
+
+#### Generated:
+    .
+    ├── ...
+    ├── build                    
+    │   ├── page-en.html             
+    │   ├── page-ru.html
+    └── ...
+### Handling data example
+
+#### JSON structure
+```json
+// languages/en folder
+// global.json
+{
+  "sitename": "My awesome site"
+}
+// page.json
+{
+  "title": "Main page"
+}
+
+// languages/ru folder
+// global.json
+{
+  "sitename": "Мой крутой сайт"
+}
+// page.json
+{
+  "title": "Главная страница"
+}
+```
+#### HTML template
+```html
+<!-- Development -->
+
+ <!-- templates/page.html -->
+<h1>{{ sitename }}</h1>
+<h2>{{ title }}</h2>
+
+<!-- Generated -->
+
+<!-- build/page-en.html -->
+<h1>My awesome site</h1>
+<h2>Main page</h2>
+
+<!-- build/page-ru.html -->
+<h1>Мой крутой сайт</h1>
+<h2>Главная страница</h2>
+```
 
 ## Other
 
