@@ -1,0 +1,26 @@
+<form class="form{% if form.mod %} {{ form.mod }}{% endif %}">
+  {% if form.cols %}
+  <div class="form__row">
+    {% for i in form.cols %}
+    <div class="form__col">
+      {{ mixins.input(
+        name = i.name,
+        mod = i.mod,
+        type = i.type,
+        placeholder = i.placeholder,
+        value = i.value,
+        fieldClass = i.fieldClass,
+        fieldAttributes = i.fieldAttributes,
+        label = i.label
+      ) }}
+    </div>
+    {% endfor %}
+  </div>
+
+  {{ mixins.btn(
+    title = form.btn.title or 'Сохранить',
+    mod = 'btn--full',
+    href = false
+  ) }}
+  {% endif %}
+</form>

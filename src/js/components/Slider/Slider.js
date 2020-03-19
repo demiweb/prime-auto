@@ -29,6 +29,13 @@ export default class SLider {
           clickable: true,
         },
       },
+      img: {
+        navigation,
+        slidersPerView: 1,
+        on: {
+          init: onInit,
+        },
+      },
     })
   }
 

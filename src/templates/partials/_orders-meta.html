@@ -1,0 +1,54 @@
+<div class="table__orders-meta orders-meta js-accordion-item">
+  <div class="orders-meta__left">
+    {% for i in range(0, 3) %}
+    {{ mixins.orderItem(
+      mod = 'orders-meta__item order-item--center',
+      amount = true
+    ) }}
+    {% endfor %}
+  </div>
+
+  <div class="orders-meta__right">
+    <div class="orders-meta__right-in">
+      {{ mixins.list(
+        name = 'meta-list',
+        descr = true,
+        modifications = { list: 'orders-meta__block meta-list meta-list--center', dt: 'meta-list__title', dd: 'meta-list__text' },
+        list = [
+          { dt: 'Статус заказа:', dd: 'Обрабатывается' },
+          { dt: 'Способ доставки:', dd: 'Новая почта' }
+        ]
+      ) }}
+
+      <div class="orders-meta__block">
+        <img class="js-lazy" src="" alt="" data-src="./img/Nova_Poshta_2014_logo.png"/>
+
+        {{ mixins.input(
+          name = 'input',
+          mod = '',
+          type = 'text',
+          placeholder = '',
+          value = '1441 1463 6337 2112',
+          fieldClass = '',
+          label = { first: '<label for="" class="input__label">Номер накладной</label>' }
+        ) }}
+      </div>
+
+      <div class="orders-meta__block">
+        {{ mixins.list(
+          name = 'meta-list',
+          descr = true,
+          modifications = { list: 'meta-list meta-list--center', dt: 'meta-list__title', dd: 'meta-list__text price' },
+          list = [
+            { dt: 'Всего к оплате:', dd: '<strong>900</strong> грн' }
+          ]
+        ) }}
+
+        {{ mixins.btn(
+          title = 'Продолжить покупки',
+          mod = ''
+        ) }}
+      </div>
+    </div>
+  </div>
+</div>

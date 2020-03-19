@@ -1,0 +1,28 @@
+.pagination
+  $this: &
+
+  color: #a5a6aa
+  text-align: center
+
+  li
+    display: inline-block
+    vertical-align: middle
+
+    margin-right: rem(10)
+    margin-left: rem(10)
+
+  a
+    +tr(color .3s)
+    +hover
+      @extend #{$this}__current-item
+
+      &.prev, &.next
+        text-decoration: none
+        font-weight: 300
+        color: $white
+
+
+  &__current-item
+    text-decoration: underline
+    font-weight: 700
+    color: $accent

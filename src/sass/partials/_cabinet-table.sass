@@ -1,0 +1,78 @@
+.table
+  $this: &
+
+  &__top, &__tr-inner
+    display: flex
+
+  &__tr-inner
+    padding-top: rem(20)
+    padding-bottom: rem(20)
+
+  &__tr
+    border-bottom: 1px solid $lighten
+
+    &--delivered
+      #{$this}__color-icon
+        fill: #3ac948
+    &--processing
+      #{$this}__color-icon
+        fill: #f6aa16
+    &--on-the-way
+      #{$this}__color-icon
+        fill: $accent
+
+  &__td, &__th
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    text-align: center
+
+    width: percentage(260 / 1650)
+    padding: rem(10)
+
+    &:first-child
+      width: percentage(95 / 1650)
+
+    &:last-child
+      width: percentage((1650 - (260 * 5) - 95) / 1650)
+
+  &__th
+    background-color: $accent
+    color: $white
+    font-weight: 500
+
+  &__td
+    +notlast
+      border-right: 1px solid $lighten
+
+  &__btn
+    display: inline-flex
+    align-items: center
+
+    +tr(color .3s)
+
+    +hover
+      color: $accent
+
+    +after
+      +icon-arrow(.5, .5, 0.1, currentColor, -45, em)
+      margin-left: .5em
+      margin-top: -.1em
+      display: block
+
+    &--active
+      color: $accent
+      +after
+        transform: rotate(135deg)
+        margin-top: .1em
+
+  &--cart
+    #{$this}__td, #{$this}__th
+      width: percentage(220 / 1650)
+
+      &:first-child
+        width: percentage(220 / 1650)
+
+      &:last-child
+        width: percentage((1650 - (220 * 7)) / 1650)

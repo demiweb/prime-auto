@@ -1,0 +1,19 @@
+<!-- begin section -->
+<section class="section section--pb-md">
+  <div class="container container--lg">
+    <h2 class="section__title section__title--mb-lg title title--h2 text-center">не пропустите также</h2>
+
+    <div class="grid">
+      {% for i in range(0, 4) %}
+      <div class="col col--3">
+        {{ mixins.cardNews(
+          img = '07.jpg',
+          title = 'новые зимние поступления товара в Prime Auto. Успейте до 18 декабря',
+          text = 'Компания Prime  Auto с 2000 года занимается продажей автомобильных аксессуаров в Украине, завоевав лидирующие позиции на этом рынке. Это стало возможным благодаря тому, что мы Компания Prime  Auto с 2000 года занимается продажей автомобильных аксессуаров в Украине, завоевав лидирующие позиции на этом рынке. Это стало возможным благодаря тому, что мы'
+        ) }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

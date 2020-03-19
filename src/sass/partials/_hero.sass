@@ -1,8 +1,42 @@
 .hero
+  $this: &
+
+  +cover
+  background-color: $dark
+  color: $white
+
   position: relative
   z-index: 0
-  margin-bottom: rem(-30)
 
+  &__title
+    margin-bottom: rem(25)
+
+  &__subttl
+    max-width: rem(645)
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    padding-top: rem(15)
+  &__content
+    padding-top: rem(25)
+    padding-bottom: rem(25)
+
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &--sm
+    #{$this}__inner
+      min-height: vw(345)    
+
+  &--xs
+    #{$this}__inner
+       min-height: vw(150)
+  
 .hero-slide
   $this: &
   

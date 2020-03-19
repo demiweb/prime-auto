@@ -1,4 +1,30 @@
+.prev, .next
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+
+  background-color: $accent
+  color: $white
+
+  height: 1em
+  width: 1em
+  font-size: rem(40)
+
+  +before
+    +icon-arrow(.2, .2, .03, currentColor, 45, em)
+    display: block
+    margin-left: .05em
+
+  &--lg
+    font-size: rem(78)
+
+.next
+  transform: scaleX(-1)
+
 .slider
+  $this: &
+
   &__wrap
     position: relative
     * 
@@ -19,6 +45,9 @@
       &.swiper-pagination-bullet-active
         background-color: $white
 
+  &__controls
+
+
   &--hero
     &__wrap
       .slider
@@ -35,5 +64,22 @@
           +lg
             padding-left: $container-padding
             padding-right: $container-padding
+
+  &--img
+    &__wrap
+      max-width: rem(820)
+      padding-right: rem(125)
+      // .swiper-container
+      //   max-width: percentage(733 / 960)
+      //   margin-right: 0
+      //   margin-left: 0
+
+      #{$this}__controls
+        position: absolute
+        z-index: 1
+        right: 0
+        top: rem(55)
+        
+
 
     

@@ -1,0 +1,23 @@
+---
+title: blog
+page: blog
+hero: {
+  bg: 'blog.jpg',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { item: 'новости', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  title: 'новости',
+  subttl: 'Мы активно следим за последними тенденциями в тематике автомобильных аксессуаров и делимся ими с вами'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-news.html" %}
+{% endblock %}

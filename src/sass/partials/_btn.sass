@@ -1,13 +1,18 @@
 .btn
   $this: &
 
-  display: inline-block
+  display: inline-flex
+  justify-content: center
+  align-items: center
   text-align: center
+
   border: 2px solid  $accent
   background-color: $accent
   color: $white
+
   font-size: em(18)
   font-weight: 700
+
   padding: rem(10) rem(25)
   min-width: 230px
   +tr(background-color .3s, border-color .3s, color .3s)
@@ -22,9 +27,33 @@
     min-width: 0
     width: 100%
 
+  &__icon
+    margin-right: .8em
+    font-size: 1.2em 
+
   &--md
     min-width: 255px
 
   &--transp-white
     border-color: $white
     background-color: transparent
+
+  &--full
+    min-width: 0
+    width: 100%
+
+.delete-btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+  background-color: #ededed
+  color: #dc3232
+
+  width: rem(20)
+  height: rem(20)
+  border-radius: 50%
+
+  > span
+    +icon-close(.7rem, 1px, currentColor)
+    display: block

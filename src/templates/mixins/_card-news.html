@@ -1,0 +1,31 @@
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro cardNews(mod, title, img, text) %}
+<!-- begin card-news -->
+<a href="#" class="card-news{% if mod %} {{ mod }}{% endif %}">
+  {% if img %}
+    <span class="card-news__img js-lazy" data-background-image="./img/{{ img }}"></span>
+  {% endif %}
+
+  <span class="card-news__content">
+    {% if title %}
+      <span class="card-news__title title title--h4">{{ title | safe }}</span>
+    {% endif %}
+
+    {% if text %}
+      <span class="card-news__text">{{ text | safe }}</span>
+    {% endif %}
+
+    <span class="card-news__btn">
+      {{ btn(
+        title = 'Читать статью',
+        mod = 'btn--no-hover',
+        href = false,
+        isInline = true
+      ) }}
+    </span>
+  </span>
+</a>
+<!-- end card-news -->
+{% endmacro %}

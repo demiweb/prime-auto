@@ -1,0 +1,36 @@
+{% import "../data/_cabinet-forms.html" as forms %}
+
+<!-- begin cabinet-meta -->
+<div class="cabinet__block cabinet-meta">
+  <div class="cabinet-meta__left">
+    <div class="cabinet-meta__block cabinet-meta-block">
+      <h3 class="title-under title title--h3 title--ttn title--500">Редактирование личных данных</h3>
+
+      <div class="cabinet-meta-block__block">
+        <h5 class="cabinet-meta-block__block-title title title--h5 title--ttn title--500">Измените ваши контактные данные</h5>
+
+        <div class="cabinet-meta-block__block-meta">
+          
+          {% set form = forms.contacts %}
+          {% include "partials/_form.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cabinet-meta__right">
+    <div class="cabinet-meta__block cabinet-meta-block">
+      <h3 class="title-under title title--h3 title--ttn title--500">Изменение пароля</h3>
+
+      <div class="cabinet-meta-block__block">
+        <h5 class="cabinet-meta-block__block-title title title--h5 title--ttn title--500">Измените ваш пароль</h5>
+
+        <div class="cabinet-meta-block__block-meta">
+          {% set form = forms.password %}
+          {% include "partials/_form.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end cabinet-meta -->

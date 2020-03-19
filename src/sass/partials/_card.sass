@@ -76,6 +76,7 @@
         z-index: 0
 
     #{$this}__text
+      display: block
       display: -webkit-box
       -webkit-line-clamp: 5
       -webkit-box-orient: vertical
@@ -87,4 +88,43 @@
         // -webkit-line-clamp: 3
         // height: 4.2rem
 
+.card-news
+  display: flex
+  flex-direction: column
 
+  height: 100%
+
+  +tr(box-shadow .3s)
+
+  +hover
+    +shadow
+
+  &__img
+    +cover
+    background-color: $dark
+
+    display: block
+    padding-top: percentage(320 / 405)
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    
+    background-color: $white
+    padding: rem(30) rem(35)
+
+  &__title
+    display: block
+    margin-bottom: rem(15)
+
+  &__text
+    margin-bottom: rem(20)
+    display: block
+    flex-grow: 1
+
+    display: -webkit-box
+    -webkit-line-clamp: 5
+    -webkit-box-orient: vertical
+    height: 6.6rem
+    overflow: hidden

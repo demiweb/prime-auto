@@ -1,0 +1,70 @@
+.orders-meta
+  display: flex
+
+  background-color: $lightest
+  border-top: 1px solid $lighten
+
+  &__left
+    width: percentage(975 / 1650)
+    border-right: 1px solid $lighten
+
+  &__right
+    display: flex
+    justify-content: center
+    text-align: center
+    flex-direction: column
+
+    width: percentage((1650 - 975) / 1650)
+    padding: rem(15)
+  
+  &__right-in
+    max-width: rem(250)
+    margin-left: auto
+    margin-right: auto
+
+  &__item
+    border-bottom: 1px solid $lighten
+    padding: rem(35) rem(30)  
+
+  &__block
+    .meta-list
+      +notlast
+        margin-bottom: rem(20)
+
+    &.meta-list
+      
+
+    +notlast
+      margin-bottom: rem(40)
+
+
+
+.order-item
+  $this: &
+  display: flex
+
+  &__title
+    width: 100%
+    +text-overflow
+    margin-bottom: rem(8)
+
+  &__img
+    flex: 0 0 rem(115)
+    img
+      min-width: 10px
+      min-height: 10px
+
+  &__content
+    padding-left: rem(15)
+    padding-right: rem(15)
+    flex-grow: 1
+  
+  &--center
+    #{$this}__content
+      width: calc(80% - #{rem(115)})
+
+    #{$this}__right
+      width: 20%
+      display: flex
+      justify-content: center
+      flex-direction: column

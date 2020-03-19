@@ -1,0 +1,50 @@
+<!-- begin cabinet -->
+<div class="cabinet">
+  <section class="cabinet__hero">
+    <div class="container container--lg">
+      <div class="page-inner">
+        <div class="cabinet__hero-inner">
+          <div class="cabinet__hero-left">
+            {{ mixins.list(
+              name = 'breadcrumbs',
+              modifications = { wrap: '', list: 'cabinet__breadcrumbs breadcrumbs', item: '', link: '' },
+              list = [
+                { link: 'Prime Auto' },
+                { item: '-' },
+                { item: 'личный кабинет', modItem: 'breadcrumbs__current-item' }
+              ]
+            ) }}
+            
+            <h1 class="cabinet__hero-title title title--h2">Приветствуем, евгений</h1>
+          </div>
+
+          <div class="cabinet__hero-right">
+            <div class="cabinet__hero-btn">
+              {{ mixins.btn(
+                title = mixins.icon('logout', 'btn__icon') + 'Выйти',
+                mod = 'btn--transp-white'
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- begin section -->
+  <section class="section">
+    <div class="container container--lg">
+      <div class="page-inner">
+        {% include "partials/_cabinet-meta.html" %}
+        
+        <h3 class="title-under title title--h3 title--ttn title--500">История заказов</h3>
+
+        {% include "partials/_cabinet-table.html" %}
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  
+</div>
+<!-- end cabinet -->

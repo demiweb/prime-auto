@@ -14,8 +14,42 @@
       font-size: em(36)
     +xs
       font-size: em(32)
+
   &--h3
-    font-size: em(22)
+    font-size: em(21)
+
+  &--h4
+    font-size: 1em
+
+  &--h5
+    font-size: em(14)
 
   &--ttn
     text-transform: none
+
+  &--500
+    font-weight: 500
+
+.meta-list
+  $this: &
+  +clr
+  font-size: em(14)
+  text-align: left
+
+  &__title
+    float: left
+    margin-right: .3em
+    font-weight: 500
+
+  &__text
+    // display: inline-block
+    // vertical-align: bottom
+
+  &--center
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    flex-wrap: wrap
+
+    #{$this}__title
+      float: none

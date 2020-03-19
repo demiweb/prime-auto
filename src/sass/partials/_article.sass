@@ -1,4 +1,26 @@
 .article
-  p
+  p, li, h1, h2, h3, h4, h5, h6, ul, ol
     +notlast
       margin-bottom: rem(20)
+
+  img
+    +notlast
+      margin-bottom: rem(30)
+
+  h1, h2, h3, h4, h5, h6
+    @extend .title
+    @extend .title--ttn
+
+  h2
+    font-size: em(24)
+
+  ul
+    padding-left: 1em
+    li
+      list-style-type: disc
+
+  ol
+    +counter('article', ')')
+    li
+      &::before
+        margin-right: .3em

@@ -1,0 +1,92 @@
+{%set
+table = {
+  rows: [
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: '15664CD' },
+        { mod: '' , text: 'Чорний' },
+        { mod: '' , text: mixins.counter() },
+        { mod: '' , text: '300 грн' },
+        { mod: '' , text: '<strong>900 грн</strong>' },
+        { mod: '' , text: '<button class="delete-btn"><span></span></button>' }
+      ]
+    },
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: '15664CD' },
+        { mod: '' , text: 'Чорний' },
+        { mod: '' , text: mixins.counter() },
+        { mod: '' , text: '300 грн' },
+        { mod: '' , text: '<strong>900 грн</strong>' },
+        { mod: '' , text: '<button class="delete-btn"><span></span></button>' }
+      ]
+    },
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: '15664CD' },
+        { mod: '' , text: 'Чорний' },
+        { mod: '' , text: mixins.counter() },
+        { mod: '' , text: '300 грн' },
+        { mod: '' , text: '<strong>900 грн</strong>' },
+        { mod: '' , text: '<button class="delete-btn"><span></span></button>' }
+      ]
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <div class="page-inner">
+      <div class="section__top-link">
+        <a href="#" class="back-link">{{ mixins.icon('left-arrow', 'back-link__icon') }} Вернуться к покупкам</a>
+      </div>
+
+      <!-- begin table -->
+      <div class="section__block table table--cart">
+        <div class="table__top">
+          <div class="table__th">Фото</div>
+          <div class="table__th">Название</div>
+          <div class="table__th">Артикул</div>
+          <div class="table__th">Цвет</div>
+          <div class="table__th">Количество</div>
+          <div class="table__th">Цена</div>
+          <div class="table__th">Сумма</div>
+          <div class="table__th"></div>
+        </div>
+        
+        {% for i in table.rows %}
+        <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %} js-accordion">
+          <div class="table__tr-inner">
+            {% for j in i.cols %}
+            <div class="table__td">{{ j.text | safe }}</div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+      <!-- end table -->
+
+      <div class="section__price-block text-center">
+        <div class="price">Сумма: <strong>27000</strong>грн</div>
+
+        {{ mixins.btn(
+          title = 'Оформить заказ',
+          mod = ''
+        ) }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

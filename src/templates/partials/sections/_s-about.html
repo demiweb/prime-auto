@@ -1,0 +1,47 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <div class="grid grid--align-items-center">
+      <div class="col col--6">
+        <!-- begin slider -->
+        <div class="slider__wrap slider--img__wrap">
+          <div class="swiper-container js-slider" data-slider="img">
+            <div class="swiper-wrapper slider slider--img">
+              {% for i in range(0, 5) %}
+              <div
+                class="swiper-slide slider__slide section-image js-lazy"
+                data-background-image="./img/7.jpg"
+              ></div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="slider__controls">
+            <button class="slider__prev prev prev--lg js-slider-prev"></button>
+            <button class="slider__next next next--lg js-slider-next"></button>
+          </div>
+        </div>
+        <!-- end slider -->
+      </div>
+
+      <div class="col col--6">
+        <div class="section-block">
+          <h2 class="section-block__title title title--h2">о prime auto </h2>
+
+          <div class="section-block__text article">
+            <p>Компания Prime  Auto с 2000 года занимается продажей автомобильных аксессуаров в Украине, завоевав лидирующие позиции на этом рынке. Это стало возможным благодаря тому, что мы предлагает нашим покупателям самый широкий ассортимент  аксессуаров  для автомобилей всех ценовых категорий – от качественных, но недорогих изделий до оригинальных, либо  произведенных ведущими компаниями США, Канады, Германии и Австралии. </p>
+            <p>Только у нас, приобретая  аксессуары  для  Вашего  автомобиля,  Вы  можете  не сомневаться  в их качестве и полной адаптированности именно к Вашему авто.  На  сайте представлен широкий выбор оригинальных и эксклюзивных ветровиков,  дефлекторов,  автоковриков, спойлеров, дуг, хром-пакетов, брызговиков,  молдингов,  автооптики,  защиты фар, крышек для пикапов, кенгурятников,  решеток  радиатора  и  прочих автоаксессуаров. Доставка осуществляется по всей территории Украины.</p>
+          </div>
+
+          <div class="section-block__btn">
+            {{ mixins.btn(
+              title = 'Подобрать коврик',
+              mod = ''
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

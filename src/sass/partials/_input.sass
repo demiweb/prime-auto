@@ -1,0 +1,68 @@
+.input
+  font-size: em(14)
+
+  #{$text-inputs}
+    width: 100%
+    border: 1px solid  $lighten
+
+    padding: rem(8) rem(15)
+    height: rem(36)
+
+    +text-overflow
+
+  &__label
+    display: block
+    margin-bottom: rem(5)
+    color: $light
+
+.counter
+  position: relative
+  display: inline-block
+  min-width: rem(120)
+  
+
+  font-size: em(14)
+
+  &__label
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: rem(10)
+    transform: translate(0, -50%)
+
+  &__input
+    height: rem(35)
+    padding-left: rem(75)
+    border: 1px solid  $lighten
+    width: 100%
+
+  &__btn
+    position: absolute
+    z-index: 1
+    right: rem(10)
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: rem(8)
+    height: rem(8)
+
+    color: $light
+
+    +tr(color .3s)
+
+    +hover
+      color: currentColor
+
+    +before
+      +icon-arrow(.5, .5, 0.1, currentColor, -45, em)
+      display: block
+
+    &--dec
+      bottom: rem(10)
+
+    &--inc
+      top: rem(10)
+      transform: scaleY(-1)
+

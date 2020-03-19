@@ -11,6 +11,8 @@ $black:    #000
 $white:    #fff
 $accent:   #2532d9
 $light:    #a5a6aa
+$lighten:  #ededed
+$lightest: #f5f5f5
 $dark:     #27272b
 
 $header-height:    rem(89)
@@ -25,3 +27,6 @@ $container--lg-padding: rem(90)
 =windowMinHeight($offset: 0px)
   min-height: calc(100vh - #{$offset})
   min-height: calc((var(--vh, 1vh) * 100) - #{$offset})
+
+=shadow
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.07)

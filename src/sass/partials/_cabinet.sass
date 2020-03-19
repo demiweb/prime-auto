@@ -1,0 +1,51 @@
+.cabinet
+  background-color: $white
+
+  &__hero
+    background-color: $dark
+    color: $white    
+
+  &__breadcrumbs
+    margin-bottom: rem(30)
+
+  &__hero-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    padding-top: rem(15)
+    padding-bottom: rem(15)
+
+  &__hero-title
+    margin-bottom: rem(25)
+
+  &__block
+    +notlast
+      margin-bottom: rem(45)
+
+.cabinet-meta
+  display: flex
+  flex-wrap: wrap
+
+  &__left, &__right
+    width: percentage(690 / 1650)
+
+  &__right
+    margin-left: percentage(75 / 1650)
+
+.cabinet-meta-block
+  &__title
+    
+
+  &__block
+    display: flex
+    flex-wrap: wrap
+    +notlast
+      margin-bottom: rem(25)
+
+  &__block-title
+    width: percentage(180 / 690)
+
+  &__block-meta
+    width: percentage((690 - 180) / 690)
+

@@ -2,3 +2,8 @@ ProjectTitle: prime-auto
 
 PageList:
 - file: home.html
+- file: about.html
+- file: blog.html
+- file: blog-one.html
+- file: cabinet.html
+- file: cart.html

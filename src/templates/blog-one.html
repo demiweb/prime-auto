@@ -1,0 +1,25 @@
+---
+title: blog-one
+page: blog-one
+hero: {
+  bg: 'blog-one.jpg',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { link: 'новости' },
+      { item: '-' },
+      { item: 'новые зимние поступления в prime auto. успейте до 18 декабря.', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  title: 'новые зимние поступления в prime <br> auto. успейте до 18 декабря.'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-blog-page.html" %}
+  {% include "partials/sections/_s-more-news.html" %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% from 'mixins/_list.html' import list %}
+{% set list = list %}
+
+{% macro orderItem(mod, counter, amount) %}
+<!-- begin order-item -->
+<div class="order-item{% if mod %} {{ mod }}{% endif %}">
+  <div class="order-item__img">
+    <img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>
+  </div>
+
+  <div class="order-item__content">
+    <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+
+    {{ list(
+      name = 'meta-list',
+      descr = true,
+      modifications = { wrap: '', list: 'order-item__meta-list meta-list', dt: 'meta-list__title', dd: 'meta-list__text' },
+      list = [
+        { dt: 'Артикул:', dd: '15664CD' },
+        { dt: 'Цвет:', dd: 'Полный комплект (1, 2, та 3  ряд)' },
+        { dt: 'Количество:', dd: '1' }
+      ]
+    ) }}
+  </div>
+
+  {% if amount %}
+    <div class="order-item__right">
+      <div class="price price--sm">Сумма: <strong>300</strong> грн</div>
+    </div>
+  {% endif %}
+</div>
+<!-- end order-item -->
+{% endmacro %}
