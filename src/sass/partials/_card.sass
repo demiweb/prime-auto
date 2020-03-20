@@ -88,6 +88,22 @@
         // -webkit-line-clamp: 3
         // height: 4.2rem
 
+  &--center
+    +hover
+      #{$this}__btn
+        +visible
+
+    #{$this}__block
+      +vcenter
+      bottom: auto
+      width: 100%
+      text-align: center
+
+    #{$this}__btn
+      max-height: none
+      +tr(visibility .3s, opacity .3s)
+      +hidden
+
 .card-news
   display: flex
   flex-direction: column

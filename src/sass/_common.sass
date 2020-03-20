@@ -26,11 +26,14 @@ body
   font-size: 0
 
 .out
-  padding-top: $header-height
-  background-color: $lightest
+  padding-top: $header-height  
   +lg
     padding-top: $header-height-lg
     padding-bottom: rem(50)
+  
+
+.main
+  background-color: $lightest
   &--white
     background-color: $white
 
@@ -134,4 +137,8 @@ body
   &__icon
     margin-right: .5em
 
+.price-info
+  font-size: 12px
+  strong
+    font-size: 1rem
     

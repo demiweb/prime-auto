@@ -1,0 +1,57 @@
+{%set
+features = [
+  {
+    title: 'Прочный материал',
+    text: 'Благодаря прочному и качественному материалу 
+из натурального каучука, коврики weatcher tech 
+не боятся влаги или грязи'
+  },
+  {
+    title: 'продленный срок службы',
+    text: 'Благодаря прочному и качественному материалу 
+из натурального каучука, коврики weatcher tech не боятся влаги или грязи'
+  }
+]
+%}
+
+<!-- begin s-two-colored -->
+<section class="s-two-colored">
+  <div
+    class="s-two-colored__img js-lazy"
+    data-background-image="./img/36.jpg"
+  ></div>
+  {# <img class="s-two-colored__img js-lazy" src="" alt="" data-src="./img/36.jpg"/> #}
+
+  <div class="s-two-colored__top">
+    <div class="container container--lg">
+      <div class="grid">
+        <div class="col col--6">
+          <div class="section__title title title--h2">как weatcher tech реагирует на влагу и грязь</div>
+
+          <div class="section__subttl">Автомобиль для современного человека - это самое оптимальное средство передвижения, показатель благосостояния, а часто и безукоризненного вкуса своего владельца. Не случайно каждый автолюбитель с первых же дней старается сделать свое авто не только более удобным, функциональным, но и красивым.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-two-colored__bottom">
+    <div class="container container--lg">
+      <div class="grid">
+        {% for i in features %}
+        <div class="col col--3">
+          <!-- begin feature -->
+          <div class="feature feature--left">
+            <div class="feature__icon square-icon square-icon--light"><div class="square-icon__inner">{{ loop.index }}</div></div>
+
+            <h3 class="feature__title title title--h3">{{ i.title | safe }}</h3>
+
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end s-two-colored -->

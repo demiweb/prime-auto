@@ -1,0 +1,43 @@
+{%set
+features = [
+  {
+    text: 'Очень эластичный материал на основе 
+натурального каучука, который 
+не содержит запаха'
+  },
+  {
+    text: 'Универсально применимый размер
+коврика, который подойдет 
+любому автомобилю'
+  },
+  {
+    text: 'Нижняя часть коврика не скользит, имеет липучку, что предотвращает смещение
+и передвижение по салону'
+  },
+  {
+    text: 'Удобны в любых погодных условиях
+и имеют повышеную стойкость
+к влаге и низкой температуре'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--lg">
+  <div class="container container--lg">
+    <h2 class="section__title section__title--mb-lg title title--h2 text-center">Почему коврики <br>
+weatcher tech</h2>
+
+    <div class="grid">
+      {% for i in features %}
+      <div class="col col--3">
+        <div class="feature">
+          <div class="feature__icon square-icon"><div class="square-icon__inner">{{ loop.index }}</div></div>
+          <div class="feature__text">{{ i.text | safe }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

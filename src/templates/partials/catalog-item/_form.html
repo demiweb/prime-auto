@@ -1,0 +1,65 @@
+{%set
+fields = [
+  {
+    fieldAttributes: {},
+    options: [
+      { value: 'placeholder', option: 'Марка' },
+      { value: '1', option: 'Марка1' },
+      { value: '2', option: 'Марка2' },
+      { value: '3', option: 'Марка3' }
+    ]
+  },
+  {
+    fieldAttributes: { disabled: '' },
+    options: [
+      { value: 'placeholder', option: 'год' },
+      { value: '1', option: 'год1' },
+      { value: '2', option: 'год2' },
+      { value: '3', option: 'год3' }
+    ]
+  },
+  {
+    fieldAttributes: { disabled: '' },
+    options: [
+      { value: 'placeholder', option: 'модель' },
+      { value: '1', option: 'модель1' },
+      { value: '2', option: 'модель2' },
+      { value: '3', option: 'модель3' }
+    ]
+  }
+]
+%}
+
+<!-- begin catalog-item__form -->
+<form class="catalog-item__form form form--block">
+  <div class="form__title">Выберите ваше авто</div>
+
+  {% for i in fields %}
+  <div class="form__field">
+    {{ mixins.input(
+      name = 'select',
+      mod = '',
+      type = '',
+      placeholder = '',
+      value = '',
+      fieldClass = 'js-select',
+      options = i.options,
+      fieldAttributes = i.fieldAttributes
+    ) }}
+  </div>
+  {% endfor %}
+
+  <div class="form__field">
+    {{ mixins.btn(
+      title = 'Подобрать',
+      mod = 'btn--full',
+      href = false
+    ) }}
+  </div>
+
+  <div class="form__field price-info">
+    Диапазон цен:
+    <strong>320 грн - 3500 грн</strong>
+  </div>
+</form>
+<!-- end catalog-item__form -->

@@ -1,0 +1,22 @@
+<div class="catalog-item__hero hero hero--sm">
+  <div class="hero__inner">
+    {{ mixins.list(
+      name = 'breadcrumbs',
+      modifications = { wrap: '', list: 'hero__breadcrumbs breadcrumbs', item: '', link: '' },
+      list = [
+        { link: 'Prime Auto' },
+        { item: '-' },
+        { link: 'Резиновые коврики' },
+        { item: '-' },
+        { item: 'Weatcher Tech', modItem: 'breadcrumbs__current-item' }
+      ]
+    ) }}
+
+    <div class="hero__content">
+      <h1 class="hero__title title title--h2">Резиновые коврики weatcher tech</h1>
+
+      <div class="hero__subttl">Наши клиенты - наш приоритет номер один. Мы стремимся постоянно превосходить ожидания наших клиентов, и это проявляется не только в каждом продукте, но и в нашей культуре. </div>
+    </div>
+
+  </div>
+</div>

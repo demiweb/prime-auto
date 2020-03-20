@@ -1,0 +1,43 @@
+{%set
+productsLg = [
+  {
+    title: 'Weatcher Tech',
+    img: 'products/01.jpg'
+  },
+  {
+    title: 'EGR',
+    img: 'products/02.jpg'
+  },
+  {
+    title: 'Rigum',
+    img: 'products/03.jpg'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--mt-neg overflow-hidden">
+  <div class="section__word section__word--left word">коврики</div>
+
+  <div class="container">
+    <div class="section__block section__block--lg">
+      <div class="grid grid--justify-content-center">
+        {% for i in productsLg %}
+        <div class="col col--md-4 col--xs-6">
+          {{ mixins.card(
+            mod = 'card--lg card--center',
+            title = i.title,
+            upttl = i.upttl,
+            img = i.img,
+            text = i.text,
+            button = true
+          ) }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% include "partials/_right-text.html" %}
+  </div>
+</section>
+<!-- end section -->

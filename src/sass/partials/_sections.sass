@@ -91,3 +91,33 @@
 
   &__article
     max-width: rem(735)
+
+.s-two-colored
+  position: relative
+  margin-bottom: rem(30)
+  &__top
+    padding-top: rem(90)
+    padding-bottom: rem(70)
+  &__bottom
+    padding-top: rem(115)
+    padding-bottom: rem(140)
+
+    background-color: $accent
+    color: $white
+
+  &__img
+    +cover
+    background-color: $dark
+
+    position: absolute
+    z-index: 1
+    right: $container--lg-padding    
+    
+    bottom: rem(-30)
+    padding-top: 37%
+
+    width: percentage(670 / 1740)
+
+.s-text-word
+  padding-top: vw(340)
+  padding-bottom: rem(90)

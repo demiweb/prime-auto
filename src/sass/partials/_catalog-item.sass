@@ -1,0 +1,26 @@
+.catalog-item
+  background-color: $lightest
+  &__hero
+    position: relative
+    margin-right: rem(-30)
+    margin-bottom: rem(30)
+
+    +before
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 100%
+      width: $container--lg-padding
+      background-color: $dark
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: rem(60)
+
+  &__left
+    width: percentage(645 / 1740)
+    padding-right: rem(30)
+
+  &__right
+    width: percentage(1095 / 1740)

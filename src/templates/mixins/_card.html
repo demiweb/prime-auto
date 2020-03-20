@@ -22,26 +22,28 @@
   <span
     class="card__img js-lazy"
     data-background-image="./img/{{ img }}"
-  ></span>
+  >
+      <span class="card__block">
+      {% if text %}
+      <span class="card__text">{{ text | safe }}</span>
+      {% endif %}
+
+      {% if button %}
+      <span class="card__btn">
+        {{ btn(
+          title = button.title or 'Перейти к товарам',
+          mod = 'btn--no-hover',
+          isInline = true,
+          href = false,
+          attributes = button.attributes
+        ) }}
+      </span>
+      {% endif %}
+    </span> 
+  </span>
   {% endif %}
 
-  <span class="card__block">
-    {% if text %}
-    <span class="card__text">{{ text | safe }}</span>
-    {% endif %}
-
-    {% if button %}
-    <span class="card__btn">
-      {{ btn(
-        title = button.title or 'Перейти к товарам',
-        mod = 'btn--no-hover',
-        isInline = true,
-        href = false,
-        attributes = button.attributes
-      ) }}
-    </span>
-    {% endif %}
-  </span>  
+   
 </a>
 <!-- end card -->
 {% endmacro %}

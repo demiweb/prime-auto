@@ -7,3 +7,5 @@ PageList:
 - file: blog-one.html
 - file: cabinet.html
 - file: cart.html
+- file: catalog-kovriki.html
+- file: catalog-item.html
