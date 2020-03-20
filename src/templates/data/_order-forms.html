@@ -1,0 +1,204 @@
+{%set
+delivery = {
+  rowMod: 'form__row--block',
+  justInner: true,
+  noButton: true,
+  cols: [
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'delivery', checked: '' },
+      label: { last: '<span>Самовывоз <span class="light-diff">(г.Киев б-р Перова 19)</span></span>' }
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'delivery' },
+      label: { last: '<span>Новая почта</span>' }
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'select',
+      type: '',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { last: '' },
+      options: [
+        { value: 'placeholder', option: 'Выберите город' },
+        { value: '1', option: 'Выберите город1' },
+        { value: '2', option: 'Выберите город2' },
+        { value: '3', option: 'Выберите город3' }
+      ]
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'select',
+      type: '',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { last: '' },
+      options: [
+        { value: 'placeholder', option: 'Выберите отделение' },
+        { value: '1', option: 'Выберите отделение1' },
+        { value: '2', option: 'Выберите отделение2' },
+        { value: '3', option: 'Выберите отделение3' }
+      ]
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'delivery' },
+      label: { last: '<span>Курьером</span>' }
+    }
+  ]
+}
+%}
+
+{%set
+contacts = {
+  justInner: true,
+  noButton: true,
+  cols: [
+    {
+      name: 'input',
+      type: 'text',
+      value: 'Карпенко',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      value: '',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      value: '',
+      placeholder: 'Отчество',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'email',
+      value: '',
+      placeholder: 'E-mail',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      value: '',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _- _ _',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      value: '',
+      placeholder: 'Адрес',
+      fieldClass: '',
+      fieldAttributes: '',
+      label: { first: '' }
+    }
+  ]
+}
+%}
+
+{%set
+pay = {
+  rowMod: 'form__row--block',
+  justInner: true,
+  noButton: true,
+  cols: [
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'pay', checked: '' },
+      label: { last: '<span>Наличными</span>' }
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'pay' },
+      label: { last: '<span>Картой Visa / Mastercard</span>' }
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'pay' },
+      label: { last: '<span>Приват 24 / Online Monobank</span>' }
+    }
+  ]
+}
+%}
+
+{%set
+pack = {
+  rowMod: 'form__row--block',
+  justInner: true,
+  noButton: true,
+  cols: [
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'pack', checked: '' },
+      label: { last: '<span>Обычная упаковка</span>' }
+    },
+    {
+      wrapMod: 'form__field--50',
+      name: 'radio',
+      type: 'radio',
+      value: '',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { name: 'pack' },
+      label: { last: '<span>Фирменная упаковка (+50 грн)</span>' }
+    }
+  ]
+}
+%}

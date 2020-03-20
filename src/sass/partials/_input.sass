@@ -15,6 +15,39 @@
     margin-bottom: rem(5)
     color: $light
 
+  &--radio
+    position: relative
+    padding-left: 1.5em
+    user-select: none
+    input[type="radio"]
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      &:checked + span
+        &::after
+          content: ''
+          top: .3em
+          left: .2em
+          position: absolute
+          display: block
+
+          width: em(10)
+          height: em(10)
+          background-color: $accent
+        &::before
+          border-color: $accent
+      & + span
+        &::before
+          content: ''
+          border: 1px solid $lighten
+          width: 1em
+          height: 1em
+          top: .1em
+          left: 0
+          background-color: transparent
+          position: absolute
+          display: block
+
 .counter
   position: relative
   display: inline-block

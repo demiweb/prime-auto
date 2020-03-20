@@ -1,0 +1,24 @@
+---
+title: order
+page: order
+mainClass: main--white
+hero: {
+  bg: 'order.jpg',
+  mod: 'hero--xs',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { link: 'корзина' },
+      { item: '-' },
+      { item: 'оформление заказа', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  title: 'оформление заказа'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/sections/_s-order.html" %}
+{% endblock %}

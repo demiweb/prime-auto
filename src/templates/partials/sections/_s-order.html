@@ -1,0 +1,75 @@
+{% import "../../data/_order-forms.html" as forms %}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <div class="section__top-link">
+      <a href="#" class="back-link">
+        {{ mixins.icon('left-arrow', 'back-link__icon') }}
+        Назад в корзину
+      </a>
+    </div>
+
+    <!-- begin cabinet-meta -->
+    <form class="cabinet__block cabinet-meta">
+      <div class="cabinet-meta__left">
+        <div class="cabinet-meta__block cabinet-meta-block">
+          <h3 class="title-under title title--h3 title--ttn title--500">Заполните данные</h3>
+
+          <div class="cabinet-meta-block__block">
+            <div class="cabinet-meta-block__block-title">
+              <h5 class=" title title--h5 title--ttn title--500">Выберите способ доставки</h5>
+            </div>            
+
+            <div class="cabinet-meta-block__block-meta">              
+              {% set form = forms.delivery %}
+              {% include "partials/_form.html" %}
+            </div>
+          </div>
+
+          <div class="cabinet-meta-block__block">
+            <div class="cabinet-meta-block__block-title">
+              <h5 class=" title title--h5 title--ttn title--500">Укажите ваши контактные данные</h5>
+            </div>            
+
+            <div class="cabinet-meta-block__block-meta">              
+              {% set form = forms.contacts %}
+              {% include "partials/_form.html" %}
+            </div>
+          </div>
+
+          <div class="cabinet-meta-block__block">
+            <div class="cabinet-meta-block__block-title">
+              <h5 class=" title title--h5 title--ttn title--500">Выберите способ оплаты</h5>
+            </div>            
+
+            <div class="cabinet-meta-block__block-meta">              
+              {% set form = forms.pay %}
+              {% include "partials/_form.html" %}
+            </div>
+          </div>
+
+          <div class="cabinet-meta-block__block">
+            <div class="cabinet-meta-block__block-title">
+              <h5 class=" title title--h5 title--ttn title--500">Выберите упаковку</h5>
+              <img class="js-lazy" src="" alt="" data-src="./img/OMEG910.png"/>
+            </div>            
+
+            <div class="cabinet-meta-block__block-meta">              
+              {% set form = forms.pack %}
+              {% include "partials/_form.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cabinet-meta__right">
+        <h3 class="title-under title title--h3 title--ttn title--500 text--center">Ваш заказ</h3>
+        
+        
+      </div>
+    </form>
+    <!-- end cabinet-meta -->
+  </div>
+</section>
+<!-- end section -->

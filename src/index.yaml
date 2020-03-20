@@ -9,3 +9,4 @@ PageList:
 - file: cart.html
 - file: catalog-kovriki.html
 - file: catalog-item.html
+- file: order.html

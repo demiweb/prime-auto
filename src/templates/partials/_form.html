@@ -1,8 +1,42 @@
+{% if not form.justInner %}
 <form class="form{% if form.mod %} {{ form.mod }}{% endif %}">
+{% endif %}
   {% if form.cols %}
-  <div class="form__row">
-    {% for i in form.cols %}
-    <div class="form__col">
+    <div class="form__row{% if form.rowMod %} {{ form.rowMod }}{% endif %}">
+      {% for i in form.cols %}
+      <div class="form__col">
+        {% if i.name %}
+          {{ mixins.input(
+            name = i.name,
+            mod = i.mod,
+            type = i.type,
+            placeholder = i.placeholder,
+            value = i.value,
+            fieldClass = i.fieldClass,
+            fieldAttributes = i.fieldAttributes,
+            label = i.label,
+            options = i.options
+          ) }}
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if not form.noButton %}
+
+      {{ mixins.btn(
+        title = form.btn.title or 'Сохранить',
+        mod = 'btn--full',
+        href = false
+      ) }}
+    {% endif %}
+  
+  {% endif %}
+
+  {% if form.fields %}
+  {% for i in form.fields %}
+  <div class="form__field{% if i.wrapMod %} {{ i.wrapMod }}{% endif %}">
+    {% if i.name %}
       {{ mixins.input(
         name = i.name,
         mod = i.mod,
@@ -11,16 +45,15 @@
         value = i.value,
         fieldClass = i.fieldClass,
         fieldAttributes = i.fieldAttributes,
-        label = i.label
+        label = i.label,
+        options = i.options
       ) }}
-    </div>
-    {% endfor %}
+    {% endif %}
   </div>
-
-  {{ mixins.btn(
-    title = form.btn.title or 'Сохранить',
-    mod = 'btn--full',
-    href = false
-  ) }}
+  {% endfor %}
   {% endif %}
+
+
+{% if not form.justInner %}
 </form>
+{% endif %}
