@@ -10,6 +10,9 @@
 
     +text-overflow
 
+    +placeholder
+      color: inherit
+
   &__label
     display: block
     margin-bottom: rem(5)
@@ -51,8 +54,7 @@
 .counter
   position: relative
   display: inline-block
-  min-width: rem(120)
-  
+    
 
   font-size: em(14)
 
@@ -65,9 +67,11 @@
 
   &__input
     height: rem(35)
+    // width: 100%
+    width: rem(120)
+
     padding-left: rem(75)
     border: 1px solid  $lighten
-    width: 100%
 
   &__btn
     position: absolute

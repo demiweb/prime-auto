@@ -13,7 +13,7 @@
     <!-- begin cabinet-meta -->
     <form class="cabinet__block cabinet-meta">
       <div class="cabinet-meta__left">
-        <div class="cabinet-meta__block cabinet-meta-block">
+        <div class="cabinet-meta__block cabinet-meta-block cabinet-meta-block--block-bdb">
           <h3 class="title-under title title--h3 title--ttn title--500">Заполните данные</h3>
 
           <div class="cabinet-meta-block__block">
@@ -64,9 +64,25 @@
       </div>
 
       <div class="cabinet-meta__right">
-        <h3 class="title-under title title--h3 title--ttn title--500 text--center">Ваш заказ</h3>
+        <h3 class="title-under title title--h3 title--ttn title--500 text-center">Ваш заказ</h3>
         
+        <div class="section__block">
+          {% for i in range(0, 5) %}
+          {{ mixins.orderItem(
+            mod = 'cabinet-meta__order-item order-item--counter',
+            hasCounter = true
+          ) }}
+          {% endfor %}
+        </div>
         
+        <div class="section__price-block text-center">
+          <div class="price">Сумма: <strong>1900</strong>грн</div>
+          {{ mixins.btn(
+            title = 'Оформить заказ',
+            mod = '',
+            href = false
+          ) }}
+        </div>
       </div>
     </form>
     <!-- end cabinet-meta -->

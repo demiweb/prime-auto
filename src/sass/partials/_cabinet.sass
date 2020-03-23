@@ -33,7 +33,14 @@
   &__right
     margin-left: percentage(75 / 1650)
 
+  &__order-item
+    border-bottom: 1px solid  $lighten
+    padding-top: rem(15)
+    padding-bottom: rem(15)
+
 .cabinet-meta-block
+  $this: &
+
   &__title
     
 
@@ -48,4 +55,10 @@
 
   &__block-meta
     width: percentage((690 - 180) / 690)
+
+  &--block-bdb
+    #{$this}__block-meta
+      border-bottom: 1px solid  $lighten
+
+
 

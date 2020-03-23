@@ -1,7 +1,10 @@
 {% from 'mixins/_list.html' import list %}
 {% set list = list %}
 
-{% macro orderItem(mod, counter, amount) %}
+{% from 'mixins/_counter.html' import counter %}
+{% set counter = counter %}
+
+{% macro orderItem(mod, hasCounter, amount) %}
 <!-- begin order-item -->
 <div class="order-item{% if mod %} {{ mod }}{% endif %}">
   <div class="order-item__img">
@@ -21,6 +24,10 @@
         { dt: 'Количество:', dd: '1' }
       ]
     ) }}
+
+    {% if hasCounter %}
+    <div class="order-item__counter">{{ counter() }}</div>    
+    {% endif %}
   </div>
 
   {% if amount %}
