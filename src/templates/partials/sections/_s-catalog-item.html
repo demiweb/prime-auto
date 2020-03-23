@@ -4,7 +4,12 @@
     <div class="catalog-item__inner">
       <div class="catalog-item__left">
         {% include "partials/catalog-item/_hero.html" %}
-        {% include "partials/catalog-item/_form.html" %}
+
+        {% if page === 'search-results' %}
+          {% include "partials/catalog-item/_search-results.html" %}
+          {% else %}
+          {% include "partials/catalog-item/_form.html" %}
+        {% endif %}
       </div>
 
       <div class="catalog-item__right">

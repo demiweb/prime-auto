@@ -1,0 +1,127 @@
+{%set
+fstBlock = [
+  {
+    checked: true,
+    title: 'Полный комплект
+(1, 2, та 3  ряд)'
+  },
+  {
+    title: '2 и 3  ряд'
+  },
+  {
+    title: '1 ряд
+(водитель и пассажир)'
+  },
+  {
+    title: 'Полный комплект
+(1, 2, та 3  ряд)'
+  },
+  {
+    title: 'Полный комплект
+(1, 2, та 3  ряд)'
+  },
+  {
+    title: 'Полный комплект
+(1, 2, та 3  ряд)'
+  }
+]
+%}
+
+{%set
+scndBlock = [
+  { title: '', color: '' },
+  { title: '', color: '' },
+  { title: '', color: '' }
+]
+%}
+
+<div class="search-results">
+  <div class="section__top-link">
+    <a href="#" class="back-link">
+      {{ mixins.icon('left-arrow', 'back-link__icon') }}
+      Назад
+    </a>
+  </div>
+  
+  <form class="search-results__form">
+    <div class="search-results__top">
+      {{ mixins.list(
+        name = 'meta-list',
+        descr = true,
+        modifications = { list: 'search-results__meta-list meta-list', dt: 'meta-list__title', dd: 'meta-list__text' },
+        list = [
+          { dt: 'Артикул: ', dd: '4332121CD' }
+        ]
+      ) }}
+
+      {{ mixins.list(
+        name = 'meta-list',
+        descr = true,
+        modifications = { list: 'search-results__meta-list meta-list', dt: 'meta-list__title', dd: 'meta-list__text' },
+        list = [
+          { dt: 'Автомобиль:', dd: 'BMW X5 (2018)' }
+        ]
+      ) }}
+
+      <div class="search-results__top-btn">
+        <button class="btn-sm" type="button">Изменить авто</button>
+      </div>
+    </div>
+
+    <div class="search-results__block search-block">
+      <div class="search-block__top">
+        <h5 class="title title--h5 title--ttn">Шаг 1 - Выберите свой комплект</h5>
+      </div>
+
+      <div class="search-block__items">
+        {% for i in fstBlock %}
+        <div class="search-block__item">
+          <label class="search-radio">
+            <input class="search-radio__input" type="radio" name="kit" {% if i.checked %}checked{% endif %}>
+            <span class="search-radio__content">
+              <span class="search-radio__img">
+                <img class="js-lazy" src="" alt="" data-src="./img/38.png"/>
+              </span>
+
+              <span class="search-radio__title">{{ i.title | safe }}</span>
+            </span>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="search-results__block search-block">
+      <div class="search-block__top">
+        <h5 class="title title--h5 title--ttn">Шаг 2 - Выберите цвет</h5>
+      </div>
+      
+      <div class="search-block__items">
+        {% for i in scndBlock %}
+        <div class="search-block__item">
+          <label class="search-radio">
+            <input class="search-radio__input" type="radio" name="color" {% if i.checked %}checked{% endif %}>
+            <span class="search-radio__content">
+              <span class="search-radio__img" style="background-color: {{ i.color }}"></span>
+
+              <span class="search-radio__title">{{ i.title | safe }}</span>
+            </span>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="search-results__price-block">
+      <div class="price">
+       Сумма: <strong>855</strong> грн
+      </div>
+
+      {{ mixins.btn(
+        title = 'Добавить в корзину',
+        mod = '',
+        href = false
+      ) }}
+    </div>
+  </form>
+</div>

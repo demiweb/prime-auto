@@ -11,3 +11,5 @@ PageList:
 - file: catalog-item.html
 - file: order.html
 - file: partnership.html
+- file: politics.html
+- file: search-results.html

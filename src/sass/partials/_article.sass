@@ -1,4 +1,7 @@
 .article
+  +notlast
+      margin-bottom: rem(20)
+      
   p, li, h1, h2, h3, h4, h5, h6, ul, ol
     +notlast
       margin-bottom: rem(20)
@@ -10,6 +13,8 @@
   h1, h2, h3, h4, h5, h6
     @extend .title
     @extend .title--ttn
+    &.title--400
+      @extend .title--400
 
   h2
     font-size: em(24)
@@ -25,3 +30,7 @@
     li
       &::before
         margin-right: .3em
+
+  a
+    color: $c-link
+    text-decoration: underline

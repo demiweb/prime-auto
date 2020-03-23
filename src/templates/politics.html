@@ -1,0 +1,22 @@
+---
+title: politics
+page: politics
+hero: {
+  bg: 'politics.jpg',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { item: 'политика компании', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  title: 'политика компании'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-politics.html" %}
+{% endblock %}
