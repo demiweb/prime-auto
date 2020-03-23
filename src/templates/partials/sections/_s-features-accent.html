@@ -1,0 +1,47 @@
+{%set
+features = [
+  {
+    title: 'Диллерам',
+    text: 'У вас собственный магазин или онлайн-площадка <br> для продажи автомобильных аксессуаров?<br>
+Нам есть, что обсудить!'
+  },
+  {
+    title: 'Владельцам онлайн-магазинов',
+    text: 'У вас собственный магазин или онлайн-площадка <br> для продажи автомобильных аксессуаров?<br>
+Нам есть, что обсудить!'
+  },
+  {
+    title: 'менеджерам по продажам',
+    text: 'У вас собственный магазин или онлайн-площадка <br> для продажи автомобильных аксессуаров?<br>
+Нам есть, что обсудить!'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-two-colored pb-0 mb-0">
+  <div class="container container--lg">
+    <h2 class="section__title section__title--mb-lg title title--h2 text-center">кому будет полезно <br>с нами сотрудничать?</h2>
+  </div>
+
+  <div class="s-two-colored__bottom">
+    <div class="container container--lg">
+      <div class="grid">
+        {% for i in features %}
+        <div class="col col--4">
+          <!-- begin feature -->
+          <div class="feature feature--left">
+            <div class="feature__icon square-icon square-icon--dark"><div class="square-icon__inner">{{ loop.index }}</div></div>
+
+            <h3 class="feature__title title title--h3">{{ i.title | safe }}</h3>
+
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

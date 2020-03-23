@@ -3,6 +3,13 @@
   <div class="container container--lg">
     <div class="grid grid--align-items-center">
       <div class="col col--6">
+        {% if sSlider.simple %}
+        {# <div
+                class="section-image js-lazy"
+                data-background-image="./img/7.jpg"
+              ></div> #}
+        <img class="js-lazy" src="" alt="" data-src="./img/7.jpg"/>
+        {% else %}
         <!-- begin slider -->
         <div class="slider__wrap slider--img__wrap">
           <div class="swiper-container js-slider" data-slider="img">
@@ -22,6 +29,7 @@
           </div>
         </div>
         <!-- end slider -->
+        {% endif %}
       </div>
 
       <div class="col col--6">
@@ -34,7 +42,7 @@
 
           <div class="section-block__btn">
             {{ mixins.btn(
-              title = 'Подобрать коврик',
+              title = sSlider.btn.title or 'Подобрать коврик',
               mod = ''
             ) }}
           </div>

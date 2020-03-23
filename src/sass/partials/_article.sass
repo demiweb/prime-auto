@@ -15,9 +15,10 @@
     font-size: em(24)
 
   ul
-    padding-left: 1em
-    li
-      list-style-type: disc
+    &:not(.list)
+      padding-left: 1em
+      li
+        list-style-type: disc
 
   ol
     +counter('article', ')')

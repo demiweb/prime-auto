@@ -1,0 +1,23 @@
+{%set
+imgs = [
+  { img: '1_02.jpg' },
+  { img: '1_03.jpg' },
+  { img: '1_04.jpg' },
+  { img: '1_05.jpg' },
+  { img: '1_06.jpg' },
+  { img: '1_07.jpg' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--lg">
+  <div class="line-imgs">
+    {% for i in imgs %}
+    <div
+      class="line-imgs__img js-lazy"
+      data-background-image="./img/line-images/{{ i.img }}"
+    ></div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->
