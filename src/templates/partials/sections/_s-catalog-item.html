@@ -1,3 +1,33 @@
+{%set
+products = [
+  {
+    title: 'Подставки для авто',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_08.jpg'
+  },
+  {
+    title: 'Роллеты для кузова',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_03.jpg'
+  },
+  {
+    title: 'Дефлекторы капота',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_05.jpg'
+  },
+  {
+    title: 'Чехлы для сидений',
+    subttl: 'универсальный портативный держатель',
+    img: 'products/1_11.jpg'
+  },
+  {
+    title: 'Кунги, крышки кузова',
+    subttl: '',
+    img: 'products/1_18.jpg'
+  }
+]
+%}
+
 <!-- begin catalog-item -->
 <section class="catalog-item">
   <div class="container container--lg">
@@ -16,6 +46,26 @@
         {% include "partials/catalog-item/_gallery.html" %}
       </div>
     </div>
+
+    {% if page === 'search-results' %}
+      <h2 class="section__title title title--h2 text-center">также рекомендуем</h2>
+      
+      <div class="section__block section__block--md">
+        <div class="grid">
+          {% for i in products %}
+          <div class="col col--2-10">
+            {{ mixins.card(
+              title = i.title,
+              subttl = i.subttl,
+              img = i.img,
+              button = true
+            ) }}
+          </div>
+          
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
 
     {% include "partials/catalog-item/_tabs.html" %}
   </div>

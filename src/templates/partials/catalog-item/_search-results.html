@@ -3,44 +3,45 @@ fstBlock = [
   {
     checked: true,
     title: 'Полный комплект
-(1, 2, та 3  ряд)'
+      (1, 2, та 3  ряд)'
   },
   {
     title: '2 и 3  ряд'
   },
   {
     title: '1 ряд
-(водитель и пассажир)'
+      (водитель и пассажир)'
   },
   {
     title: 'Полный комплект
-(1, 2, та 3  ряд)'
+      (1, 2, та 3  ряд)'
   },
   {
     title: 'Полный комплект
-(1, 2, та 3  ряд)'
+      (1, 2, та 3  ряд)'
   },
   {
     title: 'Полный комплект
-(1, 2, та 3  ряд)'
+      (1, 2, та 3  ряд)'
   }
 ]
 %}
 
 {%set
 scndBlock = [
-  { title: '', color: '' },
-  { title: '', color: '' },
-  { title: '', color: '' }
+  { checked: true, title: 'Повний комплект (1, 2, та 3  ряд)', color: '#1c2124' },
+  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#663d14' },
+  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#c09a6b' },
+  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#5e5e5e' }
 ]
 %}
 
 <div class="search-results">
   <div class="section__top-link">
-    <a href="#" class="back-link">
+    <button class="back-link">
       {{ mixins.icon('left-arrow', 'back-link__icon') }}
       Назад
-    </a>
+    </button>
   </div>
   
   <form class="search-results__form">
