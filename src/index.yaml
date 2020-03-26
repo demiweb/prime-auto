@@ -18,3 +18,4 @@ PageList:
 - file: 404.html
 - file: success.html
 - file: thanks.html
+- file: registration.html

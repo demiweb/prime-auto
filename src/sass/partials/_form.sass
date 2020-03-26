@@ -1,4 +1,6 @@
 .form
+  $this: &
+
   &__row
     display: flex
     flex-wrap: wrap
@@ -19,6 +21,28 @@
     font-weight: 700
     font-size: em(30)
     margin-bottom: rem(30)
+    &--mb-sm
+      margin-bottom: rem(10)
+
+  &__subttl
+    color: #8d8d8d
+    font-size: em(12)
+    margin-bottom: rem(15)
+
+  &__text
+    font-size: em(14)
+    color: #8d8d8d
+    a
+      text-decoration: underline
+
+  &__links
+    display: flex
+    text-align: left
+    #{$this}__text
+      width: 50%
+      &:last-child
+        text-align: right
+
 
   &__field
     +notlast
@@ -34,4 +58,6 @@
     background-color: $lighten
     padding: rem(50) rem(60)
     text-align: center
-    // #{}
+  
+  &--bg-white
+    background-color: $white

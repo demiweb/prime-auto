@@ -1,0 +1,22 @@
+---
+title: registration
+page: registration
+hero: {
+  bg: 'registration.jpg',
+  mod: 'hero--xs',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { item: 'о нас', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  title: 'о нас',
+  subttl: 'Компания Prime  Auto с 2000 года занимается продажей автомобильных аксессуаров в Украине, завоевав лидирующие позиции на этом рынке.'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-registration.html" %}
+{% endblock %}
