@@ -1,0 +1,26 @@
+<!-- begin s-full -->
+<section class="s-full">
+  <div class="container container--lg">
+    <div class="s-full__inner">
+      {% if sFull.icon %}
+        <img class="s-full__icon js-lazy" src="" alt="" data-src="./img/check.svg"/>
+      {% endif %}
+
+      {% if sFull.title %}
+        <h1 class="s-full__title title title--h2">{{ sFull.title | safe }}</h1>
+      {% endif %}
+
+      {% if sFull.subttl %}
+        <div class="s-full__subttl">{{ sFull.subttl | safe }}</div>
+      {% endif %}
+
+      {% if sFull.btn %}
+        {{ mixins.btn(
+          title = sFull.btn.title,
+          mod = ''
+        ) }}
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- end s-full -->

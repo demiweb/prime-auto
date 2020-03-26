@@ -1,0 +1,17 @@
+---
+title: error
+page: error
+mainClass: ''
+sFull: {
+  title: '404',
+  subttl: 'К сожалению, такой страницы не существует',
+  btn: {
+    title: 'На главную'
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-full.html" %}
+{% endblock %}
