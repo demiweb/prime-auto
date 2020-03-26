@@ -93,8 +93,9 @@
     max-width: rem(735)
 
 .s-two-colored
+  $this: &
+
   position: relative
-  margin-bottom: rem(30)
   &__top
     padding-top: rem(90)
     padding-bottom: rem(70)
@@ -111,12 +112,18 @@
 
     position: absolute
     z-index: 1
-    right: $container--lg-padding    
+    right: $container--lg-padding
+    bottom: 0 
     
-    bottom: rem(-30)
     padding-top: 37%
 
     width: percentage(670 / 1740)
+    
+  &--bottom-offset
+    margin-bottom: rem(30)
+    #{$this}__img
+      &.lazy--loaded
+        bottom: rem(-30)
 
 .s-text-word
   padding-top: vw(340)

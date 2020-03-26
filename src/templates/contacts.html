@@ -1,0 +1,25 @@
+---
+title: contacts
+page: contacts
+hero: {
+  title: 'Контакты',
+  subttl: 'Мы всегда рады вашему звонку или визитку.',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { item: 'Контакты', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  grid: {
+    col: 'col--8'
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}
