@@ -1,5 +1,6 @@
 export default {
   lazy: 'js-lazy',
+  rating: 'js-rating',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

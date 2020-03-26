@@ -1,1 +1,42 @@
-testimonials
+<!-- begin testimonials -->
+<div class="testimonials">
+  <div class="testimonials__top">
+    <div class="testimonials__top-rating">
+      {{ mixins.rating(
+        grade = 4,
+        title = 'общий рейтинг:'
+      ) }}
+
+      <small>Проголосовало: 43</small>
+    </div>
+
+    <a href="#" class="testimonials__top-link link">Оставить отзыв</a>
+  </div>
+
+  <div class="testimonials__slider slider__wrap slider--testimonials__wrap">
+    <div class="swiper-container js-slider" data-slider="testimonials">
+      <div class="swiper-wrapper">
+        {% for i in range(0, 1) %}
+        <div class="swiper-slide testimonial">
+          <div class="testimonial__rating rating-block">
+            {{ mixins.rating(
+              mod = 'rating--sm rating-block__item',
+              grade = 4
+            ) }}
+
+            <div class="rating-block__item">Андрей Карпенко</div>
+            <div class="rating-block__item">17.09.2020</div>
+          </div>
+
+          <h5 class="testimonial__title title title--h5">Отличный сервис и хорошие коврики</h5>
+
+          <div class="testimonial__text">Отличные коврики в салон ! Покупаю в третий автомобиль. Аналогов на рынке Украины нет. В 30 тоету кемри я заказал себе и был доволен и также остаюсь. Рекомендую всем вещь в машине для нашей зимы просто отличная тема. Прежде чем заказать одолевали сомнения. Не мог найти на Range Rover evoque Цена кусается. Но положив их в машину не пожалел. Качество супер. Доволен.</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="slider__pagination js-slider-pagination"></div>
+  </div>
+</div>
+<!-- end testimonials -->

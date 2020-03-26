@@ -5,6 +5,8 @@ import classNames from './classNames'
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
+import addRatingIds from './methods/addRatingIds'
+
 import { isModernBrowser, setVhProperty } from './helpers'
 
 import SLider from './components/Slider/Slider'
@@ -45,6 +47,7 @@ class App {
       setHTMLClassNames,
       setLazy,
       setVhProperty,
+      addRatingIds,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

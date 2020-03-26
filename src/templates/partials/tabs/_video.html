@@ -1,1 +1,14 @@
-video
+<div class="grid">
+  {% for i in range(0, 5) %}
+  <div class="col col--2-10">
+    <a
+      href="#"
+      class="gallery-item js-lazy"
+      data-background-image="./img/video-thumb.jpg"
+    ></a>
+{#     <div class="gallery-item">
+      <iframe class="js-lazy" src="" data-src="https://www.youtube.com/embed/MUOv8ksL9zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> #}
+  </div>
+  {% endfor %}
+</div>
