@@ -1,0 +1,27 @@
+---
+title: delivery
+page: delivery
+hero: {
+  bg: 'delivery.jpg',
+  title: 'оплата и доставка',
+  subttl: 'Prime Auto предлагает несколько вариантов оплаты и доставки товара
+и всегда проконсультируют вас по всем возникшим вопросам.',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { item: 'оплата и доставка', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  grid: {
+    col: 'col--8'
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-delivery.html" %}
+{% endblock %}
