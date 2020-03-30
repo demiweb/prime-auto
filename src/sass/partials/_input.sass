@@ -9,7 +9,6 @@
     height: rem(36)
 
     +text-overflow
-
     +placeholder
       color: inherit
 
@@ -23,7 +22,7 @@
     #{$text-inputs}
       border: 0
       background-color: $lightest
-      height: 50px
+      height: rem(50)
       text-transform: uppercase
       font-weight: 500
 
@@ -59,6 +58,105 @@
           background-color: transparent
           position: absolute
           display: block
+
+  &--checkbox
+    position: relative
+    padding-left: 1.5em
+    user-select: none
+
+    text-align: left
+    display: block
+    input[type="checkbox"]
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      &:checked + span
+        &::after
+          content: ''
+
+          +icon-arrow(.8, .4, .06, currentColor, -45, em)
+
+          top: .25em
+          left: .15em
+          position: absolute
+          display: block
+      & + span
+        &::before
+          content: ''
+          border: 1px solid currentColor
+          width: 1em
+          height: 1em
+          top: .1em
+          left: 0
+          background-color: transparent
+          position: absolute
+          display: block
+
+  &--select-color
+    .custom-select
+      &__opener, &__panel
+        background-color: $lightest
+
+.custom-select
+  $this: &
+
+  position: relative
+  font-weight: 500
+  text-align: left
+  text-transform: uppercase
+
+  select
+    position: absolute
+    opacity: 0
+    visibility: hidden
+
+  &__opener
+    height: rem(50)
+    background-color: $white
+    padding: rem(15) rem(20)
+
+    cursor: pointer
+
+    +before
+      +arr(1em, .5em, currentColor, b)
+      position: absolute
+      z-index: 1
+      top: 50%
+      transform: translate(0, -50%)
+      right: rem(20)
+
+  &__panel
+    position: absolute
+    z-index: 5
+    top: 100%
+    left: 0
+    right: 0
+
+    max-height: 250px
+    overflow: auto
+
+    background-color: $white
+
+    +hidden
+
+  &__option
+    padding: rem(15) rem(20)
+    cursor: pointer
+
+    +tr(background-color .3s)
+    +hover
+      background-color: $lightest
+
+    &[data-value="placeholder"]
+      display: none
+
+  &--open
+    #{$this}__panel
+      +visible
+
+  &--disabled
+    opacity: .5
+
 
 .counter
   position: relative

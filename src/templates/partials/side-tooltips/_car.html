@@ -1,15 +1,17 @@
 {%set
 form = {
-  mod: 'catalog-item__form',
+  mod: 'form--bg-white',
   title: 'Выберите ваше авто',
-  priceInfo: true,
+  titleMod: 'form__title--mb-sm',
+  subttl: 'Выберите марку, год и модель вашего авто и система подберет
+    подходящие аксессуары специально для вас',
   button: {
     title: 'Подобрать'
   },
   fields: [
     {
       name: 'select',
-      fieldAttributes: {},
+      mod: 'input--select-color',
       fieldClass: 'js-select',
       options: [
         { value: 'placeholder', option: 'Марка' },
@@ -17,10 +19,10 @@ form = {
         { value: '2', option: 'Марка2' },
         { value: '3', option: 'Марка3' }
       ]
-    },
+    },    
     {
       name: 'select',
-      fieldAttributes: { disabled: '' },
+      mod: 'input--select-color',
       fieldClass: 'js-select',
       options: [
         { value: 'placeholder', option: 'год' },
@@ -31,7 +33,7 @@ form = {
     },
     {
       name: 'select',
-      fieldAttributes: { disabled: '' },
+      mod: 'input--select-color',
       fieldClass: 'js-select',
       options: [
         { value: 'placeholder', option: 'модель' },
@@ -44,4 +46,6 @@ form = {
 }
 %}
 
-{% include "partials/_form-block.html" %}
+<div class="side-btns__tooltip">
+  {% include "partials/_form-block.html" %}
+</div>

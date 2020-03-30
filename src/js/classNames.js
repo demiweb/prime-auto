@@ -1,6 +1,7 @@
 export default {
   lazy: 'js-lazy',
   rating: 'js-rating',
+  select: 'js-select',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

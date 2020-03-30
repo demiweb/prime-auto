@@ -1,0 +1,39 @@
+{%set
+form = {
+  mod: 'form--bg-white',
+  title: 'Авторизация',
+  titleMod: 'form__title--mb-sm',
+  subttl: 'Введите ваши данные ниже',
+  authLinks: true,
+  button: {
+    title: 'Войти'
+  },
+  fields: [
+    {
+      name: 'input',
+      type: 'email',
+      mod: 'input--lg',
+      placeholder: 'email',
+      label: {}
+    },
+    {
+      name: 'input',
+      type: 'password',
+      mod: 'input--lg',
+      placeholder: 'пароль',
+      label: {}
+    },
+    {
+      name: 'checkbox',
+      type: 'checkbox',
+      mod: '',
+      placeholder: '',
+      label: { last: '<span>Запомнить данные</span>' }
+    }
+  ]
+}
+%}
+
+<div class="side-btns__tooltip">
+  {% include "partials/_form-block.html" %}
+</div>

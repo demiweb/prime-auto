@@ -1,23 +1,41 @@
 {%set
 form = {
+  mod: 'section__form form--bg-white',
+  titleMod: 'mb-0',
+  title: 'Регистрация',
+  subttl: 'Введите ваши данные ниже',
+  button: {
+    title: 'Зарегистрироваться'
+  },
+  links: true,
   fields: [
     {
+      name: 'input',
+      mod: 'input--lg',
       type: 'text',
       placeholder: 'ФИО'
     },
     {
+      name: 'input',
+      mod: 'input--lg',
       type: 'tel',
       placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _'
     },
     {
+      name: 'input',
+      mod: 'input--lg',
       type: 'email',
       placeholder: 'email'
     },
     {
+      name: 'input',
+      mod: 'input--lg',
       type: 'password',
       placeholder: 'придумайте пароль'
     },
     {
+      name: 'input',
+      mod: 'input--lg',
       type: 'password',
       placeholder: 'повторите пароль'
     }
@@ -28,38 +46,7 @@ form = {
 <!-- begin section -->
 <section class="section section--lg">
   <div class="container container--lg">
-    <div class="section__form form form--block form--bg-white">
-      <div class="form__title mb-0">Регистрация</div>
-      <div class="form__subttl">Введите ваши данные ниже</div>
-
-      <form>
-        {% for i in form.fields %}
-          <div class="form__field">
-            {{ mixins.input(
-              name = 'input',
-              mod = 'input--lg',
-              type = i.type,
-              placeholder = i.placeholder,
-              value = '',
-              fieldClass = ''
-            ) }}
-          </div>
-        {% endfor %}
-
-        <div class="form__field">
-          {{ mixins.btn(
-            title = 'Зарегистрироваться',
-            mod = 'btn--full',
-            href = false
-          ) }}
-        </div>
-
-        <div class="form__links">
-          <div class="form__text">Создавая новый аккаунт вы соглашаетесь с <a href="#">политикой компании</a></div>
-          <div class="form__text"><a href="#">Уже есть аккаунт?</a></div>
-        </div>
-      </form>
-    </div>
+    {% include "partials/_form-block.html" %}
   </div>
 </section>
 <!-- end section -->

@@ -2,37 +2,78 @@
   text-transform: uppercase
   color: $dark
 
-  ul
+  > ul
     display: flex
     align-items: center
 
     +md
       display: block
 
-  a
-    display: flex
-    align-items: center
-    justify-content: center
+    > li
+      position: relative
+      > ul
+        position: absolute
+        top: 100%
+        left: 0
 
-    height: $header-height
-    border-right: 1px solid  $c-border
+        background-color: $white
+        font-size:  em(14)
 
-    padding-left: rem(20)
-    padding-right: rem(20)
+        width: rem(511)
+        padding: rem(30) rem(20) rem(15)
+        border-top: 1px solid $c-border    
+        
+        +ready
+          +tr(opacity .4s, visibility .4s)
+        +hidden
 
-    +tr(color .3s)
-    +hover
-      color: $accent
+        > li
+          margin-bottom: rem(15)
 
-    +lg
-      height: $header-height-lg
+          > a
+            +tr(color .3s)
+            +hover
+              color: #7c7c7c
 
-    &:first-child
-      border-left: 1px solid $c-border
+      > a
+        display: flex
+        align-items: center
+        justify-content: center
 
-    .icon
-      margin-right: .3em
-      font-size: 1.5em
+        height: $header-height
+        border-right: 1px solid  $c-border
+
+        padding-left: rem(20)
+        padding-right: rem(20)
+
+        font-weight: 500
+
+        +tr(color .3s)
+        +hover
+          color: $accent
+
+        +lg
+          height: $header-height-lg
+
+        &:first-child
+          border-left: 1px solid $c-border
+
+        .icon
+          margin-right: .3em
+          font-size: 1.5em
+
+      &:hover
+        > ul
+          +visible
+
+      &.has-dropdown-lg
+        > ul
+          width: rem(618)
+          display: flex
+          flex-wrap: wrap
+          > li
+              width: 50%
+              padding-right: rem(10)  
 
   &--footer
     color: inherit

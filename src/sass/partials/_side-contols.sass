@@ -47,11 +47,18 @@
         position: static
         transform: none
 
+
 .side-btns
   $this: &
 
   +lg
     display: flex
+
+  &__item
+    position: relative
+    // &:nth-child(4)
+    //   #{$this}__tooltip
+    //     +visible
 
   &__btn
     display: flex
@@ -86,3 +93,24 @@
     &--active
       color: $white
       background-color: $accent
+
+  &__tooltip
+    position: absolute
+    z-index: 5
+    top: 0
+    right: 100%
+    +hidden
+
+    min-width: 615px
+
+.side-search
+  min-width: 0
+  width: 400px
+  &__input
+    height: $header-height
+    width: 100%
+    padding: rem(20) rem(30)
+
+    color: $light
+    background-color: $lightest
+    font-size: em(14)    

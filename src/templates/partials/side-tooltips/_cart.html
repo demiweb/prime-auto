@@ -1,0 +1,26 @@
+<div class="side-btns__tooltip block side-cart">
+  <div class="side-cart__title block__title">Корзина</div>
+  
+  <form>
+    <div class="side-cart__items">
+      {% for i in range(0, 5) %}
+      {{ mixins.orderItem(
+        mod = 'side-cart__order-item order-item--counter',
+        hasCounter = true
+      ) }}
+      {% endfor %}
+    </div>
+
+    <div class="section__price-block text-center">
+      <div class="price">Сумма: <strong>1900</strong> грн</div>
+
+      {{ mixins.btn(
+        title = 'Оформить заказ',
+        mod = '',
+        href = false
+      ) }}
+
+      <a href="#" class="link">Перейти в корзину</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,47 @@
+{%set
+contacts = [
+  {
+    icon: 'phone-call',
+    title: 'Телефоны',
+    text: '
+      <p><a href="tel:0443318327">(044) 331-83-27</a></p>
+      <p><a href="tel:0975516655">(097) 551-66-55</a></p>
+      <p><a href="tel:0667263153">(066) 726-31-53</a></p>
+    '
+  },
+  {
+    icon: 'envelope',
+    title: 'e-mail',
+    text: '
+      <p><a href="mailto:info@primeauto.com.ua">info@primeauto.com.ua</a></p>
+      <p><a href="mailto:sales@primeauto.com.ua">sales@primeauto.com.ua</a></p>
+    '
+  },
+  {
+    icon: 'placeholder',
+    title: 'Адресс',
+    text: 'г.Киев б-р Перова, 19
+(маг.21, маг.33)
+'
+  }
+]
+%}
+
+<div class="side-btns__tooltip block">
+  <div class="block__title">Свяжитесь с нами</div>
+  <div class="block__subttl">Мы ждем вашего звонка, также вы можете
+написать нам на e-mail</div>
+
+  <!-- begin contacts -->
+  <div class="contacts">
+    {% for i in contacts %}
+    <div class="contacts__item contact">
+      {{ mixins.icon(i.icon, 'contact__icon') }}
+      <h4 class="contact__title title title--h4">{{ i.title | safe }}</h4>
+
+      <div class="contact__text">{{ i.text | safe }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- end contacts -->
+</div>

@@ -1,0 +1,58 @@
+<!-- begin form -->
+<div class="form form--block{% if form.mod %} {{ form.mod }}{% endif %}">
+  {% if form.title %}
+  <div class="form__title{% if form.titleMod %} {{ form.titleMod }}{% endif %}">{{ form.title }}</div>
+  {% endif %}
+
+  {% if form.subttl %}
+    <div class="form__subttl">{{ form.subttl }}</div>
+  {% endif %}
+  
+  <form>
+    {% for i in form.fields %}
+    <div class="form__field">
+      {{ mixins.input(
+        name = i.name,
+        mod = i.mod,
+        type = i.type,
+        placeholder = i.placeholder,
+        value = '',
+        fieldClass = i.fieldClass,
+        options = i.options,
+        fieldAttributes = i.fieldAttributes,
+        label = i.label
+      ) }}
+    </div>
+    {% endfor %}
+
+    <div class="form__field">
+      {{ mixins.btn(
+        title = form.button.title,
+        mod = 'btn--full',
+        href = false
+      ) }}
+    </div>
+
+    {% if form.priceInfo %}
+      <div class="form__field price-info">
+        Диапазон цен:
+        <strong>320 грн - 3500 грн</strong>
+      </div>
+    {% endif %}
+
+    {% if form.links %}
+      <div class="form__links">
+        <div class="form__text">Создавая новый аккаунт вы соглашаетесь с <a href="#">политикой компании</a></div>
+        <div class="form__text"><a href="#">Уже есть аккаунт?</a></div>
+      </div>
+    {% endif %}
+
+    {% if form.authLinks %}
+      <div class="form__links">
+        <div class="form__text"><a href="#">Забыли пароль?</a></div>
+        <div class="form__text"><a href="#">Новый пользователь?</a></div>
+      </div>
+    {% endif %}
+  </form>
+</div>
+<!-- end form -->

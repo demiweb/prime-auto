@@ -1,16 +1,22 @@
 <!-- begin side-controls -->
 <div class="side-controls">
-  {{ mixins.list(
-    name = 'side-btns',
-    modifications = { wrap: '', list: 'side-controls__btns side-btns', item: 'side-btns__item', button: 'side-btns__btn' },
-    list = [
-      { button: mixins.icon('magnifying-glass')  },
-      { button: mixins.icon('car')  },
-      { button: mixins.icon('user')  },
-      { button: mixins.icon('shopping-cart')  },
-      { button: mixins.icon('phone-call')  }
-    ]
-  ) }}
+  <ul class="side-controls__btns side-btns">
+    <li class="side-btns__item"
+      ><button class="side-btns__btn">{{ mixins.icon('magnifying-glass') }}</button
+    >{% include "partials/side-tooltips/_search.html" %}</li>
+    <li class="side-btns__item"
+      ><button class="side-btns__btn">{{ mixins.icon('car') }}</button
+    >{% include "partials/side-tooltips/_car.html" %}</li>
+    <li class="side-btns__item"
+      ><button class="side-btns__btn">{{ mixins.icon('user') }}</button
+    >{% include "partials/side-tooltips/_cabinet.html" %}</li>
+    <li class="side-btns__item"
+      ><button class="side-btns__btn">{{ mixins.icon('shopping-cart') }}</button
+    >{% include "partials/side-tooltips/_cart.html" %}</li>
+    <li class="side-btns__item"
+      ><button class="side-btns__btn">{{ mixins.icon('phone-call') }}</button
+    >{% include "partials/side-tooltips/_contacts.html" %}</li>
+  </ul>
 
   {{ mixins.list(
     name = 'side-btns',
