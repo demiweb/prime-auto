@@ -18,6 +18,8 @@
 
   &--lg
     font-size: rem(78)
+    +lg
+      font-size: rem(40)
 
 .next
   transform: scaleX(-1)
@@ -69,16 +71,17 @@
     &__wrap
       max-width: rem(820)
       padding-right: rem(125)
-      // .swiper-container
-      //   max-width: percentage(733 / 960)
-      //   margin-right: 0
-      //   margin-left: 0
+      +lg
+        padding-right: rem(50)
+
 
       #{$this}__controls
         position: absolute
         z-index: 1
         right: 0
         top: rem(55)
+        +lg
+          top: rem(30)
         
 
 
