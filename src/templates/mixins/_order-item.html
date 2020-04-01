@@ -4,7 +4,7 @@
 {% from 'mixins/_counter.html' import counter %}
 {% set counter = counter %}
 
-{% macro orderItem(mod, hasCounter, amount) %}
+{% macro orderItem(mod, hasCounter, amount, delete) %}
 <!-- begin order-item -->
 <div class="order-item{% if mod %} {{ mod }}{% endif %}">
   <div class="order-item__img">
@@ -33,6 +33,12 @@
   {% if amount %}
     <div class="order-item__right">
       <div class="price price--sm">Сумма: <strong>300</strong> грн</div>
+    </div>
+  {% endif %}
+
+  {% if delete %}
+    <div class="order-item__btn">
+      <button class="delete-btn" type="button"><span></span></button>
     </div>
   {% endif %}
 </div>

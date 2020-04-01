@@ -59,8 +59,10 @@
     margin-bottom: rem(30)
 
   &__price-block
-    .price
-      margin-bottom: rem(15)
+    .price, .btn
+      +notlast
+        margin-bottom: rem(15)
+
 
   &__form
     max-width: rem(615)

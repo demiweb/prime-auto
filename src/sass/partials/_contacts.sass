@@ -1,0 +1,27 @@
+.contacts
+  display: flex
+  flex-wrap: wrap
+
+  margin-left: rem(-10)
+  margin-right: rem(-10)
+
+  &__item
+    width: calc(33.33333% - #{rem(20)})
+    margin-left: rem(10)
+    margin-right: rem(10)
+
+.contact
+  &__icon
+    fill: $accent
+    margin-bottom: rem(8)
+
+  &__title
+    margin-bottom: rem(8)
+
+  &__text
+    font-size: em(14)
+
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent

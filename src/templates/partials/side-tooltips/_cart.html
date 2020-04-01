@@ -5,8 +5,9 @@
     <div class="side-cart__items">
       {% for i in range(0, 5) %}
       {{ mixins.orderItem(
-        mod = 'side-cart__order-item order-item--counter',
-        hasCounter = true
+        mod = 'side-cart__order-item order-item--counter order-item--xs',
+        hasCounter = true,
+        delete = true
       ) }}
       {% endfor %}
     </div>
@@ -20,7 +21,9 @@
         href = false
       ) }}
 
-      <a href="#" class="link">Перейти в корзину</a>
+      <div>
+        <a href="#" class="link link--tdn">Перейти в корзину</a>
+      </div>
     </div>
   </form>
 </div>
