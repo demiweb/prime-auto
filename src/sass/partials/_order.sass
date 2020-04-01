@@ -37,8 +37,6 @@
     +notlast
       margin-bottom: rem(40)
 
-
-
 .order-item
   $this: &
   display: flex
@@ -47,18 +45,22 @@
     width: 100%
     +text-overflow
     margin-bottom: rem(8)
+    text-align: left
 
   &__img
-    width: rem(115)
-    // flex: 0 0 rem(115)    
+    width: rem(115)  
     img
       min-width: 10px
       min-height: 10px
+    +xs
+      width: rem(80)
 
   &__content
     padding-left: rem(15)
     padding-right: rem(15)
     width: calc(100% - #{rem(115)})
+    +xs
+      width: calc(100% - #{rem(80)})
   
   &--center
     #{$this}__content
@@ -88,14 +90,26 @@
 
     #{$this}__title
       width: 70%
+      +xs
+        width: 100%
 
     #{$this}__meta-list
       width: 70%
+      +xs
+        width: 100%
 
     #{$this}__counter
       width: 30%
+      +xs
+        width: 100%
+        // text-align: left
+        padding-top: rem(10)
+        padding-bottom: rem(10)
 
     #{$this}__btn
       width: 100%
       text-align: left
       padding-left: (rem(115) / 2) - (rem(20) / 2) // image half width minus button half width
+      +xs
+        padding-left: 0
+        text-align: center

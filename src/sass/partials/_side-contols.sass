@@ -60,6 +60,21 @@
       #{$this}__tooltip
         +visible
 
+    &:nth-child(2)
+      #{$this}__tooltip
+        overflow: visible
+    &:nth-child(3)
+      #{$this}__tooltip
+        max-height: calc(100vh - #{$container--lg-padding * 2}) // screen height - buttons above height
+        +lg
+          max-height: calc(100vh - #{$container--lg-padding * 2})
+    &:nth-child(4)
+      #{$this}__tooltip
+        max-height: calc(100vh - #{$header-height-lg* 2}) // screen height - header - bottom buttons panel
+    &:nth-child(5)
+      #{$this}__tooltip
+        overflow: visible
+
   &__btn
     display: flex
     align-items: center
@@ -102,10 +117,21 @@
     +hidden
 
     min-width: 615px
+    overflow: auto  
+
+    +lg
+      position: fixed
+      top: auto
+      right: 0
+      left: 0
+      bottom: $header-height-lg
+      min-width: 0
 
 .side-search
   min-width: 0
   width: 400px
+  +lg
+    width: 100vw
   &__input
     height: $header-height
     width: 100%
@@ -115,10 +141,15 @@
     background-color: $lightest
     font-size: em(14)
 
-.side-cart
+    +lg
+      height: $header-height-lg
+      padding: rem(10) rem(15)
+
+.side-cart  
   &__items
     max-height: 500px
     overflow: auto
+    margin-bottom: rem(15)
   &__order-item
     padding: rem(20)
     border-bottom: 1px solid  $lighten

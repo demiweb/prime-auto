@@ -1,14 +1,25 @@
 .contacts
   display: flex
   flex-wrap: wrap
+  justify-content: center
 
   margin-left: rem(-10)
   margin-right: rem(-10)
+
+  +xs
+    margin-left: rem(-5)
+    margin-right: rem(-5)
 
   &__item
     width: calc(33.33333% - #{rem(20)})
     margin-left: rem(10)
     margin-right: rem(10)
+    margin-bottom: rem(20)
+
+    +xs
+      margin-left: rem(5)
+      margin-right: rem(5)
+      width: calc(50% - #{rem(10)})
 
 .contact
   &__icon

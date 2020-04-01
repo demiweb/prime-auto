@@ -18,16 +18,13 @@
     margin-bottom: rem(15)
 
   &__title
-    font-weight: 700
-    font-size: em(30)
-    margin-bottom: rem(30)
+    @extend .block__title
     &--mb-sm
-      margin-bottom: rem(10)
+      @extend .block__title--mb-sm    
 
   &__subttl
-    color: $light-dark
-    font-size: em(12)
-    margin-bottom: rem(15)
+    @extend .block__subttl
+    
 
   &__text
     font-size: em(14)
@@ -58,6 +55,12 @@
     background-color: $lighten
     padding: rem(50) rem(60)
     text-align: center
+
+    +lg
+      padding: rem(30)
+
+    +md
+      padding: rem(30) rem(15)
   
   &--bg-white
     background-color: $white
