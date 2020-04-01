@@ -67,10 +67,12 @@
       #{$this}__tooltip
         max-height: calc(100vh - #{$container--lg-padding * 2}) // screen height - buttons above height
         +lg
-          max-height: calc(100vh - #{$container--lg-padding * 2})
+          max-height: calc(100vh - #{$header-height-lg * 2})
     &:nth-child(4)
       #{$this}__tooltip
-        max-height: calc(100vh - #{$header-height-lg* 2}) // screen height - header - bottom buttons panel
+        max-height: calc(100vh - #{$container--lg-padding * 3}) // screen height - buttons above height
+        +lg
+          max-height: calc(100vh - #{$header-height-lg * 2})
     &:nth-child(5)
       #{$this}__tooltip
         overflow: visible
