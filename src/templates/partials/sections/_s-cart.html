@@ -46,7 +46,7 @@ table = {
 
 <!-- begin section -->
 <section class="section">
-  <div class="container container--lg">
+  <div class="container container--lg-right-gap">
     <div class="page-inner">
       <div class="section__top-link">
         <a href="#" class="back-link">{{ mixins.icon('left-arrow', 'back-link__icon') }} Вернуться к покупкам</a>
@@ -77,8 +77,12 @@ table = {
         
       </div>
       <!-- end table -->
+      
+    </div>
+  </div>
 
-      <div class="section__price-block text-center">
+  <div class="container container--lg">
+    <div class="section__price-block text-center">
         <div class="price">Сумма: <strong>27000</strong>грн</div>
 
         {{ mixins.btn(
@@ -86,7 +90,6 @@ table = {
           mod = ''
         ) }}
       </div>
-    </div>
   </div>
 </section>
 <!-- end section -->

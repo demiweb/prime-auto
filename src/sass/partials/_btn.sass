@@ -34,6 +34,11 @@
   &--md
     min-width: rem(255)
 
+  &--sm
+    padding-top: 0
+    padding-bottom: 0
+    height: rem(44)
+
   &--transp-white
     border-color: $white
     background-color: transparent
@@ -57,6 +62,18 @@
   > span
     +icon-close(.7rem, 1px, currentColor)
     display: block
+
+.btn-sm-round
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+  background-color: #ededed
+  color: $accent
+
+  width: rem(34)
+  height: rem(34)
+  border-radius: 50%
 
 .btn-sm
   display: inline-flex

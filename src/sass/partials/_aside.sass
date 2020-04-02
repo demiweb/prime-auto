@@ -1,0 +1,17 @@
+.aside-container
+  @extend .grid
+
+  &__aside, &__content
+    @extend .col
+
+  &__aside
+    width: percentage(255 / 1650)
+
+  &__content
+    width: percentage((1650 - 255) / 1650)
+
+.aside
+  &__top
+    color: $white
+    background-color: $accent
+    padding: rem(15) rem(25)

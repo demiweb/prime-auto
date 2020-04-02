@@ -1,0 +1,79 @@
+{%set
+table = {
+  rows: [
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: 'ED21124412' },
+        { mod: '' , text: mixins.colors(itemMod = 'search-radio--sm', name = 'item-01-colors', colors = ['#1b2023', '#663d14', '#c09a6b', '#b4977a', '#953b20', '#9e8c76']) },
+        { mod: '' , text: 'Поставка в теч. 2 дней' },
+        { mod: '' , text: '1300 грн' },
+        { mod: '' , text: mixins.counter() },        
+        { mod: '' , text: '<strong>105000 грн</strong>' },
+        { mod: '' , text: '<button class="btn-sm-round">'+ mixins.icon('shopping-cart') +'</button>' }
+      ]
+    },
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: 'ED21124412' },
+        { mod: '' , text: mixins.colors(itemMod = 'search-radio--sm', name = 'item-02-colors', colors = ['#1b2023', '#663d14', '#c09a6b', '#b4977a', '#953b20', '#9e8c76']) },
+        { mod: '' , text: 'Поставка в теч. 2 дней' },
+        { mod: '' , text: '1300 грн' },
+        { mod: '' , text: mixins.counter() },        
+        { mod: '' , text: '<strong>105000 грн</strong>' },
+        { mod: '' , text: '<button class="btn-sm-round">'+ mixins.icon('shopping-cart') +'</button>' }
+      ]
+    },
+    {
+      mod: '',
+      cols: [
+        { mod: '' , text: '<img class="js-lazy" src="" alt="" data-src="./img/39.jpg"/>' },
+        { mod: '' , text: 'Коврики для Toyota Camry (2018) Weather Tech ®' },
+        { mod: '' , text: 'ED21124412' },
+        { mod: '' , text: mixins.colors(itemMod = 'search-radio--sm', name = 'item-03-colors', colors = ['#1b2023', '#663d14', '#c09a6b', '#b4977a', '#953b20', '#9e8c76']) },
+        { mod: '' , text: 'Поставка в теч. 2 дней' },
+        { mod: '' , text: '1300 грн' },
+        { mod: '' , text: mixins.counter() },        
+        { mod: '' , text: '<strong>105000 грн</strong>' },
+        { mod: '' , text: '<button class="btn-sm-round">'+ mixins.icon('shopping-cart') +'</button>' }
+      ]
+    }
+  ]
+}
+%}
+
+<div class="aside-container__content">
+  <!-- begin table -->
+  <div class="table table--for-dealers">
+    <div class="table__top">
+      <div class="table__th">Фото</div>
+      <div class="table__th">Название</div>
+      <div class="table__th">Артикул</div>
+      <div class="table__th">Доступные цвета</div>
+      <div class="table__th">Кол-во на складе</div>
+      <div class="table__th">Цена</div>
+      <div class="table__th">Выберите кол-во</div>
+      <div class="table__th">Сумма</div>
+      <div class="table__th"></div>
+    </div>
+    
+    {% for i in table.rows %}
+    <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
+      <div class="table__tr-inner">
+        {% for j in i.cols %}
+        <div class="table__td">{{ j.text | safe }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    
+  </div>
+  <!-- end table -->
+
+  {% include "partials/_pagination.html" %}
+</div>

@@ -31,6 +31,8 @@ body
     background-color: $white
 
 .container
+  $this: &
+
   max-width: none
   +rmin(1625)
     max-width: 1440px
@@ -49,6 +51,10 @@ body
     +lg
       padding-left: $container-padding
       padding-right: $container-padding
+
+  &--lg-right-gap
+    @extend #{$this}--lg
+    padding-right: $container--lg-padding * 2
 
 .page-inner
   max-width: 1650px

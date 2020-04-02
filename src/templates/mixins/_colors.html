@@ -1,0 +1,15 @@
+{% macro colors(mod, name, itemMod, colors) %}
+<!-- begin colors -->
+<div class="colors">
+  {% for color in colors %}
+    <label class="colors__item search-radio{% if itemMod %} {{ itemMod }}{% endif %}">
+    <input class="search-radio__input" type="radio" name="{{ name }}" {% if loop.index === 1 %}checked=""{% endif %}>
+
+    <span class="search-radio__content">
+      <span class="search-radio__img" style="background-color: {{ color }};"></span>
+    </span>
+  </label>
+  {% endfor %}  
+</div>
+<!-- end colors -->
+{% endmacro %}

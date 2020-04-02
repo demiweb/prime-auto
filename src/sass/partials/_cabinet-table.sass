@@ -1,6 +1,10 @@
 .table
   $this: &
 
+  background-color: $white
+  border-left: 1px solid $lighten
+  border-right: 1px solid $lighten
+
   &__top, &__tr-inner
     display: flex
 
@@ -76,3 +80,26 @@
 
       &:last-child
         width: percentage((1650 - (220 * 7)) / 1650)
+
+  &--for-dealers
+    #{$this}__td, #{$this}__th
+      width: percentage(1365)
+      &:nth-child(1)
+        width: percentage(170 / 1365)
+      &:nth-child(2)
+        width: percentage(235 / 1365)
+      &:nth-child(3)
+        width: percentage(125 / 1365)
+      &:nth-child(4)
+        width: percentage(175 / 1365)
+      &:nth-child(5)
+        width: percentage(130 / 1365)
+      &:nth-child(6)
+        width: percentage(125 / 1365)
+      &:nth-child(7)
+        width: percentage(195 / 1365)
+      &:nth-child(8)
+        width: percentage(120 / 1365)
+      &:nth-child(9)
+        width: percentage((1365 - 170 - 235 - 125 - 175 - 130 - 125 - 195 - 120) / 1365)
+        

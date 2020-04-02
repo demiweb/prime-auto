@@ -1,0 +1,68 @@
+{%set
+filters = {
+  cols: [
+    {
+      options: [
+        { value: 'placeholder', option: 'Год' },
+        { value: '1', option: 'Год1' },
+        { value: '3', option: 'Год2' },
+        { value: '3', option: 'Год3' }
+      ]
+    },
+    {
+      options: [
+        { value: 'placeholder', option: 'Марка' },
+        { value: '1', option: 'Марка1' },
+        { value: '2', option: 'Марка2' },
+        { value: '3', option: 'Марка3' }
+      ]
+    },
+    {
+      options: [
+        { value: 'placeholder', option: 'Модель' },
+        { value: '1', option: 'Модель1' },
+        { value: '2', option: 'Модель2' },
+        { value: '3', option: 'Модель3' }
+      ]
+    },
+    {
+      options: [
+        { value: 'placeholder', option: 'Комплектация' },
+        { value: '1', option: 'Передний + Задний (2 шт.)' },
+        { value: '2', option: 'Передний + Задний + Запасной комплект в багажник  (2шт.)' },
+        { value: '3', option: 'Комплектация3' }
+      ]
+    }
+  ]
+}
+%}
+
+{# <div class="section__search section-search"> #}
+  <form class="section__block search-filters">
+    {% for i in filters.cols %}
+      <div class="search-filters__col">
+        {{ mixins.input(
+          name = 'select',
+          mod = 'input--select-border input--select-border-md',
+          type = '',
+          placeholder = '',
+          value = '',
+          fieldClass = 'js-select',
+          options = i.options
+        ) }}
+      </div>
+    {% endfor %}
+    <div class="search-filters__col">
+      {{ mixins.btn(
+        title = 'Поиск',
+        mod = 'btn--full btn--sm',
+        href = false
+      ) }}
+    </div>
+  </form>
+
+  <form class="section__block search">
+    <input type="text" class="search__input" placeholder="Введите название или артикул товара...">
+    <button class="search__btn">{{ mixins.icon('magnifying-glass') }}</button>
+  </form>
+{# </div> #}

@@ -1,0 +1,40 @@
+.search-filters
+  display: flex
+  flex-wrap: wrap
+
+  &__col
+    width: rem(250)
+    margin-right: rem(10)
+
+.search
+  position: relative
+  &__input
+    width: 100%
+    height: $container--lg-padding
+
+    border: 1px solid  $lighten
+    background-color: $white
+    color: $light
+
+    padding: rem(20) rem(30)
+    padding-right: rem(100)
+    font-size: em(14)
+
+    +lg
+      height: $header-height-lg
+      padding: rem(10) rem(15)
+
+  &__btn
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 0
+
+    height: 100%
+    width: rem(90)
+
+    color: $accent
+    background-color: transparent
+
+    .icon
+      font-size: rem(30)

@@ -1,0 +1,1272 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>for-dealers</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin side-controls -->
+      <div class="side-controls">
+        <ul class="side-controls__btns side-btns">
+          <li class="side-btns__item"><button class="side-btns__btn">
+              <svg height="1em" viewBox="-1 0 136 136.219" width="0.998em" class="icon icon--magnifying-glass">
+                <path d="M93.148 80.832c16.352-23.09 10.883-55.062-12.207-71.41S25.88-1.461 9.531 21.632C-6.816 44.723-1.352 76.693 21.742 93.04a51.226 51.226 0 0055.653 2.3l37.77 37.544c4.077 4.293 10.862 4.465 15.155.387 4.293-4.075 4.465-10.86.39-15.153a9.21 9.21 0 00-.39-.39zm-41.84 3.5c-18.245.004-33.038-14.777-33.05-33.023-.004-18.246 14.777-33.04 33.027-33.047 18.223-.008 33.008 14.75 33.043 32.972.031 18.25-14.742 33.067-32.996 33.098h-.023zm0 0" />
+              </svg>
+            </button>
+            <div class="side-btns__tooltip side-search">
+              <input class="side-search__input" type="text" placeholder="Введите название или артикул товара...">
+            </div>
+          </li>
+          <li class="side-btns__item"><button class="side-btns__btn">
+              <svg height="1em" viewBox="1 -172 575.96 575" width="1.002em" class="icon icon--car">
+                <path d="M240 86.89h38.398v19.204H240zm0 0" />
+                <path d="M567.762 58.188l-65.211-9.313a329.028 329.028 0 00-36.953-19.582A323.284 323.284 0 00331.852.493h-11.329a326.318 326.318 0 00-155.816 39.734l-32.91 17.953A226.834 226.834 0 0022.023 87.938 43.826 43.826 0 000 125.886v57.004a9.6 9.6 0 009.602 9.601h32.234c10.484 29.91 43.23 45.66 73.14 35.176a57.382 57.382 0 0035.176-35.176h256.485c10.484 29.91 43.23 45.66 73.14 35.176a57.391 57.391 0 0035.176-35.176h3.445c1.223 0 2.434-.23 3.57-.683l31.095-12.477A36.303 36.303 0 00576 145.453V67.691a9.605 9.605 0 00-8.238-9.504zm-434.14 122.785c-4.247 20.777-24.532 34.18-45.31 29.933-20.78-4.246-34.183-24.531-29.937-45.312 4.25-20.778 24.535-34.18 45.313-29.934 17.878 3.653 30.714 19.383 30.71 37.633a38.43 38.43 0 01-.777 7.68zm173.577-7.68H153.598c0-31.813-25.786-57.602-57.598-57.602-31.813 0-57.602 25.79-57.602 57.602H19.2v-47.406a24.556 24.556 0 0112.356-21.282 207.555 207.555 0 01102.843-27.312H307.2zm0-115.2H172.051l1.851-1.011A306.958 306.958 0 01307.2 20.113zm19.2-38.402h5.433a303.837 303.837 0 01112.957 21.641l-16.762 16.762H326.398zm172.023 161.282c-4.246 20.777-24.531 34.18-45.313 29.933-20.777-4.246-34.18-24.531-29.933-45.312 4.246-20.778 24.535-34.18 45.312-29.934 17.88 3.653 30.715 19.383 30.711 37.633a38.43 38.43 0 01-.777 7.68zM556.8 86.89H528v19.203h28.8v39.36a17.182 17.182 0 01-10.866 16.038l-27.536 11.059c0-.883-.113-1.758-.171-2.64-.059-.884-.079-1.919-.172-2.88-.098-.96-.29-1.922-.442-2.879-.156-.96-.27-1.922-.46-2.793-.192-.875-.473-1.843-.723-2.757-.25-.91-.442-1.832-.73-2.727-.286-.89-.634-1.746-.958-2.621-.328-.871-.625-1.774-.96-2.64-.337-.864-.79-1.65-1.192-2.466-.403-.816-.797-1.71-1.246-2.535-.453-.824-.961-1.527-1.395-2.293-.43-.77-.957-1.644-1.504-2.43-.55-.788-1.058-1.41-1.586-2.12-.527-.711-1.125-1.547-1.738-2.286-.613-.738-1.187-1.316-1.785-1.922-.594-.601-1.258-1.417-1.918-2.09-.664-.671-1.316-1.202-1.977-1.796-.664-.594-1.375-1.297-2.105-1.922-.727-.621-1.469-1.102-2.195-1.649-.73-.546-1.461-1.132-2.227-1.644-.77-.508-1.633-.957-2.457-1.496-.828-.54-1.5-.961-2.277-1.371-.778-.414-1.746-.848-2.63-1.27-.882-.422-1.573-.797-2.39-1.14-.816-.348-1.922-.711-2.879-1.055-.96-.348-1.586-.617-2.402-.875-1.094-.336-2.215-.578-3.332-.856-.73-.171-1.43-.402-2.168-.554-1.18-.242-2.39-.375-3.59-.551-.71-.094-1.39-.25-2.101-.316a58.518 58.518 0 00-5.856-.297c-31.8.03-57.57 25.8-57.602 57.601h-76.828V77.29H432a9.584 9.584 0 006.785-2.812l24.895-24.895a307.841 307.841 0 0130.433 16.648 9.628 9.628 0 003.723 1.364l58.965 8.418zm0 0" />
+              </svg>
+            </button>
+            <!-- begin form -->
+            <div class="form form--block side-btns__tooltip form--bg-white">
+              <div class="form__title mb-0">Выберите ваше авто</div>
+              <div class="form__subttl">Выберите марку, год и модель вашего авто и система подберет подходящие аксессуары специально для вас</div>
+              <form>
+                <div class="form__field">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-color">
+                    <select class="js-select">
+                      <option value="placeholder">Марка</option>
+                      <option value="1">Марка1</option>
+                      <option value="2">Марка2</option>
+                      <option value="3">Марка3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="form__field">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-color">
+                    <select class="js-select">
+                      <option value="placeholder">год</option>
+                      <option value="1">год1</option>
+                      <option value="2">год2</option>
+                      <option value="3">год3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="form__field">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-color">
+                    <select class="js-select">
+                      <option value="placeholder">модель</option>
+                      <option value="1">модель1</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="2">модель2</option>
+                      <option value="3">модель3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="form__field">
+                  <button class="btn btn--full">Подобрать</button>
+                </div>
+              </form>
+            </div>
+            <!-- end form -->
+          </li>
+          <li class="side-btns__item"><button class="side-btns__btn">
+              <svg viewBox="-42 0 512 512.001" class="icon icon--user" width="1.000em" height="1em">
+                <path d="M210.352 246.633c33.882 0 63.218-12.153 87.195-36.13 23.969-23.972 36.125-53.304 36.125-87.19 0-33.876-12.152-63.211-36.129-87.192C273.566 12.152 244.23 0 210.352 0c-33.887 0-63.22 12.152-87.192 36.125s-36.129 53.309-36.129 87.188c0 33.886 12.156 63.222 36.13 87.195 23.98 23.969 53.316 36.125 87.19 36.125zM144.379 57.34c18.394-18.395 39.973-27.336 65.973-27.336 25.996 0 47.578 8.941 65.976 27.336 18.395 18.398 27.34 39.98 27.34 65.972 0 26-8.945 47.579-27.34 65.977-18.398 18.399-39.98 27.34-65.976 27.34-25.993 0-47.57-8.945-65.973-27.34-18.399-18.394-27.344-39.976-27.344-65.976 0-25.993 8.945-47.575 27.344-65.973zm0 0M426.129 393.703c-.692-9.976-2.09-20.86-4.149-32.351-2.078-11.579-4.753-22.524-7.957-32.528-3.312-10.34-7.808-20.55-13.375-30.336-5.77-10.156-12.55-19-20.16-26.277-7.957-7.613-17.699-13.734-28.965-18.2-11.226-4.44-23.668-6.69-36.976-6.69-5.227 0-10.281 2.144-20.043 8.5a2711.03 2711.03 0 01-20.879 13.46c-6.707 4.274-15.793 8.278-27.016 11.903-10.949 3.543-22.066 5.34-33.043 5.34-10.968 0-22.086-1.797-33.043-5.34-11.21-3.622-20.3-7.625-26.996-11.899-7.77-4.965-14.8-9.496-20.898-13.469-9.754-6.355-14.809-8.5-20.035-8.5-13.313 0-25.75 2.254-36.973 6.7-11.258 4.457-21.004 10.578-28.969 18.199-7.609 7.281-14.39 16.12-20.156 26.273-5.558 9.785-10.058 19.992-13.371 30.34-3.2 10.004-5.875 20.945-7.953 32.524-2.063 11.476-3.457 22.363-4.149 32.363C.343 403.492 0 413.668 0 423.949c0 26.727 8.496 48.363 25.25 64.32C41.797 504.017 63.688 512 90.316 512h246.532c26.62 0 48.511-7.984 65.062-23.73 16.758-15.946 25.254-37.59 25.254-64.325-.004-10.316-.351-20.492-1.035-30.242zm-44.906 72.828c-10.934 10.406-25.45 15.465-44.38 15.465H90.317c-18.933 0-33.449-5.059-44.379-15.46-10.722-10.208-15.933-24.141-15.933-42.587 0-9.594.316-19.066.95-28.16.616-8.922 1.878-18.723 3.75-29.137 1.847-10.285 4.198-19.937 6.995-28.675 2.684-8.38 6.344-16.676 10.883-24.668 4.332-7.618 9.316-14.153 14.816-19.418 5.145-4.926 11.63-8.957 19.27-11.98 7.066-2.798 15.008-4.329 23.629-4.56 1.05.56 2.922 1.626 5.953 3.602 6.168 4.02 13.277 8.606 21.137 13.625 8.86 5.649 20.273 10.75 33.91 15.152 13.941 4.508 28.16 6.797 42.273 6.797 14.114 0 28.336-2.289 42.27-6.793 13.648-4.41 25.058-9.507 33.93-15.164 8.043-5.14 14.953-9.593 21.12-13.617 3.032-1.973 4.903-3.043 5.954-3.601 8.625.23 16.566 1.761 23.636 4.558 7.637 3.024 14.122 7.059 19.266 11.98 5.5 5.262 10.484 11.798 14.816 19.423 4.543 7.988 8.208 16.289 10.887 24.66 2.801 8.75 5.156 18.398 7 28.675 1.867 10.434 3.133 20.239 3.75 29.145v.008c.637 9.058.957 18.527.961 28.148-.004 18.45-5.215 32.38-15.937 42.582zm0 0" />
+              </svg>
+            </button>
+            <!-- begin form -->
+            <div class="form form--block side-btns__tooltip form--bg-white">
+              <div class="form__title mb-0">Авторизация</div>
+              <div class="form__subttl">Введите ваши данные ниже</div>
+              <form>
+                <div class="form__field">
+                  <!-- begin input -->
+                  <div class="input input--lg">
+                    <input type="email" placeholder="email">
+                  </div>
+                  <!-- end input -->
+                </div>
+                <div class="form__field">
+                  <!-- begin input -->
+                  <div class="input input--lg">
+                    <input type="password" placeholder="пароль">
+                  </div>
+                  <!-- end input -->
+                </div>
+                <div class="form__field">
+                  <!-- begin checkbox -->
+                  <label class="input input--checkbox">
+                    <input type="checkbox">
+                    <span>Запомнить данные</span>
+                  </label>
+                  <!-- end checkbox -->
+                </div>
+                <div class="form__field">
+                  <button class="btn btn--full">Войти</button>
+                </div>
+                <div class="form__links">
+                  <div class="form__text"><a href="#">Забыли пароль?</a></div>
+                  <div class="form__text"><a href="#">Новый пользователь?</a></div>
+                </div>
+              </form>
+            </div>
+            <!-- end form -->
+          </li>
+          <li class="side-btns__item"><button class="side-btns__btn">
+              <svg viewBox="0 0 469.333 469.333" class="icon icon--shopping-cart" width="1.000em" height="1em">
+                <path d="M434.979 42.667H85.333v3.061l-4.375-14.999C75.687 12.635 58.844 0 40 0H10.667C4.771 0 0 4.771 0 10.667s4.771 10.667 10.667 10.667H40c9.427 0 17.844 6.313 20.479 15.365l66.396 227.635-34.021 42.521a34.48 34.48 0 00-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416A10.66 10.66 0 00426.667 352 10.66 10.66 0 00416 341.333H119.687c-7.177 0-13.021-5.844-13.021-13.021 0-2.948 1.01-5.844 2.854-8.135l34.279-42.844H353.02c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177a34.636 34.636 0 003.26-14.615V77.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.51 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64h344.316C442.156 64 448 69.844 448 77.021v3.021zM128 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.531 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333zM384 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.531 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333z" />
+              </svg>
+            </button>
+            <div class="side-btns__tooltip block side-cart">
+              <div class="side-cart__title block__title">Корзина</div>
+              <form>
+                <div class="side-cart__items">
+                  <!-- begin order-item -->
+                  <div class="order-item side-cart__order-item order-item--counter order-item--xs">
+                    <div class="order-item__img">
+                      <img class="js-lazy" src="" alt="" data-src="./img/39.jpg" />
+                    </div>
+                    <div class="order-item__content">
+                      <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+                      <!-- begin meta-list -->
+                      <dl class="order-item__meta-list meta-list" class="meta-list">
+                        <dt class="meta-list__title ">Артикул:</dt>
+                        <dd class="meta-list__text ">15664CD</dd>
+                        <dt class="meta-list__title ">Цвет:</dt>
+                        <dd class="meta-list__text ">Полный комплект (1, 2, та 3 ряд)</dd>
+                        <dt class="meta-list__title ">Количество:</dt>
+                        <dd class="meta-list__text ">1</dd>
+                      </dl>
+                      <!-- end meta-list-->
+                      <div class="order-item__counter">
+                        <!-- begin counter -->
+                        <div class="counter">
+                          <label class="counter__label">Кол-во:</label>
+                          <input class="counter__input" type="number" value="3">
+                          <button class="counter__btn counter__btn--inc" type="button"></button>
+                          <button class="counter__btn counter__btn--dec" type="button"></button>
+                        </div>
+                        <!-- end counter -->
+                      </div>
+                    </div>
+                    <div class="order-item__btn">
+                      <button class="delete-btn" type="button"><span></span></button>
+                    </div>
+                  </div>
+                  <!-- end order-item -->
+                  <!-- begin order-item -->
+                  <div class="order-item side-cart__order-item order-item--counter order-item--xs">
+                    <div class="order-item__img">
+                      <img class="js-lazy" src="" alt="" data-src="./img/39.jpg" />
+                    </div>
+                    <div class="order-item__content">
+                      <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+                      <!-- begin meta-list -->
+                      <dl class="order-item__meta-list meta-list" class="meta-list">
+                        <dt class="meta-list__title ">Артикул:</dt>
+                        <dd class="meta-list__text ">15664CD</dd>
+                        <dt class="meta-list__title ">Цвет:</dt>
+                        <dd class="meta-list__text ">Полный комплект (1, 2, та 3 ряд)</dd>
+                        <dt class="meta-list__title ">Количество:</dt>
+                        <dd class="meta-list__text ">1</dd>
+                      </dl>
+                      <!-- end meta-list-->
+                      <div class="order-item__counter">
+                        <!-- begin counter -->
+                        <div class="counter">
+                          <label class="counter__label">Кол-во:</label>
+                          <input class="counter__input" type="number" value="3">
+                          <button class="counter__btn counter__btn--inc" type="button"></button>
+                          <button class="counter__btn counter__btn--dec" type="button"></button>
+                        </div>
+                        <!-- end counter -->
+                      </div>
+                    </div>
+                    <div class="order-item__btn">
+                      <button class="delete-btn" type="button"><span></span></button>
+                    </div>
+                  </div>
+                  <!-- end order-item -->
+                  <!-- begin order-item -->
+                  <div class="order-item side-cart__order-item order-item--counter order-item--xs">
+                    <div class="order-item__img">
+                      <img class="js-lazy" src="" alt="" data-src="./img/39.jpg" />
+                    </div>
+                    <div class="order-item__content">
+                      <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+                      <!-- begin meta-list -->
+                      <dl class="order-item__meta-list meta-list" class="meta-list">
+                        <dt class="meta-list__title ">Артикул:</dt>
+                        <dd class="meta-list__text ">15664CD</dd>
+                        <dt class="meta-list__title ">Цвет:</dt>
+                        <dd class="meta-list__text ">Полный комплект (1, 2, та 3 ряд)</dd>
+                        <dt class="meta-list__title ">Количество:</dt>
+                        <dd class="meta-list__text ">1</dd>
+                      </dl>
+                      <!-- end meta-list-->
+                      <div class="order-item__counter">
+                        <!-- begin counter -->
+                        <div class="counter">
+                          <label class="counter__label">Кол-во:</label>
+                          <input class="counter__input" type="number" value="3">
+                          <button class="counter__btn counter__btn--inc" type="button"></button>
+                          <button class="counter__btn counter__btn--dec" type="button"></button>
+                        </div>
+                        <!-- end counter -->
+                      </div>
+                    </div>
+                    <div class="order-item__btn">
+                      <button class="delete-btn" type="button"><span></span></button>
+                    </div>
+                  </div>
+                  <!-- end order-item -->
+                  <!-- begin order-item -->
+                  <div class="order-item side-cart__order-item order-item--counter order-item--xs">
+                    <div class="order-item__img">
+                      <img class="js-lazy" src="" alt="" data-src="./img/39.jpg" />
+                    </div>
+                    <div class="order-item__content">
+                      <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+                      <!-- begin meta-list -->
+                      <dl class="order-item__meta-list meta-list" class="meta-list">
+                        <dt class="meta-list__title ">Артикул:</dt>
+                        <dd class="meta-list__text ">15664CD</dd>
+                        <dt class="meta-list__title ">Цвет:</dt>
+                        <dd class="meta-list__text ">Полный комплект (1, 2, та 3 ряд)</dd>
+                        <dt class="meta-list__title ">Количество:</dt>
+                        <dd class="meta-list__text ">1</dd>
+                      </dl>
+                      <!-- end meta-list-->
+                      <div class="order-item__counter">
+                        <!-- begin counter -->
+                        <div class="counter">
+                          <label class="counter__label">Кол-во:</label>
+                          <input class="counter__input" type="number" value="3">
+                          <button class="counter__btn counter__btn--inc" type="button"></button>
+                          <button class="counter__btn counter__btn--dec" type="button"></button>
+                        </div>
+                        <!-- end counter -->
+                      </div>
+                    </div>
+                    <div class="order-item__btn">
+                      <button class="delete-btn" type="button"><span></span></button>
+                    </div>
+                  </div>
+                  <!-- end order-item -->
+                  <!-- begin order-item -->
+                  <div class="order-item side-cart__order-item order-item--counter order-item--xs">
+                    <div class="order-item__img">
+                      <img class="js-lazy" src="" alt="" data-src="./img/39.jpg" />
+                    </div>
+                    <div class="order-item__content">
+                      <h3 class="order-item__title title title--h3 title--ttn">Коврики в автомобиль AVM® для BMW X5 (2018)</h3>
+                      <!-- begin meta-list -->
+                      <dl class="order-item__meta-list meta-list" class="meta-list">
+                        <dt class="meta-list__title ">Артикул:</dt>
+                        <dd class="meta-list__text ">15664CD</dd>
+                        <dt class="meta-list__title ">Цвет:</dt>
+                        <dd class="meta-list__text ">Полный комплект (1, 2, та 3 ряд)</dd>
+                        <dt class="meta-list__title ">Количество:</dt>
+                        <dd class="meta-list__text ">1</dd>
+                      </dl>
+                      <!-- end meta-list-->
+                      <div class="order-item__counter">
+                        <!-- begin counter -->
+                        <div class="counter">
+                          <label class="counter__label">Кол-во:</label>
+                          <input class="counter__input" type="number" value="3">
+                          <button class="counter__btn counter__btn--inc" type="button"></button>
+                          <button class="counter__btn counter__btn--dec" type="button"></button>
+                        </div>
+                        <!-- end counter -->
+                      </div>
+                    </div>
+                    <div class="order-item__btn">
+                      <button class="delete-btn" type="button"><span></span></button>
+                    </div>
+                  </div>
+                  <!-- end order-item -->
+                </div>
+                <div class="section__price-block text-center">
+                  <div class="price">Сумма: <strong>1900</strong> грн</div>
+                  <button class="btn">Оформить заказ</button>
+                  <div>
+                    <a href="#" class="link link--tdn">Перейти в корзину</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="side-btns__item"><button class="side-btns__btn">
+              <svg viewBox="0 0 512 512" class="icon icon--phone-call" width="1.000em" height="1em">
+                <path d="M511.95 412.553c-.714-19.805-8.964-38.287-23.229-52.042-27.931-26.933-51.333-42.481-73.647-48.929-30.745-8.886-59.225-.806-84.641 24.016l-.114.113-27.04 26.838c-16.899-9.526-49.759-30.442-85.261-65.944l-2.632-2.63c-35.508-35.507-56.423-68.373-65.94-85.253l26.84-27.041.114-.115c24.821-25.414 32.901-53.892 24.016-84.641-6.449-22.313-21.996-45.715-48.93-73.646C137.732 9.016 119.251.766 99.446.052 79.629-.663 60.613 6.235 45.865 19.473l-.574.516a20.9 20.9 0 00-.78.739C15.152 50.087-.238 91.188.003 139.589c.411 82.222 45.6 176.25 120.879 251.528 14.195 14.195 30.328 28.243 47.95 41.755 8.765 6.72 21.319 5.064 28.04-3.702 6.722-8.766 5.064-21.32-3.702-28.041-16.235-12.449-31.04-25.333-44.004-38.294C81.17 294.839 40.361 211.309 40.002 139.39c-.185-37.276 11.028-68.389 32.431-90.015l.153-.138a35.977 35.977 0 0150.108 1.808c51.779 53.698 48.03 79.049 25.15 102.511l-37.074 37.352a20.003 20.003 0 00-4.076 22.226c.941 2.114 23.71 52.427 80.415 109.132l2.633 2.629c56.698 56.699 107.012 79.467 109.126 80.408a19.998 19.998 0 0022.225-4.075l37.353-37.075c23.465-22.881 48.816-26.628 102.511 25.151a35.976 35.976 0 011.811 50.105l-.142.157c-21.449 21.229-52.231 32.433-89.101 32.433-.304 0-.608 0-.913-.002-29.471-.147-63.598-8.226-98.689-23.362-10.14-4.376-21.911.3-26.285 10.443-4.375 10.143.3 21.911 10.443 26.286 40.562 17.496 79.028 26.456 114.332 26.633l1.122.002c47.914 0 88.607-15.379 117.739-44.51.253-.254.499-.513.738-.78l.519-.577c13.237-14.747 20.134-33.775 19.419-53.579z" />
+              </svg>
+            </button>
+            <div class="side-btns__tooltip block side-contacts">
+              <div class="block__title mb-0">Свяжитесь с нами</div>
+              <div class="block__subttl">Мы ждем вашего звонка, также вы можете <br> написать нам на e-mail</div>
+              <!-- begin contacts -->
+              <div class="contacts">
+                <div class="contacts__item contact">
+                  <svg viewBox="0 0 512 512" class="contact__icon icon icon--phone-call" width="1.000em" height="1em">
+                    <path d="M511.95 412.553c-.714-19.805-8.964-38.287-23.229-52.042-27.931-26.933-51.333-42.481-73.647-48.929-30.745-8.886-59.225-.806-84.641 24.016l-.114.113-27.04 26.838c-16.899-9.526-49.759-30.442-85.261-65.944l-2.632-2.63c-35.508-35.507-56.423-68.373-65.94-85.253l26.84-27.041.114-.115c24.821-25.414 32.901-53.892 24.016-84.641-6.449-22.313-21.996-45.715-48.93-73.646C137.732 9.016 119.251.766 99.446.052 79.629-.663 60.613 6.235 45.865 19.473l-.574.516a20.9 20.9 0 00-.78.739C15.152 50.087-.238 91.188.003 139.589c.411 82.222 45.6 176.25 120.879 251.528 14.195 14.195 30.328 28.243 47.95 41.755 8.765 6.72 21.319 5.064 28.04-3.702 6.722-8.766 5.064-21.32-3.702-28.041-16.235-12.449-31.04-25.333-44.004-38.294C81.17 294.839 40.361 211.309 40.002 139.39c-.185-37.276 11.028-68.389 32.431-90.015l.153-.138a35.977 35.977 0 0150.108 1.808c51.779 53.698 48.03 79.049 25.15 102.511l-37.074 37.352a20.003 20.003 0 00-4.076 22.226c.941 2.114 23.71 52.427 80.415 109.132l2.633 2.629c56.698 56.699 107.012 79.467 109.126 80.408a19.998 19.998 0 0022.225-4.075l37.353-37.075c23.465-22.881 48.816-26.628 102.511 25.151a35.976 35.976 0 011.811 50.105l-.142.157c-21.449 21.229-52.231 32.433-89.101 32.433-.304 0-.608 0-.913-.002-29.471-.147-63.598-8.226-98.689-23.362-10.14-4.376-21.911.3-26.285 10.443-4.375 10.143.3 21.911 10.443 26.286 40.562 17.496 79.028 26.456 114.332 26.633l1.122.002c47.914 0 88.607-15.379 117.739-44.51.253-.254.499-.513.738-.78l.519-.577c13.237-14.747 20.134-33.775 19.419-53.579z" />
+                  </svg>
+                  <h4 class="contact__title title title--h4">Телефоны</h4>
+                  <div class="contact__text">
+                    <p><a href="tel:0443318327">(044) 331-83-27</a></p>
+                    <p><a href="tel:0975516655">(097) 551-66-55</a></p>
+                    <p><a href="tel:0667263153">(066) 726-31-53</a></p>
+                  </div>
+                </div>
+                <div class="contacts__item contact">
+                  <svg viewBox="0 0 512 512" class="contact__icon icon icon--envelope" width="1.000em" height="1em">
+                    <path d="M469.333 64H42.667C19.135 64 0 83.135 0 106.667v298.667C0 428.865 19.135 448 42.667 448h426.667C492.865 448 512 428.865 512 405.333V106.667C512 83.135 492.865 64 469.333 64zM42.667 85.333h426.667c1.572 0 2.957.573 4.432.897-36.939 33.807-159.423 145.859-202.286 184.478-3.354 3.021-8.76 6.625-15.479 6.625s-12.125-3.604-15.49-6.635C197.652 232.085 75.161 120.027 38.228 86.232c1.478-.324 2.866-.899 4.439-.899zm-21.334 320V106.667c0-2.09.63-3.986 1.194-5.896 28.272 25.876 113.736 104.06 169.152 154.453C136.443 302.671 50.957 383.719 22.46 410.893c-.503-1.814-1.127-3.588-1.127-5.56zm448 21.334H42.667c-1.704 0-3.219-.594-4.81-.974 29.447-28.072 115.477-109.586 169.742-156.009a7980.773 7980.773 0 0018.63 16.858c8.792 7.938 19.083 12.125 29.771 12.125s20.979-4.188 29.76-12.115a8178.815 8178.815 0 0018.641-16.868c54.268 46.418 140.286 127.926 169.742 156.009-1.591.38-3.104.974-4.81.974zm21.334-21.334c0 1.971-.624 3.746-1.126 5.56-28.508-27.188-113.984-108.227-169.219-155.668 55.418-50.393 140.869-128.57 169.151-154.456.564 1.91 1.194 3.807 1.194 5.897v298.667z" />
+                  </svg>
+                  <h4 class="contact__title title title--h4">e-mail</h4>
+                  <div class="contact__text">
+                    <p><a href="mailto:info@primeauto.com.ua">info@primeauto.com.ua</a></p>
+                    <p><a href="mailto:sales@primeauto.com.ua">sales@primeauto.com.ua</a></p>
+                  </div>
+                </div>
+                <div class="contacts__item contact">
+                  <svg viewBox="0 0 512 512" class="contact__icon icon icon--placeholder" width="1.000em" height="1em">
+                    <path d="M256 0C156.748 0 76 80.748 76 180c0 33.534 9.289 66.26 26.869 94.652l142.885 230.257A15 15 0 00258.499 512h.119a14.997 14.997 0 0012.75-7.292L410.611 272.22C427.221 244.428 436 212.539 436 180 436 80.748 355.252 0 256 0zm128.866 256.818L258.272 468.186l-129.905-209.34C113.734 235.214 105.8 207.95 105.8 180c0-82.71 67.49-150.2 150.2-150.2S406.1 97.29 406.1 180c0 27.121-7.411 53.688-21.234 76.818z" />
+                    <path d="M256 90c-49.626 0-90 40.374-90 90 0 49.309 39.717 90 90 90 50.903 0 90-41.233 90-90 0-49.626-40.374-90-90-90zm0 150.2c-33.257 0-60.2-27.033-60.2-60.2 0-33.084 27.116-60.2 60.2-60.2s60.1 27.116 60.1 60.2c0 32.683-26.316 60.2-60.1 60.2z" />
+                  </svg>
+                  <h4 class="contact__title title title--h4">Адресс</h4>
+                  <div class="contact__text">г.Киев б-р Перова, 19 (маг.21, маг.33) </div>
+                </div>
+              </div>
+              <!-- end contacts -->
+            </div>
+          </li>
+        </ul>
+        <!-- begin side-btns -->
+        <ul class="side-controls__social social" class="side-btns">
+          <li class="social__item "><a href="#" class="social__link "><span class="social__title">facebook</span><span class="social__title social__title--mob">Fb</span></a></li>
+          <li class="social__item "><a href="#" class="social__link "><span class="social__title">instagram</span><span class="social__title social__title--mob">Ins</span></a></li>
+        </ul>
+        <!-- end side-btns-->
+      </div>
+      <!-- end side-controls -->
+      <!-- begin header -->
+      <header class="out__header header">
+        <div class="container container--lg">
+          <div class="header__inner">
+            <a href="/" class="header__logo logo">
+              <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
+            </a>
+            <!-- begin nav -->
+            <nav class="nav header__nav js-menu">
+              <ul>
+                <li class=" has-dropdown-lg"><a href="#">
+                    <svg viewBox="0 0 384 384" class="icon icon--menu" width="1.000em" height="1em">
+                      <path d="M0 277.333h384V320H0zM0 170.667h384v42.667H0zM0 64h384v42.667H0z" />
+                    </svg> каталог</a>
+                  <ul>
+                    <li><a href="#">Подставки для авто</a></li>
+                    <li><a href="#">Роллеты для кузова</a></li>
+                    <li><a href="#">Дефлекторы капота</a></li>
+                    <li><a href="#">Чехлы для сидений</a></li>
+                    <li><a href="#">Кунги, крышки кузова</a></li>
+                    <li><a href="#">Ящики кузова</a></li>
+                    <li><a href="#">Тенты для кузова</a></li>
+                    <li><a href="#">Расширитель арок</a></li>
+                    <li><a href="#">Кунги, крышки кузова</a></li>
+                    <li><a href="#">Ящики кузова</a></li>
+                    <li><a href="#">Подставки для авто</a></li>
+                    <li><a href="#">Роллеты для кузова</a></li>
+                    <li><a href="#">Дефлекторы капота</a></li>
+                    <li><a href="#">Чехлы для сидений</a></li>
+                    <li><a href="#">Кунги, крышки кузова</a></li>
+                    <li><a href="#">Ящики кузова</a></li>
+                    <li><a href="#">Тенты для кузова</a></li>
+                    <li><a href="#">Расширитель арок</a></li>
+                    <li><a href="#">Кунги, крышки кузова</a></li>
+                    <li><a href="#">Ящики кузова</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">о нас</a></li>
+                <li><a href="#">для покупателя</a>
+                  <ul>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">как заказать</a></li>
+                    <li><a href="#">отзывы</a></li>
+                    <li><a href="#">политика компании</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">сотрудничество</a></li>
+                <li><a href="#">контакты</a></li>
+              </ul>
+            </nav>
+            <!-- end nav-->
+            <button class="header__burger burger js-burger">
+              <svg viewBox="0 0 384 384" class="icon icon--menu" width="1.000em" height="1em">
+                <path d="M0 277.333h384V320H0zM0 170.667h384v42.667H0zM0 64h384v42.667H0z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin main -->
+      <main class="out__main main">
+        <!-- begin cabinet -->
+        <div class="cabinet">
+          <section class="cabinet__hero">
+            <div class="container container--lg">
+              <div class="page-inner">
+                <div class="cabinet__hero-inner">
+                  <div class="cabinet__hero-left">
+                    <!-- begin breadcrumbs -->
+                    <ul class="cabinet__breadcrumbs breadcrumbs" class="breadcrumbs">
+                      <li><a href="#">Prime Auto</a></li>
+                      <li>-</li>
+                      <li class=" breadcrumbs__current-item">личный кабинет</li>
+                    </ul>
+                    <!-- end breadcrumbs-->
+                    <a href="#" class="cabinet__hero-link back-link">
+                      <svg viewBox="0 0 492 492" class="back-link__icon icon icon--left-arrow" width="1.000em" height="1em">
+                        <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z" />
+                      </svg> Вернуться в кабинет </a>
+                    <h1 class="cabinet__hero-title title title--h2">каталог для диллеров</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- begin section -->
+          <section class="section">
+            <div class="container container--lg-right-gap">
+              <form class="section__block search-filters">
+                <div class="search-filters__col">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-border input--select-border-md">
+                    <select class="js-select">
+                      <option value="placeholder">Год</option>
+                      <option value="1">Год1</option>
+                      <option value="3">Год2</option>
+                      <option value="3">Год3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="search-filters__col">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-border input--select-border-md">
+                    <select class="js-select">
+                      <option value="placeholder">Марка</option>
+                      <option value="1">Марка1</option>
+                      <option value="2">Марка2</option>
+                      <option value="3">Марка3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="search-filters__col">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-border input--select-border-md">
+                    <select class="js-select">
+                      <option value="placeholder">Модель</option>
+                      <option value="1">Модель1</option>
+                      <option value="2">Модель2</option>
+                      <option value="3">Модель3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="search-filters__col">
+                  <!-- begin select -->
+                  <div class="input input--select input--select-border input--select-border-md">
+                    <select class="js-select">
+                      <option value="placeholder">Комплектация</option>
+                      <option value="1">Передний + Задний (2 шт.)</option>
+                      <option value="2">Передний + Задний + Запасной комплект в багажник (2шт.)</option>
+                      <option value="3">Комплектация3</option>
+                    </select>
+                  </div>
+                  <!-- end select -->
+                </div>
+                <div class="search-filters__col">
+                  <button class="btn btn--full btn--sm">Поиск</button>
+                </div>
+              </form>
+              <form class="section__block search">
+                <input type="text" class="search__input" placeholder="Введите название или артикул товара...">
+                <button class="search__btn">
+                  <svg height="1em" viewBox="-1 0 136 136.219" width="0.998em" class="icon icon--magnifying-glass">
+                    <path d="M93.148 80.832c16.352-23.09 10.883-55.062-12.207-71.41S25.88-1.461 9.531 21.632C-6.816 44.723-1.352 76.693 21.742 93.04a51.226 51.226 0 0055.653 2.3l37.77 37.544c4.077 4.293 10.862 4.465 15.155.387 4.293-4.075 4.465-10.86.39-15.153a9.21 9.21 0 00-.39-.39zm-41.84 3.5c-18.245.004-33.038-14.777-33.05-33.023-.004-18.246 14.777-33.04 33.027-33.047 18.223-.008 33.008 14.75 33.043 32.972.031 18.25-14.742 33.067-32.996 33.098h-.023zm0 0" />
+                  </svg>
+                </button>
+              </form>
+              <div class="aside-container">
+                <!-- begin aside -->
+                <aside class="aside-container__aside aside">
+                  <div class="aside__top">
+                    <h3 class="title title--h3">каталог</h3>
+                  </div>
+                  <ul class="aside__accordion catalog-accordion js-accordion">
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Подставки для авто</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Роллеты для кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Дефлекторы капота</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Чехлы для сидений</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Кунги, крышки кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Ящики кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Тенты для кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Расширитель арок</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Кунги, крышки кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="catalog-accordion__item">
+                      <button class="catalog-accordion__btn title title--h5">Ящики кузова</button>
+                      <ul class="catalog-accordion__sublist">
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="catallog-accordion__subitem">
+                          <button class="catalog-accordion__btn catalog-accordion__btn--sub">Роллеты пластиковые</button>
+                          <ul class="catalog-accordion__sublist">
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                            <li class="catalog-accordion__subitem">
+                              <a href="#" class="catalog-accordion__link">Роллеты пластиковые для внедорожников и грузовых автомобилей</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </aside>
+                <!-- end aside -->
+                <div class="aside-container__content">
+                  <!-- begin table -->
+                  <div class="table table--for-dealers">
+                    <div class="table__top">
+                      <div class="table__th">Фото</div>
+                      <div class="table__th">Название</div>
+                      <div class="table__th">Артикул</div>
+                      <div class="table__th">Доступные цвета</div>
+                      <div class="table__th">Кол-во на складе</div>
+                      <div class="table__th">Цена</div>
+                      <div class="table__th">Выберите кол-во</div>
+                      <div class="table__th">Сумма</div>
+                      <div class="table__th"></div>
+                    </div>
+                    <div class="table__tr">
+                      <div class="table__tr-inner">
+                        <div class="table__td"><img class="js-lazy" src="" alt="" data-src="./img/39.jpg" /></div>
+                        <div class="table__td">Коврики для Toyota Camry (2018) Weather Tech ®</div>
+                        <div class="table__td">ED21124412</div>
+                        <div class="table__td">
+                          <!-- begin colors -->
+                          <div class="colors">
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors" checked="">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #1b2023;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #663d14;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #c09a6b;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #b4977a;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #953b20;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-01-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #9e8c76;"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <!-- end colors -->
+                        </div>
+                        <div class="table__td">Поставка в теч. 2 дней</div>
+                        <div class="table__td">1300 грн</div>
+                        <div class="table__td">
+                          <!-- begin counter -->
+                          <div class="counter">
+                            <label class="counter__label">Кол-во:</label>
+                            <input class="counter__input" type="number" value="3">
+                            <button class="counter__btn counter__btn--inc" type="button"></button>
+                            <button class="counter__btn counter__btn--dec" type="button"></button>
+                          </div>
+                          <!-- end counter -->
+                        </div>
+                        <div class="table__td"><strong>105000 грн</strong></div>
+                        <div class="table__td"><button class="btn-sm-round">
+                            <svg viewBox="0 0 469.333 469.333" class="icon icon--shopping-cart" width="1.000em" height="1em">
+                              <path d="M434.979 42.667H85.333v3.061l-4.375-14.999C75.687 12.635 58.844 0 40 0H10.667C4.771 0 0 4.771 0 10.667s4.771 10.667 10.667 10.667H40c9.427 0 17.844 6.313 20.479 15.365l66.396 227.635-34.021 42.521a34.48 34.48 0 00-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416A10.66 10.66 0 00426.667 352 10.66 10.66 0 00416 341.333H119.687c-7.177 0-13.021-5.844-13.021-13.021 0-2.948 1.01-5.844 2.854-8.135l34.279-42.844H353.02c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177a34.636 34.636 0 003.26-14.615V77.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.51 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64h344.316C442.156 64 448 69.844 448 77.021v3.021zM128 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.531 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333zM384 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.531 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333z" />
+                            </svg>
+                          </button></div>
+                      </div>
+                    </div>
+                    <div class="table__tr">
+                      <div class="table__tr-inner">
+                        <div class="table__td"><img class="js-lazy" src="" alt="" data-src="./img/39.jpg" /></div>
+                        <div class="table__td">Коврики для Toyota Camry (2018) Weather Tech ®</div>
+                        <div class="table__td">ED21124412</div>
+                        <div class="table__td">
+                          <!-- begin colors -->
+                          <div class="colors">
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors" checked="">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #1b2023;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #663d14;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #c09a6b;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #b4977a;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #953b20;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-02-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #9e8c76;"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <!-- end colors -->
+                        </div>
+                        <div class="table__td">Поставка в теч. 2 дней</div>
+                        <div class="table__td">1300 грн</div>
+                        <div class="table__td">
+                          <!-- begin counter -->
+                          <div class="counter">
+                            <label class="counter__label">Кол-во:</label>
+                            <input class="counter__input" type="number" value="3">
+                            <button class="counter__btn counter__btn--inc" type="button"></button>
+                            <button class="counter__btn counter__btn--dec" type="button"></button>
+                          </div>
+                          <!-- end counter -->
+                        </div>
+                        <div class="table__td"><strong>105000 грн</strong></div>
+                        <div class="table__td"><button class="btn-sm-round">
+                            <svg viewBox="0 0 469.333 469.333" class="icon icon--shopping-cart" width="1.000em" height="1em">
+                              <path d="M434.979 42.667H85.333v3.061l-4.375-14.999C75.687 12.635 58.844 0 40 0H10.667C4.771 0 0 4.771 0 10.667s4.771 10.667 10.667 10.667H40c9.427 0 17.844 6.313 20.479 15.365l66.396 227.635-34.021 42.521a34.48 34.48 0 00-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416A10.66 10.66 0 00426.667 352 10.66 10.66 0 00416 341.333H119.687c-7.177 0-13.021-5.844-13.021-13.021 0-2.948 1.01-5.844 2.854-8.135l34.279-42.844H353.02c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177a34.636 34.636 0 003.26-14.615V77.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.51 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64h344.316C442.156 64 448 69.844 448 77.021v3.021zM128 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.531 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333zM384 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.531 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333z" />
+                            </svg>
+                          </button></div>
+                      </div>
+                    </div>
+                    <div class="table__tr">
+                      <div class="table__tr-inner">
+                        <div class="table__td"><img class="js-lazy" src="" alt="" data-src="./img/39.jpg" /></div>
+                        <div class="table__td">Коврики для Toyota Camry (2018) Weather Tech ®</div>
+                        <div class="table__td">ED21124412</div>
+                        <div class="table__td">
+                          <!-- begin colors -->
+                          <div class="colors">
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors" checked="">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #1b2023;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #663d14;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #c09a6b;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #b4977a;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #953b20;"></span>
+                              </span>
+                            </label>
+                            <label class="colors__item search-radio search-radio--sm">
+                              <input class="search-radio__input" type="radio" name="item-03-colors">
+                              <span class="search-radio__content">
+                                <span class="search-radio__img" style="background-color: #9e8c76;"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <!-- end colors -->
+                        </div>
+                        <div class="table__td">Поставка в теч. 2 дней</div>
+                        <div class="table__td">1300 грн</div>
+                        <div class="table__td">
+                          <!-- begin counter -->
+                          <div class="counter">
+                            <label class="counter__label">Кол-во:</label>
+                            <input class="counter__input" type="number" value="3">
+                            <button class="counter__btn counter__btn--inc" type="button"></button>
+                            <button class="counter__btn counter__btn--dec" type="button"></button>
+                          </div>
+                          <!-- end counter -->
+                        </div>
+                        <div class="table__td"><strong>105000 грн</strong></div>
+                        <div class="table__td"><button class="btn-sm-round">
+                            <svg viewBox="0 0 469.333 469.333" class="icon icon--shopping-cart" width="1.000em" height="1em">
+                              <path d="M434.979 42.667H85.333v3.061l-4.375-14.999C75.687 12.635 58.844 0 40 0H10.667C4.771 0 0 4.771 0 10.667s4.771 10.667 10.667 10.667H40c9.427 0 17.844 6.313 20.479 15.365l66.396 227.635-34.021 42.521a34.48 34.48 0 00-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416A10.66 10.66 0 00426.667 352 10.66 10.66 0 00416 341.333H119.687c-7.177 0-13.021-5.844-13.021-13.021 0-2.948 1.01-5.844 2.854-8.135l34.279-42.844H353.02c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177a34.636 34.636 0 003.26-14.615V77.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.51 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64h344.316C442.156 64 448 69.844 448 77.021v3.021zM128 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.531 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333zM384 384c-23.531 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.531 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333 0-11.76 9.573-21.333 21.333-21.333 11.76 0 21.333 9.573 21.333 21.333 0 11.76-9.573 21.333-21.333 21.333z" />
+                            </svg>
+                          </button></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end table -->
+                  <!-- begin pagination -->
+                  <ul class="section__pagination pagination" class="pagination">
+                    <li><a href="#" class=" prev"> </a></li>
+                    <li><a href="#">1</a></li>
+                    <li class=" pagination__current-item"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li>...</li>
+                    <li><a href="#">18</a></li>
+                    <li><a href="#">19</a></li>
+                    <li><a href="#" class=" next"> </a></li>
+                  </ul>
+                  <!-- end pagination-->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end section -->
+        </div>
+        <!-- end cabinet -->
+      </main>
+      <!-- end main -->
+      <!-- begin footer -->
+      <footer class="out__footer footer">
+        <div class="container">
+          <div class="footer__inner">
+            <!-- begin nav -->
+            <nav class="nav nav--footer footer__nav">
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Оплата и доставка</a></li>
+                <li><a href="#">политика компании</a></li>
+                <li><a href="#">контакты</a></li>
+              </ul>
+            </nav>
+            <!-- end nav-->
+            <a href="/" class="footer__logo logo">
+              <img class="js-lazy" alt="" src="" data-src="./img/logo-white.png" />
+            </a>
+            <div class="footer__text">prime auto - надежное качество по лучшей цене</div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script id="app-script" type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
