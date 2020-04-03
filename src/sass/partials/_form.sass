@@ -17,6 +17,9 @@
     padding-right: rem(5)
     margin-bottom: rem(15)
 
+    +xs
+      width: 100%
+
   &__title
     @extend .block__title
     &--mb-sm
@@ -55,7 +58,10 @@
     background-color: $lighten
     padding: rem(50) rem(60)
     text-align: center
-
+    
+    +xl
+      padding: rem(40)
+      
     +lg
       padding: rem(30)
 

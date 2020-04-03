@@ -123,6 +123,9 @@ body
   border-bottom: 1px solid $lighten
   padding-bottom: rem(25)
   margin-bottom: rem(25)
+  +md
+    padding-bottom: rem(15)
+    margin-bottom: rem(15)
 
 .price
   font-size: 1rem
@@ -159,7 +162,26 @@ body
     width: percentage(1 / 6)
     padding-top: 17%
 
-.col
-  &--2-10
-    width: percentage(2 / 10)
+@for $i from 1 through 10
+  .col
+    &--#{$i}-10
+      width: percentage($i/10)
+    &--xxs-#{$i}-10
+      +xxsmin
+        width: percentage($i/10)
+    &--xs-#{$i}-10
+      +xsmin
+        width: percentage($i/10)
+    &--sm-#{$i}-10
+      +smmin
+        width: percentage($i/10)
+    &--md-#{$i}-10
+      +mdmin
+        width: percentage($i/10)
+    &--lg-#{$i}-10
+      +lgmin
+        width: percentage($i/10)
+    &--xl-#{$i}-10
+      +xlmin
+        width: percentage($i/10)
     

@@ -16,12 +16,22 @@
     padding-top: rem(15)
     padding-bottom: rem(15)
 
+    +sm
+      display: block
+
+  &__hero-left
+    padding-right: rem(15)
+
   &__hero-title
     margin-bottom: rem(25)
 
   &__block
     +notlast
       margin-bottom: rem(45)
+      +lg
+        margin-bottom: rem(30)
+      +md
+        margin-bottom: rem(15)
 
 .cabinet-meta
   display: flex
@@ -30,8 +40,24 @@
   &__left, &__right
     width: percentage(690 / 1650)
 
+    +xl
+      width: 50%
+
+    +sm
+      width: 100%
+      margin-bottom: rem(15)
+      padding-left: 0
+      padding-right: 0
+  
+  &__left
+    +xl
+      padding-right: rem(15)
+
   &__right
     margin-left: percentage(75 / 1650)
+    +xl
+      margin-left: 0
+      padding-left: rem(15)
 
   &__order-item
     border-bottom: 1px solid  $lighten
@@ -50,11 +76,22 @@
     +notlast
       margin-bottom: rem(25)
 
+    +md
+      display: block
+
   &__block-title
     width: percentage(180 / 690)
+    padding-right: rem(10)
+
+    +md
+      width: auto
+      padding-right: 0
+      margin-bottom: rem(15)
 
   &__block-meta
     width: percentage((690 - 180) / 690)
+    +md
+      width: auto
 
   &--block-bdb
     #{$this}__block-meta

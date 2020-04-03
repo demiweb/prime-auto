@@ -105,12 +105,19 @@
   &__top
     padding-top: rem(90)
     padding-bottom: rem(70)
+    +lg
+      padding-top: rem(50)
+      padding-bottom: rem(50)
   &__bottom
     padding-top: rem(115)
     padding-bottom: rem(140)
 
     background-color: $accent
     color: $white
+
+    +lg
+      padding-top: rem(90)
+      padding-bottom: rem(90)
 
   &__img
     +cover
@@ -124,6 +131,9 @@
     padding-top: 37%
 
     width: percentage(670 / 1740)
+
+    +md
+      display: none
     
   &--bottom-offset
     margin-bottom: rem(30)

@@ -5,12 +5,28 @@
   border-left: 1px solid $lighten
   border-right: 1px solid $lighten
 
+  +md
+    border-top: 1px solid $lighten
+
   &__top, &__tr-inner
     display: flex
+
+  &__top
+    +md
+      display: none
 
   &__tr-inner
     padding-top: rem(20)
     padding-bottom: rem(20)
+    +lg
+      padding-top: rem(10)
+      padding-bottom: rem(10)
+    +md
+      flex-wrap: wrap
+      justify-content: flex-end
+
+      padding-top: 0
+      padding-bottom: 0
 
   &__tr
     border-bottom: 1px solid $lighten
@@ -35,6 +51,9 @@
     width: percentage(260 / 1650)
     padding: rem(10)
 
+    strong
+      max-width: 100%
+
     &:first-child
       width: percentage(95 / 1650)
 
@@ -49,6 +68,18 @@
   &__td
     +notlast
       border-right: 1px solid $lighten
+
+    +md
+      width: 50%
+      border-bottom: 1px solid $lighten
+      +notlast
+        border-right: 0
+      &:first-child
+        width: 100%
+      &:last-child
+        width: 50%
+      &:nth-child(even)
+        border-right: 1px solid  $lighten
 
   &__btn
     display: inline-flex
@@ -75,11 +106,18 @@
     #{$this}__td, #{$this}__th
       width: percentage(220 / 1650)
 
+      +md
+        width: 50%
+
       &:first-child
         width: percentage(220 / 1650)
+        +md
+          width: 100%
 
       &:last-child
         width: percentage((1650 - (220 * 7)) / 1650)
+        +md
+          width: 100%
 
   &--for-dealers
     #{$this}__td, #{$this}__th

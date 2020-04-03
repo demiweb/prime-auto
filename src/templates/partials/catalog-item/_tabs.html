@@ -11,10 +11,12 @@ tabs = [
 
 <!-- begin catalog-item-tabs -->
 <div class="catalog-item__tabs tabs">
-  <div class="tabs__tabs">
-    {% for i in tabs %}
-    <button class="tabs__tab js-tabs-btn{% if i.isActive %} tabs__tab--active{% endif %}">{{ i.title | safe }}</button>
-    {% endfor %}
+  <div class="tabs__tabs-wrap">
+    <div class="tabs__tabs">
+      {% for i in tabs %}
+      <button class="tabs__tab js-tabs-btn{% if i.isActive %} tabs__tab--active{% endif %}">{{ i.title | safe }}</button>
+      {% endfor %}
+    </div>
   </div>
 
   <div class="tabs__content">
