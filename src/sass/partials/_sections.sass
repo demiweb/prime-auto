@@ -132,6 +132,9 @@
 
     width: percentage(670 / 1740)
 
+    +lg
+      right: 0
+
     +md
       display: none
     
@@ -167,7 +170,7 @@
     z-index: 0
 
 .s-full
-  +windowHeight()
+  +windowHeight($header-height)
   display: flex
   align-items: center
   justify-content: center
@@ -176,6 +179,8 @@
   background-color: $dark
   color: $white
 
+  +lg
+    +windowHeight($header-height-lg * 2)
 
   &__icon
     width: rem(54)

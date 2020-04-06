@@ -2,12 +2,27 @@
   display: flex
   flex-wrap: wrap
 
+  +lg
+    margin-left: rem(-10)
+    margin-right: rem(-10)
+
   &__col
     width: rem(250)
     margin-right: rem(10)
+    margin-bottom: rem(10)
+
+    +lg
+      width: 33.33333%
+      margin-right: 0
+      padding-left: rem(10)
+      padding-right: rem(10)
+      
+    +xs
+      width: 100%
 
 .search
   position: relative
+
   &__input
     width: 100%
     height: $container--lg-padding
@@ -23,6 +38,7 @@
     +lg
       height: $header-height-lg
       padding: rem(10) rem(15)
+      padding-right: rem(50)
 
   &__btn
     position: absolute
@@ -36,5 +52,10 @@
     color: $accent
     background-color: transparent
 
+    +lg
+      width: rem(50)
+
     .icon
       font-size: rem(30)
+      +lg
+        font-size: rem(20)

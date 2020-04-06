@@ -6,9 +6,18 @@
 
   &__aside
     width: percentage(255 / 1650)
+    +r(1749)
+      width: rem(300)
+      transform: translate(calc(-100% - #{$container--lg-padding}), 0)
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 10
 
   &__content
     width: percentage((1650 - 255) / 1650)
+    +r(1749)
+      width: 100%
 
 .aside
   &__top

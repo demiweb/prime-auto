@@ -6,9 +6,18 @@
 
     margin-bottom: rem(30)
 
+    +sm
+      display: block
+
   &__top-rating
     display: flex
     align-items: center
+
+
+    +sm
+      margin-bottom: rem(10)
+      flex-wrap: wrap
+
     small
       font-size: em(12)
       color: $light-dark
@@ -16,9 +25,17 @@
       border-left: 1px solid currentColor
       padding-left: rem(10)
 
+      +sm
+        width: 100%
+        padding-left: 0
+        border-left: 0
+
 .testimonial
   background-color: $white
   padding: rem(25) rem(30)
+
+  +lg
+    padding: rem(20)
   
   &__rating
     margin-bottom: rem(20)

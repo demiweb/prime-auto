@@ -30,7 +30,16 @@
   <section class="section">
     <div class="container container--lg-right-gap">
       {% include "partials/for-dealers/_search.html" %}
-
+      
+      {{ mixins.btn(
+        title = 'каталог',
+        mod = 'section__aside-toggle js-burger',
+        href = false,
+        attributes = {
+          'data-menu-target': 'catalog',
+          'data-block': 'section__aside-toggle'
+        }
+      ) }}
       <div class="aside-container">
         {% include "partials/_aside.html" %}
 

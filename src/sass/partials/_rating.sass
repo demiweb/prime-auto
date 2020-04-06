@@ -46,13 +46,27 @@
 .rating-block
   display: flex
   align-items: center
+
+  +xxs
+    display: block
+
   &__item
     padding-left: rem(15)
     padding-right: rem(15)
+
+    +xxs
+      padding-left: 0
+      padding-right: 0
+
     +notlast
       border-right: 1px solid $light-dark
+      +xxs
+        border-right: 0
+        margin-bottom: rem(10)
+
     &:first-child
       padding-left: 0
+
     &:not(.rating)
       color: $light-dark
       font-size: em(14)
