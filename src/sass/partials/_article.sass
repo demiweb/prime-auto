@@ -1,4 +1,5 @@
 .article
+  +clr
   +notlast
       margin-bottom: rem(20)
       
@@ -6,9 +7,17 @@
     +notlast
       margin-bottom: rem(20)
 
-  img
+  img, figure
     +notlast
       margin-bottom: rem(30)
+
+    &.alignleft
+      float: left
+      margin-right: rem(15)
+
+    &.alignleft
+      float: right
+      margin-left: rem(15)
 
   h1, h2, h3, h4, h5, h6
     @extend .title

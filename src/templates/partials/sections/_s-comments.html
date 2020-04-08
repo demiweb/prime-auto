@@ -1,0 +1,43 @@
+<!-- begin section -->
+<section class="section section--bd-top">
+  <div class="container">
+    <!-- begin add-comment -->
+    <form class="section__add-comment section__block add-comment">
+      <h3 class="add-comment__title title title--h3-lg title--400 title--ttn">Комментарии</h3>
+
+      <textarea class="add-comment__field" placeholder="Добавьте комментарий..."></textarea>
+
+      {{ mixins.btn(
+        title = 'Добавить',
+        mod = '',
+        href = false
+      ) }}
+    </form>
+    <!-- end add-comment -->
+    
+    <div class="section__block">
+      <div class="grid">
+        {% for i in range(0, 6) %}
+        <div class="col col--xs-6">
+          <div class="testimonial">
+            <div class="testimonial__rating rating-block rating-block--black">
+              <strong class="rating-block__item">Андрей Карпенко</strong>
+              <div class="rating-block__item">17.09.2020</div>
+            </div>
+
+            <div class="testimonial__text">Соглашусь с автором! Равным образом рамки и место обучения кадров способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий.</div>
+
+            <div class="textimonial__linkes likes">
+              <button class="likes__btn likes__btn--like">0 {{ mixins.icon('like', 'likes__icon') }}</button>
+              <button class="likes__btn likes__btn--dislike">0 {{ mixins.icon('like', 'likes__icon') }}</button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <button class="link-arrow">Показать еще</button>
+  </div>
+</section>
+<!-- end section -->

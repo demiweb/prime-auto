@@ -74,6 +74,15 @@
 .order-list
   +counter('order', '.')
 
+.back-link
+  color: $accent
+  display: inline-flex
+  align-items: center
+  +hover
+    text-decoration: underline
+  &__icon
+    margin-right: .5em
+
 .link
   font-size: em(18)
   font-weight: 700
@@ -82,4 +91,15 @@
 
   &--tdn
     text-decoration: none
+
+.link-arrow
+  display: inline-flex
+  align-items: center
+
+  font-size: em(12)
+  color: #7b889b
+  +after
+    +icon-arrow(.5, .5, .1, currentColor, -45, em)
+    display: block
+    margin-left: .5em
     
