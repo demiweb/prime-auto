@@ -19,11 +19,20 @@
           </div>
 
           <div class="cabinet__hero-right">
-            <div class="cabinet__hero-btn">
-              {{ mixins.btn(
-                title = mixins.icon('logout', 'btn__icon') + 'Выйти',
-                mod = 'btn--transp-white'
-              ) }}
+            <div class="cabinet__hero-btns">            
+              <div class="cabinet__hero-btn">
+                {{ mixins.btn(
+                  title = 'Каталог для диллеров',
+                  mod = ''
+                ) }}
+              </div>
+
+              <div class="cabinet__hero-btn">
+                {{ mixins.btn(
+                  title = mixins.icon('logout', 'btn__icon') + 'Выйти',
+                  mod = 'btn--transp-white'
+                ) }}
+              </div>
             </div>
           </div>
         </div>

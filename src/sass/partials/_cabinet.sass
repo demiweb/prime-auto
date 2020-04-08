@@ -16,11 +16,19 @@
     padding-top: rem(15)
     padding-bottom: rem(15)
 
-    +sm
+    +r(1559)
       display: block
 
   &__hero-left
     padding-right: rem(15)
+    width: 60%
+    +r(1559)
+      width: auto
+
+  &__hero-right
+    width: 40%
+    +r(1559)
+      width: auto
 
   &__hero-title
     margin-bottom: rem(25)
@@ -31,6 +39,21 @@
       +lg
         margin-bottom: rem(30)
       +md
+        margin-bottom: rem(15)
+
+  &__hero-btns
+    display: flex
+    justify-content: flex-end
+    +r(1559)
+      justify-content: flex-start
+    +xs
+      display: block
+
+  &__hero-btn
+    +notlast
+      margin-right: rem(15)
+      +xs
+        margin-right: 0
         margin-bottom: rem(15)
 
 .cabinet-meta
