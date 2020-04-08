@@ -152,3 +152,61 @@
     -webkit-box-orient: vertical
     height: 4.5rem
     overflow: hidden
+
+
+.product-card
+  display: flex
+  flex-direction: column
+
+  height: 100%
+
+  &__img
+    +cover
+    background-color: $light
+    padding-top: 120%
+    position: relative
+
+  &__label
+    display: block
+
+    position: absolute
+    z-index: 1
+    top: rem(20)
+    left: 0
+
+    padding: rem(3) rem(12)
+    
+    font-weight: 700
+    color: $white    
+    text-transform: uppercase
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    padding: rem(10) 0 0
+
+  &__upttl, &__price
+    font-size: em(24)
+    font-weight: 300
+    +sm
+      font-size: em(21)
+
+  &__title
+    @extend .block__title
+    margin-bottom: 0 !important
+
+  &__subttl
+    margin-bottom: rem(10)
+
+  &__rating
+    margin-bottom: rem(15)
+
+  &__colors
+    margin-bottom: rem(15)
+
+  &__price
+    margin-bottom: rem(20)
+
+

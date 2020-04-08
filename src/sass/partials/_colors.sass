@@ -1,4 +1,6 @@
 .colors
+  $this: &
+
   display: flex
   flex-wrap: wrap
   width: 100%
@@ -10,3 +12,7 @@
     width: calc(33.33333% - #{rem(10)})
     margin-left: rem(5)
     margin-right: rem(5)
+
+  &--sm
+    #{$this}__item
+      width: rem(38)

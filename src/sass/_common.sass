@@ -41,6 +41,11 @@ body
   +rmin(1200)
     max-width: 1030px
 
+  &--md
+    max-width: none
+    +rmin(1800)
+      max-width: 1630px
+
   &--lg
     max-width: none !important
     margin-left: 0
@@ -175,4 +180,43 @@ body
     &--xl-#{$i}-10
       +xlmin
         width: percentage($i/10)
+
+.img-item
+  +cover
+  background-color: $light
+  padding-top: 100%
+  &.swiper-slide
+    padding-top: 18%
+    +md
+      padding-top: 22%
+    +sm
+      padding-top: 30%
+
+.logos
+  $logos-grid-gap: rem(15)
+
+  display: flex
+  flex-wrap: wrap
+
+  margin-left: $logos-grid-gap / -2
+  margin-right: $logos-grid-gap / -2
+
+  &__item
+    width: percentage(1 / 6)
+    padding-left: $logos-grid-gap / 2
+    padding-right: $logos-grid-gap / 2
+    margin-bottom: $logos-grid-gap
+
+    +md
+      width: percentage(2 / 6)
+
+.logo-item
+  position: relative
+  padding-top: 60%
+  background-color: #f0f0f0
+  img
+    +vcenter
+    max-height: 80%
+    max-width: 80%
+
     

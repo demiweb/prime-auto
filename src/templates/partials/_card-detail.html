@@ -1,0 +1,54 @@
+{%set
+colors = [
+  '#303130',
+  '#3d251b',
+  '#ae8c6c',
+  '#5e5e5e'
+]
+%}
+
+<!-- begin  -->
+<div class="product-card">
+  <span
+    class="product-card__img js-lazy"
+    data-background-image="./img/products/01.jpg"
+  >
+    {% if i.label %}
+      <span class="product-card__label" style="background-color: {{ i.label.color }}">{{ i.label.title | safe }}</span>
+    {% endif %}
+  </span>
+
+  <span class="product-card__content">
+    <span class="product-card__upttl">WeatcherTech®</span>
+    <span class="product-card__title">Коврики с бортиком</span>
+    <span class="product-card__subttl">Лазерное измерение для идеальной посадки</span>
+
+    {{ mixins.rating(
+      mod = 'product-card__rating',
+      grade = 5,
+      label = '1558'
+    ) }}
+
+    <!-- begin colors -->
+    <div class="product-card__colors colors colors--sm">
+      {% for color in colors %}
+        <div class="colors__item search-radio search-radio--sm">
+          <span class="search-radio__img" style="background-color: {{ color }};"></span>
+        </div>
+      {% endfor %}  
+    </div>
+    <!-- end colors -->
+
+    <span class="product-card__price">
+      2250 UAH - 12890 UAH
+    </span>
+
+    <span class="product-card__btn">
+      {{ mixins.btn(
+        title = 'Перейти к товарам',
+        mod = 'btn--full btn--transp'
+      ) }}
+    </span>
+  </span>
+</div>
+<!-- end  -->

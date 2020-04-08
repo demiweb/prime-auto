@@ -12,7 +12,7 @@ export default class SLider {
   _getOptions() {
     this.getOptions = ({ navigation, onInit, pagination }) => ({
       hero: {
-        slidersPerView: 1,
+        slidesPerView: 1,
         fadeEffect: { crossFade: true },
         effect: 'fade',
         autoplay: {
@@ -31,9 +31,32 @@ export default class SLider {
       },
       img: {
         navigation,
-        slidersPerView: 1,
+        slidesPerView: 1,
         on: {
           init: onInit,
+        },
+      },
+      row: {
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 15,
+        on: {
+          init: onInit,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
         },
       },
     })

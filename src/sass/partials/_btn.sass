@@ -48,6 +48,14 @@
     border-color: $white
     background-color: transparent
 
+  &--transp
+    background-color: transparent
+    color: $accent
+    +hover
+      &:not(#{$this}--no-hover)
+        background-color: $accent
+        color: $white
+
   &--full
     min-width: 0
     width: 100%

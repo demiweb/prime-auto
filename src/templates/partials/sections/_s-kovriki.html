@@ -1,43 +1,48 @@
 {%set
 productsLg = [
-  {
-    title: 'Weatcher Tech',
-    img: 'products/01.jpg'
-  },
-  {
-    title: 'EGR',
-    img: 'products/02.jpg'
-  },
-  {
-    title: 'Rigum',
-    img: 'products/03.jpg'
-  }
+  { label: { color: '#cd000a', title: 'рекоммендуем' } },
+  { label: { color: '', title: '' } },
+  { label: { color: '#0c9b27', title: 'топ продаж' } },
+  { label: { color: '#cd000a', title: 'рекоммендуем' } },
+  { label: { color: '', title: '' } },
+  { label: { color: '#0c9b27', title: 'топ продаж' } }
 ]
 %}
 
 <!-- begin section -->
-<section class="section section--mt-neg overflow-hidden">
-  <div class="section__word section__word--left word">коврики</div>
-
+<section class="section">
   <div class="container">
-    <div class="section__block section__block--lg">
+    <div class="section__block">
       <div class="grid grid--justify-content-center">
         {% for i in productsLg %}
         <div class="col col--md-4 col--xs-6">
-          {{ mixins.card(
-            mod = 'card--lg card--center',
-            title = i.title,
-            upttl = i.upttl,
-            img = i.img,
-            text = i.text,
-            button = true
-          ) }}
+          {% include "partials/_card-detail.html" %}
         </div>
         {% endfor %}
       </div>
     </div>
+  </div>
+  
+  <div class="container container--md">
+    <!-- begin logos -->
+    <div class="logos section__block">
+      {% for i in range(0, 12) %}
+      <div class="logos__item">
+        <div class="logo-item">
+          <img class="js-lazy" src="" alt="" data-src="./img/Nova_Poshta_2014_logo.png"/>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- end logos -->
+  </div>
 
-    {% include "partials/_right-text.html" %}
+  <div class="container">
+    <article class="article">
+      <p>Салон авто может рассказать об аккуратности и отношении владельца к своему автомобилю. Если вы ездили в чужой машине, где не было резиновых ковриков для авто, то понимали, что и в жизни ее хозяин не стремится к чистоте, а его автомобиль ему совсем не дорог.</p>
+      <p>Мы предлагаем различные автоковрики в Киеве, полагая, что они являются обязательной принадлежностью любой машины. Ошибаются те, кто считает коврики автомобильные резиновые незначительной мелочью. Автомобильные коврики добавят уюта в ваш салон и неплохо защитят его от износа.</p>
+      <p>Коврики (резиновые) автомобильные обладают высокой влагоустойчивостью и пластичностью при эксплуатации. Вы сможете надежно защитить пол от просачивания воды и последующих усилий для борьбы с этой неприятностью.</p>
+    </article>
   </div>
 </section>
 <!-- end section -->

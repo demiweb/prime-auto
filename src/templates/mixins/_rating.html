@@ -1,14 +1,14 @@
 {% from 'mixins/_icon.html' import icon %}
 {% set icon = icon %}
 
-{% macro rating(mod, title, grade, interactive = false) %}
+{% macro rating(mod, title, grade, label, interactive = false, starsNmb = 5) %}
 <div class="rating{% if mod %} {{ mod }}{% endif %} {% if interactive %} rating--interactive{% endif %} js-rating">
   {% if title %}
     <div class="rating__title title title--h4">{{ title | safe }}</div>
   {% endif %}
   
   <div class="rating__stars">
-    {% for i in range(0, 5) | reverse %}
+    {% for i in range(0, starsNmb) | reverse %}
       <input
         class="rating__input"
         type="radio"
@@ -24,7 +24,11 @@
   </div>
 
   <div class="rating__grades">
-    {{ grade }} / 5
+    {% if label %}
+      {{ label }}
+    {% else %}
+      {{ grade }} / {{ starsNmb }}
+    {% endif %}
   </div>
 </div>
 {% endmacro %}
