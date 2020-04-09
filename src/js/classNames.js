@@ -5,6 +5,7 @@ export default {
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
+    close: 'js-menu-close',
   },
   slider: {
     container: 'js-slider',

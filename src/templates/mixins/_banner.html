@@ -1,0 +1,26 @@
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro banner(mod, title, text, img) %}
+<!-- begin banner -->
+<div
+  class="banner{% if mod %} {{ mod }}{% endif %} js-lazy"
+  data-background-image="./img/{{ img }}"
+>
+ <div class="banner__content">
+   {% if title %}
+    <div class="banner__title">{{ title | safe }}</div>
+   {% endif %}
+
+   {% if text %}
+    <div class="banner__text">{{ text | safe }}</div>
+   {% endif %}
+
+   {{ btn(
+     title = 'Перейти',
+     mod = 'banner__btn'
+   ) }}
+ </div> 
+</div>
+<!-- end banner -->
+{% endmacro %}

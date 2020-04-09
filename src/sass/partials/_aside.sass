@@ -6,13 +6,30 @@
 
   &__aside
     width: percentage(255 / 1650)
+    background-color: $white
+
     +r(1749)
+      position: fixed
+      z-index: 10
+      top: $header-height
+      left: 0
+      bottom: 0
+
+      padding-left: 0
+      padding-right: 0
+      margin-bottom: 0
+
       width: rem(300)
       transform: translate(calc(-100% - #{$container--lg-padding}), 0)
-      position: fixed
-      top: 0
-      left: 0
-      z-index: 10
+
+      +ready
+        +tr(transform .5s $easeInQuad) 
+
+      &--open
+        transform: translate(0, 0)
+
+    +lg
+      top: $header-height-lg
 
   &__content
     width: percentage((1650 - 255) / 1650)
@@ -20,7 +37,26 @@
       width: 100%
 
 .aside
+  +r(1749)
+    display: flex
+    flex-direction: column
   &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+
     color: $white
     background-color: $accent
     padding: rem(15) rem(25)
+
+  &__accordion
+    +r(1749)
+      overflow: auto
+      flex-grow: 1
+
+  &__close
+    position: relative
+    top: auto
+    right: auto
+    +hover
+      color: $c-text

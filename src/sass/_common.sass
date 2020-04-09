@@ -233,4 +233,62 @@ body
     background-color: $light
     color: $white
 
+.close
+  +icon-close(1.2em, 0.1em, currentColor)
+  display: block
+
+  position: absolute
+  z-index: 1
+  top: rem(15)
+  right: rem(15)
+  
+  +tr(color .3s)
+
+  +hover
+    color: $accent
+
+.two-btns
+  display: flex
+  justify-content: center
+
+  +md
+    display: block
+
+  &__btn
+    margin-left: rem(15) / 2
+    margin-right: rem(15) / 2
+    +md
+      margin-left: 0
+      margin-right: 0
+
+    +notlast
+      +md
+        margin-bottom: rem(15)
+
+.banner
+  +cover
+
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  background-color: $dark
+  color: $white
+
+  padding: vw(180) rem(35) rem(35)
+  height: 100%
+
+  +lg
+    padding: vw(180) rem(20) rem(20)
+
+  &__title
+    font-size: em(32)
+    font-weight: 700
+    margin-bottom: rem(10)
+
+  &__text
+    margin-bottom: rem(15)
+
+  &__content
+    max-width: rem(470)
     

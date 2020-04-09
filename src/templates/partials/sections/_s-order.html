@@ -77,15 +77,49 @@
         
         <div class="section__price-block text-center">
           <div class="price">Сумма: <strong>1900</strong>грн</div>
-          {{ mixins.btn(
-            title = 'Оформить заказ',
-            mod = '',
-            href = false
-          ) }}
+          <div class="two-btns">
+            <div class="two-btns__btn">
+              {{ mixins.btn(
+                title = 'Оформить заказ',
+                mod = '',
+                href = false
+              ) }}
+            </div>
+
+            <div class="two-btns__btn">
+              {{ mixins.btn(
+                title = 'Заказать в 1 клик',
+                mod = 'btn--transp',
+                href = false
+              ) }}
+            </div>
+          </div>
+          
         </div>
       </div>
     </form>
     <!-- end cabinet-meta -->
+
+    <div class="grid">
+      <div class="col col--md-7">
+        {{ mixins.banner(
+          img = '13.jpg',
+          title = 'Автономера в Украине',
+          text = 'Изготовление автомобильных номеров в Украине от 250 грн. 
+Срок оформления - до 15 минут. Быстрое оформление. 
+Доставка по Киеву курьером и по Украине Новой Почтой.'
+        ) }}
+      </div>
+
+      <div class="col col--md-5">
+        {{ mixins.banner(
+          img = '2020-gmc-sierra-mmp-1-1579115018.jpg',
+          title = 'Autolend',
+          text = 'Роллеты, коврики, дефлекторы, ящики кузова
+и многое другое для вашего автомобиля'
+        ) }}
+      </div>
+    </div>
   </div>
 </section>
 <!-- end section -->

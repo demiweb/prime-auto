@@ -7,6 +7,7 @@ import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
 import addRatingIds from './methods/addRatingIds'
 import setSelects from './methods/setSelects'
+import handleCloseMenu from './methods/handleCloseMenu'
 
 import { isModernBrowser, setVhProperty } from './helpers'
 
@@ -50,6 +51,7 @@ class App {
       setVhProperty,
       addRatingIds,
       setSelects,
+      handleCloseMenu,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
