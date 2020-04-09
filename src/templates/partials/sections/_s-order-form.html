@@ -1,0 +1,65 @@
+{%set
+form = {
+  mod: 'form--bg-white form--block order-form-block__form',
+  title: {
+    title: 'Оставьте ваши контактные данные',
+    mod: 'form__title--md'
+  },
+  colMod: 'form__col--33',
+  btn: {
+    title: 'Отправить',
+    wrapMod: 'form__btn-short'
+  },
+  cols: [
+    {
+      name: 'input',
+      mod: '',
+      type: 'text',
+      placeholder: 'Имя'
+    },
+    {
+      name: 'input',
+      mod: '',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _'
+    },
+    {
+      name: 'input',
+      mod: '',
+      type: 'email',
+      placeholder: 'E-mail'
+    }
+  ],
+  fields: [
+    {
+      name: 'input',
+      mod: '',
+      type: 'text',
+      placeholder: 'Укажите ваш статус (ООО, ИП и т.д.)'
+    },
+    {
+      name: 'textarea',
+      mod: '',
+      type: '',
+      placeholder: 'Комментарий'
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container container--lg">
+    <h2 class="section__title--mb-lg title title--h2 text-center">Заявка на сотрудничество</h2>
+  </div>
+
+  <!-- begin order-form-block -->
+  <div class="order-form-block">
+    <div class="container container--lg">
+      {% include "partials/_form.html" %}
+    </div>
+  </div>
+  <!-- end order-form-block -->
+
+</section>
+<!-- end section -->

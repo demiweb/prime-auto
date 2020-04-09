@@ -1,10 +1,14 @@
 {% if not form.justInner %}
 <form class="form{% if form.mod %} {{ form.mod }}{% endif %}">
 {% endif %}
+  {% if form.title %}
+  <div class="form__title{% if form.title.mod %} {{ form.title.mod }}{% endif %}">{{ form.title.title | safe }}</div>
+  {% endif %}
+
   {% if form.cols %}
     <div class="form__row{% if form.rowMod %} {{ form.rowMod }}{% endif %}">
       {% for i in form.cols %}
-      <div class="form__col">
+      <div class="form__col{% if form.colMod %} {{ form.colMod }}{% endif %}">
         {% if i.name %}
           {{ mixins.input(
             name = i.name,
@@ -22,14 +26,7 @@
       {% endfor %}
     </div>
 
-    {% if not form.noButton %}
-
-      {{ mixins.btn(
-        title = form.btn.title or 'Сохранить',
-        mod = 'btn--full',
-        href = false
-      ) }}
-    {% endif %}
+    
   
   {% endif %}
 
@@ -51,6 +48,16 @@
     {% endif %}
   </div>
   {% endfor %}
+  {% endif %}
+
+  {% if not form.noButton %}
+  <div class="form__field{% if form.btn.wrapMod %} {{ form.btn.wrapMod }}{% endif %}">
+    {{ mixins.btn(
+      title = form.btn.title or 'Сохранить',
+      mod = 'btn--full',
+      href = false
+    ) }}
+  </div>
   {% endif %}
 
 

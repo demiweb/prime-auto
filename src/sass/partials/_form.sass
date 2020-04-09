@@ -20,10 +20,18 @@
     +xs
       width: 100%
 
+    &--33
+      width: 33.33333%
+
   &__title
     @extend .block__title
     &--mb-sm
-      @extend .block__title--mb-sm    
+      @extend .block__title--mb-sm
+
+    &--md
+      text-transform: uppercase
+      font-size: em(18) !important
+      font-weight: 300 !important
 
   &__subttl
     @extend .block__subttl
@@ -53,6 +61,11 @@
 
     &--50
       width: 50%
+
+  &__btn-short
+    max-width: rem(385)
+    margin-left: auto
+    margin-right: auto
 
   &--block
     background-color: $lighten

@@ -164,11 +164,20 @@
     position: relative
     z-index: 1
 
+  +md
+    margin-top: 0
+
   &__img
     position: absolute
     bottom: 0
     left: 10%
     z-index: 0
+
+    +xl
+      left: 0
+
+    +md
+      display: none
 
 .s-full
   +windowHeight($header-height)
@@ -195,4 +204,4 @@
 
   &__subttl
     margin-bottom: rem(15)
-
+    

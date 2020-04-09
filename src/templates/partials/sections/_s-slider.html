@@ -39,13 +39,16 @@
           <div class="section-block__text article">
             {{ sSlider.text | safe }}
           </div>
+          
 
-          <div class="section-block__btn">
-            {{ mixins.btn(
-              title = sSlider.btn.title or 'Подобрать коврик',
-              mod = ''
-            ) }}
-          </div>
+          {% if not sSlider.noBtn %}
+            <div class="section-block__btn">
+              {{ mixins.btn(
+                title = sSlider.btn.title or 'Подобрать коврик',
+                mod = ''
+              ) }}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
