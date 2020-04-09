@@ -2,21 +2,30 @@
 title: search-results
 page: search-results
 mainClass: 'main--white'
-sSlider: {
-  title: гарантии weatcher tech,
-  text: '
-    <p>Коврик WeatherTech Грузовой лайнер обеспечивает защиту всей площади багажного отделения, по краям оснащен высоким бортиком. Поверхность текстурирована специальной отделкой, которая позволяет удерживать грузы от смещения. Перед установкой WeatherTech обязательно рекомендуется снять тканевые коврики.</p>
-    <p>Коврик WeatherTech Грузовой лайнер обеспечивает защиту всей площади багажного отделения, по краям оснащен высоким бортиком. Поверхность текстурирована специальной отделкой, которая позволяет удерживать грузы от смещения.</p>
-  ' 
+hero: {
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { link: 'Резиновые коврики' },
+      { item: '-' },
+      { item: 'Weatcher Tech', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+}
+sImg: {
+  mod: 'img-block--white img-block--contain',
+  img: '58.jpg',
+  imgs: true
 }
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+  {% include "partials/_hero.html" %}
   {% include "partials/sections/_s-catalog-item.html" %}
-  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-video.html" %}
   {% include "partials/_img-block.html" %}
   {% include "partials/sections/_s-two-colored.html" %}
-  {% include "partials/sections/_s-slider.html" %}
-  {% include "partials/sections/_s-text-word.html" %}
+  {% include "partials/sections/_s-warranty.html" %}
 {% endblock %}

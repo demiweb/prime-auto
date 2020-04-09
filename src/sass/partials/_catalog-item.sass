@@ -13,6 +13,7 @@
     +lg
       width: 100%
       order: 1
+      padding-right: 0
 
   &__right
     @extend .grid
@@ -23,6 +24,10 @@
 
     +lg
       width: 100%
+      
+      padding-left: 0
+      margin-left: 0
+      margin-right: 0
       margin-bottom: rem(30)
 
   &__upttl
@@ -46,14 +51,18 @@
     width: percentage(5 / 7)
     +r(1714)
       width: 100%
+      padding-left: 0
+      padding-right: 0
 
   &__links
     @extend .col
     width: percentage(2 / 7)
     +r(1714)
       width: 100%
+      padding-left: 0
+      padding-right: 0
 
-  &__form
+  &__form, &__search-results
     margin-bottom: rem(20)
 
 .catalog-item-header

@@ -1,6 +1,7 @@
 .gallery
   &__slider
     margin-bottom: rem(10)
+    position: relative
 
   &__thumbs
     height: vw(270)
@@ -28,6 +29,12 @@
     &.swiper-slide-thumb-active
       +before
         display: none
+
+  &__label
+   @extend .product-card__label
+   top: auto
+   bottom: rem(30)
+   background-color: $accent
 
 .gallery-item
   +cover

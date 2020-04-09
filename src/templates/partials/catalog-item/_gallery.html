@@ -1,6 +1,10 @@
 <!-- begin gallery -->
 <div class="gallery js-gallery">
   <div class="gallery__slider slider__wrap slider--gallery__wrap">
+    {% if page === 'search-results' %}
+      <div class="gallery__label">BMW X5 2018</div>
+    {% endif %}
+
     <div class="swiper-container js-slider" data-slider="gallery">
       <div class="swiper-wrapper slider slider--gallery">
         {% for i in range(0, 16) %}

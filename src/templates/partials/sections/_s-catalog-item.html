@@ -1,35 +1,21 @@
 <!-- begin section -->
 <section class="section section--lightest z-9">
-  <header class="out__aux-header catalog-item-header">
-    <div class="container container--lg">
-      <div class="catalog-item-header__inner">      
-        <div class="catalog-item-header__left">
-          <div class="catalog-item-header__img">
-            <img class="js-lazy" src="" alt="" data-src="./img/45.jpg"/>
-          </div>
+  {% if page === 'catalog-item' %}
+    {% include "partials/catalog-item/_header.html" %}
+  {% endif %}
 
-          <div class="catalog-item-header__left-content">
-            <div class="catalog-item-header__upttl">WeatcherTech®</div>
-
-            <div class="catalog-item-header__title">Коврики с бортиком</div>
-          </div>
-        </div>
-
-        <div class="catalog-item-header__right">
-          <div class="catalog-item-header__price">2250 UAH - 12890 UAH</div>
-
-          <div class="catalog-item-header__btn">
-            {{ mixins.btn(
-              title = 'Подобрать',
-              mod = ''
-            ) }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  
 
   <div class="container container--lg-right-gap">
+    {% if page === 'search-results' %}
+    <div class="section__top-link">
+      <a href="#" class="back-link">
+        {{ mixins.icon('left-arrow', 'back-link__icon') }}
+        Назад
+      </a>
+    </div>
+    {% endif %}
+  
     <!-- begin catalog-item -->
     <div class="catalog-item">
       <div class="catalog-item__inner">

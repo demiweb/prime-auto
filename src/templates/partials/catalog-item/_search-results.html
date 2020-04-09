@@ -2,47 +2,28 @@
 fstBlock = [
   {
     checked: true,
-    title: 'Полный комплект
-      (1, 2, та 3  ряд)'
+    title: '1 ряд'
   },
   {
-    title: '2 и 3  ряд'
+    title: '2 ряд'
   },
   {
-    title: '1 ряд
-      (водитель и пассажир)'
-  },
-  {
-    title: 'Полный комплект
-      (1, 2, та 3  ряд)'
-  },
-  {
-    title: 'Полный комплект
-      (1, 2, та 3  ряд)'
-  },
-  {
-    title: 'Полный комплект
-      (1, 2, та 3  ряд)'
+    title: '3 ряд'
   }
 ]
 %}
 
 {%set
 scndBlock = [
-  { checked: true, title: 'Повний комплект (1, 2, та 3  ряд)', color: '#1c2124' },
-  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#663d14' },
-  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#c09a6b' },
-  { title: 'Повний комплект (1, 2, та 3  ряд)', color: '#5e5e5e' }
+  { checked: true, title: 'Черный', img: '59.png' },
+  { title: 'Кофейный', img: '60.png' },
+  { title: 'Бежевый', color: '#c09a6b' },
+  { title: 'Серый', color: '#5e5e5e' }
 ]
 %}
 
-<div class="search-results">
-  <div class="section__top-link">
-    <button class="back-link">
-      {{ mixins.icon('left-arrow', 'back-link__icon') }}
-      Назад
-    </button>
-  </div>
+<div class="catalog-item__search-results search-results">
+  
   
   <form class="search-results__form">
     <div class="search-results__top">
@@ -77,7 +58,7 @@ scndBlock = [
       <div class="search-block__items">
         {% for i in fstBlock %}
         <div class="search-block__item">
-          <label class="search-radio">
+          <label class="search-radio search-radio--fit">
             <input class="search-radio__input" type="radio" name="kit" {% if i.checked %}checked{% endif %}>
             <span class="search-radio__content">
               <span class="search-radio__img">
@@ -100,10 +81,17 @@ scndBlock = [
       <div class="search-block__items">
         {% for i in scndBlock %}
         <div class="search-block__item">
-          <label class="search-radio">
+          <label class="search-radio search-radio--fit">
             <input class="search-radio__input" type="radio" name="color" {% if i.checked %}checked{% endif %}>
+
             <span class="search-radio__content">
-              <span class="search-radio__img" style="background-color: {{ i.color }}"></span>
+              <span
+                class="search-radio__img"
+                {% if i.color %}style="background-color: {{ i.color }}"{% endif %}>
+                  {% if i.img %}
+                    <img class="js-lazy" src="" alt="" data-src="./img/{{ i.img }}"/>
+                  {% endif %}
+                </span>
 
               <span class="search-radio__title">{{ i.title | safe }}</span>
             </span>
@@ -114,9 +102,7 @@ scndBlock = [
     </div>
 
     <div class="search-results__price-block">
-      <div class="price">
-       Сумма: <strong>855</strong> грн
-      </div>
+      <div class="search-results__price title title--h2 title--300">2855 UAH</div>
 
       {{ mixins.btn(
         title = 'Добавить в корзину',
