@@ -77,26 +77,6 @@
   &__title
     text-decoration: underline
 
-// .s-blog-page
-//   &__inner
-//     display: flex
-//     flex-wrap: wrap
-//     margin-bottom: rem(100)
-
-//   &__left, &__right
-//     width: 50%
-//     +sm
-//       width: 100%
-
-//   &__right
-//     padding-left: rem(30)
-//     +sm
-//       padding-left: 0
-
-//   &__article
-//     max-width: rem(735)
-//     +sm
-//       max-width: none
 
 .s-two-colored
   $this: &
@@ -119,6 +99,10 @@
       padding-top: rem(90)
       padding-bottom: rem(90)
 
+    &--with-footer
+      overflow: hidden
+      padding-bottom: 0 !important
+
   &__img
     +cover
     background-color: $dark
@@ -130,13 +114,30 @@
     
     padding-top: 37%
 
-    width: percentage(670 / 1740)
+    width: percentage(650 / 1740)
 
     +lg
       right: 0
 
     +md
       display: none
+
+  &__bottom-footer
+    position: relative
+    margin-right: rem(-25)
+    margin-top: rem(85)
+
+    +lg
+      margin-right: 0
+  
+    +before
+      border-top: 1px solid #414eeb
+      position: absolute
+      z-index: 0
+      top: 0
+      left: -$container--lg-padding
+      width: calc(100vw + #{$container--lg-padding})
+      
     
   &--bottom-offset
     margin-bottom: rem(30)

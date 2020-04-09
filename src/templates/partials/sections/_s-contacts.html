@@ -37,13 +37,13 @@ features = [
     data-background-image="./img/tyler-franta-iusJ25iYu1c-unsplash.jpg"
   ></div>
 
-  <div class="s-two-colored__bottom">
+  <div class="s-two-colored__bottom s-two-colored__bottom--with-footer">
     <div class="container container--lg">
-      <div class="grid">
-        <div class="col col--md-8">
+      <div class="grid grid--no-bottom-gap">
+        <div class="col col--md-7 col--no-bottom-gap">
           <div class="grid">
             {% for i in features %}
-            <div class="col col--xl-3 col--xxs-6">
+            <div class="col col--xl-4 col--xxs-6">
               <!-- begin feature -->
               <div class="feature feature--left">
                 <div class="feature__icon square-icon square-icon--dark"><div class="square-icon__inner">{{ mixins.icon(i.icon) }}</div></div>
@@ -56,8 +56,31 @@ features = [
             </div>
             {% endfor %}
           </div>
+
+          <footer class="s-two-colored__bottom-footer contacts-footer">
+            <div class="contacts-footer__left">
+              <p>Станьте частью нас в социальных сетях. </p>
+              <p>
+                  Читайте, смотрите, делитесь, лайкайте и следите за нами:
+                  <img class="js-lazy" src="" alt="" width="28" data-src="./img/facebook.svg"/>
+                  <img class="js-lazy" src="" alt="" width="28" data-src="./img/instagram.svg"/>
+              </p>
+            </div>
+
+            <div class="contacts-footer__right">
+              <h3 class="title title--h3">Напишите нам:</h3>
+
+              <a href="#" class="chat-btn">
+                <span class="chat-btn__icon">{{ mixins.icon('speech-bubble') }}</span>
+
+                <span class="chat-btn__title">online-чат</span>
+              </a>
+            </div>
+          </footer>
         </div>        
       </div>
+
+      
     </div>
   </div>
 </section>

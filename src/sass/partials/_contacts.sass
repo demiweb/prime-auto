@@ -36,3 +36,88 @@
       +tr(color .3s)
       +hover
         color: $accent
+
+.contacts-footer
+  display: flex
+  +r(1714)
+    display: block
+    padding-top: rem(15)
+
+  &__left
+    display: flex
+    justify-content: center
+    flex-direction: column
+
+    width: 50%
+
+    font-size: em(12)
+
+    +r(1714)
+      width: auto
+      margin-bottom: rem(15)
+
+    p
+      
+
+    img
+      margin-left: rem(5)
+      margin-right: rem(5)
+
+      position: relative
+      top: .8em
+
+  &__right    
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    width: 50%
+
+    background-color: #414eeb
+
+    padding: rem(15) rem(40)
+
+    +r(1714)
+      width: auto
+
+    +md
+      margin-left: rem(-15)
+      margin-right: rem(-15)
+
+    +xs
+      padding: rem(15)
+
+.chat-btn
+  display: inline-flex
+  align-items: center
+
+  text-transform: uppercase
+  font-weight: 700
+  font-size: em(12)
+
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: rem(70)
+    height: rem(70)
+
+    background-color: #54c060
+    border-radius: 50%
+
+    margin-right: rem(12)
+
+    +xs
+      width: rem(50)
+      height: rem(50)
+
+      .icon
+        font-size: rem(28)
+
+    .icon
+      font-size:  rem(38)
+  
+  &__title    
+    text-decoration: underline
+
