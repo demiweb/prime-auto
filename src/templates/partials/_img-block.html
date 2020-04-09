@@ -1,22 +1,40 @@
 <!-- begin img-block -->
-<div class="img-block js-lazy" data-background-image="./img/{{ sImg.img or '10.jpg' }}">
+<div class="img-block{% if sImg.mod %} {{ sImg.mod }}{% endif %} js-lazy" data-background-image="./img/{{ sImg.img or '10.jpg' }}">
   <div class="container container--lg">
     <div class="img-block__block">
       <h2 class="img-block__title title title--h2">
         {% if sImg.title %}
-        {{ sImg.title | safe }}
+          {{ sImg.title | safe }}
         {% else %}
-        В чем особенность ковриков weatcher tech
+          В чем особенность ковриков weatcher tech
         {% endif %}
       </h2>
 
       <div class="img-block__text">
         {% if sImg.text %}
-        {{ sImg.text | safe }}
+          {{ sImg.text | safe }}
         {% else %}
-        Автовладельцы всего мира покупают и рекомендуют продукцию WeatherTech уже более 25 лет. Пользуясь репутацией новатора и перфекциониста, компания не останавливает развитие технологичности продукции. Поэтому сегодня Вы можете позволить себе высококлассный комфорт и защиту автомобиля с аксессуарами WeatherTech.
+          Автовладельцы всего мира покупают и рекомендуют продукцию WeatherTech уже более 25 лет. Пользуясь репутацией новатора и перфекциониста, компания не останавливает развитие технологичности продукции. Поэтому сегодня Вы можете позволить себе высококлассный комфорт и защиту автомобиля с аксессуарами WeatherTech.
         {% endif %}
       </div>
+
+      {% if sImg.imgs %}
+        <div class="img-block__imgs">
+          <!-- begin img-block-image -->
+          <div class="img-block-image" style="background-color: #6dbd63;">
+            {{ mixins.icon('support', 'img-block-image__icon') }}
+            <div class="img-block-image__title">Технологии</div>
+          </div>
+          <!-- end img-block-image -->
+
+          <!-- begin img-block-image -->
+          <div class="img-block-image" style="background-color: #72839c;">
+            {{ mixins.icon('question', 'img-block-image__icon') }}
+            <div class="img-block-image__title">О бренде</div>
+          </div>
+          <!-- end img-block-image -->
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

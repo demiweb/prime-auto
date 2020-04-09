@@ -1,0 +1,24 @@
+{%set
+links = [
+  { title: 'Видео' },
+  { title: 'Инструкция' },
+  { title: 'Установка' },
+  { title: 'Спец. предл.' },
+  { title: 'FAQ' },
+  { title: 'Информ.' },
+  { title: 'Каталог PDF' },
+  { title: 'USA' },
+  { title: 'Автор.' }
+]
+%}
+
+<!-- begin catalog-item__links -->
+<div class="catalog-item__links catalog-links">
+  {% for i in links %}
+    <a href="#" class="catalog-links__item catalog-link">
+      <img class="catalog-link__img js-lazy" src="" alt="" data-src="./img/catalog-links/{{ 47 + loop.index }}.png"/>
+      <span class="catalog-link__title">{{ i.title }}</span>
+    </a>
+  {% endfor %}
+</div>
+<!-- end catalog-item__links -->

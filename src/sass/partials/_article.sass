@@ -44,3 +44,23 @@
   a:not(.btn)
     color: $c-link
     text-decoration: underline
+
+
+.article-img-block
+  display: flex
+  margin-bottom: rem(25)
+
+  &__img
+    font-size: 0
+    width: rem(100)
+    img
+      width: 100%
+
+  &__content
+    width: calc(100% - #{rem(100)})
+    padding-left: rem(15)
+
+  &__title
+    &::after
+      content: '-'
+      display: block

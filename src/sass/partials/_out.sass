@@ -1,4 +1,6 @@
 .out
+  $this: &
+
   display: flex
   flex-direction: column
   +windowHeight()
@@ -15,7 +17,60 @@
     top: 0
     left: 0
     right: 0
+  
+    +before
+      +coverdiv
+      z-index: 9
+
+      background-color: $white
+      border: 1px solid  $c-border      
+
+    +md
+      box-shadow: 0 0 10px rgba($black, .25)
+      +before
+        border: 0
+        border-bottom: 1px solid  $c-border      
 
   &__main
     flex-grow: 1
+
+  &__side-controls
+    position: fixed
+    z-index: 15
+    top: 0
+    right: 0
+    bottom: 0
+
+    width: $container--lg-padding
+
+    +lg
+      top: auto
+      width: 100%
+
+  &__aux-header
+    @extend #{$this}__header
+    box-shadow: 0px 2px 4px 0px rgba(43, 37, 35, 0.35)
+
+    +md
+      display: none
+
+  &--double-header
+    padding-top: $header-height * 2
+
+    +lg
+      padding-top: $header-height-lg * 2
+
+    +md
+      padding-top: $header-height-lg
+
+    #{$this}__header
+      top: $header-height
+      +lg
+        top: $header-height-lg
+      +md
+        top: 0
+
+    #{$this}__aux-header
+      top: 0 !important
+
     

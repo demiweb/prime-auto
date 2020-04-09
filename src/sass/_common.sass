@@ -95,35 +95,6 @@ body
   +xs
     font-size: em(120)
 
-.img-block
-  +cover
-  background-color: $dark
-  color: $white
-
-  padding-top: percentage(270 / 1920)
-  margin-bottom: rem(35)
-
-  &__block
-    background-color: $dark
-    padding: rem(75) rem(65)
-
-    max-width: rem(855)
-    position: relative
-    bottom: rem(-35)
-
-    +lg
-      padding: rem(50)
-    +md
-      padding: rem(40)
-    +sm
-      padding: rem(30) rem(20)
-
-  &__title
-    margin-bottom: rem(15)
-
-  &__text
-    font-size: em(18)
-
 .title-under
   border-bottom: 1px solid $lighten
   padding-bottom: rem(25)
@@ -218,5 +189,48 @@ body
     +vcenter
     max-height: 80%
     max-width: 80%
+
+.link-blocks
+  display: flex
+  flex-wrap: wrap
+
+  &__item
+    width: rem(330)
+    margin-right: rem(10)
+    margin-bottom: rem(10)
+
+.link-block
+  border: 1px solid  $c-border
+  border-radius: 3px
+  padding: rem(20)
+
+  &__title
+    display: block
+    font-weight: 700
+    font-size: em(21)
+    margin-bottom: rem(50)
+
+  &__bottom
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+
+  &__link-wrap
+    flex-grow: 1
+
+  &__link
+    display: inline-flex
+    align-items: center
+
+    color: $c-link
+    +after
+      +icon-arrow(.5, .5, .1, currentColor, -135, em)
+      display: block
+      margin-left: .5em
+
+  &--img    
+    +cover
+    background-color: $light
+    color: $white
 
     

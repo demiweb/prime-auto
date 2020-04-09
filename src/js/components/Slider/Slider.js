@@ -59,16 +59,69 @@ export default class SLider {
           },
         },
       },
+      gallery: {
+        // navigation,
+        slidesPerView: 1,
+        on: {
+          init: onInit,
+        },
+      },
+      thumbs: {
+        // navigation,
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        on: {
+          init: onInit,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 4,
+          },
+        },
+      },
     })
+  }
+
+  _getSliders() {
+    this.gallerySliders = this.containers.filter(
+      container => container.dataset.slider === 'gallery'
+    )
   }
 
   _initSliders() {
     this.containers.forEach(container => {
       if (container.classList.contains(classNames.plugin.initialized)) return
 
+      const name = container.dataset.slider
+
       const slider = new MySlider(container, this.getOptions)
-      slider.init()
+      if (name !== 'gallery') slider.init()
+
       this.sliders = [...this.sliders, slider]
+    })
+
+    this.initGallerySliders()
+  }
+
+  initGallerySliders() {
+    if (!this.gallerySliders.length) return
+
+    this.sliders.forEach(sliderObj => {
+      const slider = sliderObj
+      if (slider.name === 'gallery') {
+        const gallery = slider.container.closest('.js-gallery')
+        const thumbs = gallery.querySelector('.js-slider[data-slider="thumbs"]')
+        const [thumbsSlider] = this.sliders.filter(el => el.container === thumbs)
+
+        slider.options.thumbs = {
+          swiper: thumbsSlider.swiper,
+        }
+        slider.init()
+      }
     })
   }
 
@@ -77,6 +130,7 @@ export default class SLider {
     if (!this.containers.length) return
 
     this._getOptions()
+    this._getSliders()
     this._initSliders()
   }
 }

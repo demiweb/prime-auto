@@ -1,3 +1,34 @@
+.gallery
+  &__slider
+    margin-bottom: rem(10)
+
+  &__thumbs
+    height: vw(270)
+    +xxs
+      height: rem(120)
+
+  &__img
+    +cover
+    background-color: $dark
+    padding-top: percentage(450 / 735)
+
+  &__thumb
+    +cover
+    background-color: $dark
+    height: vw(125)
+    position: relative
+
+    +xxs
+      height: rem(55)
+
+    +before
+      +coverdiv
+      background-color: rgba($white, .3)
+
+    &.swiper-slide-thumb-active
+      +before
+        display: none
+
 .gallery-item
   +cover
   background-color: $dark

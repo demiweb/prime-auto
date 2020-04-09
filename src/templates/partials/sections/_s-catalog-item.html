@@ -1,34 +1,85 @@
-{%set
-products = [
-  {
-    title: 'Подставки для авто',
-    subttl: 'универсальный портативный держатель',
-    img: 'products/1_08.jpg'
-  },
-  {
-    title: 'Роллеты для кузова',
-    subttl: 'универсальный портативный держатель',
-    img: 'products/1_03.jpg'
-  },
-  {
-    title: 'Дефлекторы капота',
-    subttl: 'универсальный портативный держатель',
-    img: 'products/1_05.jpg'
-  },
-  {
-    title: 'Чехлы для сидений',
-    subttl: 'универсальный портативный держатель',
-    img: 'products/1_11.jpg'
-  },
-  {
-    title: 'Кунги, крышки кузова',
-    subttl: '',
-    img: 'products/1_18.jpg'
-  }
-]
-%}
+<!-- begin section -->
+<section class="section section--lightest z-9">
+  <header class="out__aux-header catalog-item-header">
+    <div class="container container--lg">
+      <div class="catalog-item-header__inner">      
+        <div class="catalog-item-header__left">
+          <div class="catalog-item-header__img">
+            <img class="js-lazy" src="" alt="" data-src="./img/45.jpg"/>
+          </div>
 
-<!-- begin catalog-item -->
+          <div class="catalog-item-header__left-content">
+            <div class="catalog-item-header__upttl">WeatcherTech®</div>
+
+            <div class="catalog-item-header__title">Коврики с бортиком</div>
+          </div>
+        </div>
+
+        <div class="catalog-item-header__right">
+          <div class="catalog-item-header__price">2250 UAH - 12890 UAH</div>
+
+          <div class="catalog-item-header__btn">
+            {{ mixins.btn(
+              title = 'Подобрать',
+              mod = ''
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container container--lg-right-gap">
+    <!-- begin catalog-item -->
+    <div class="catalog-item">
+      <div class="catalog-item__inner">
+        <div class="catalog-item__gallery">
+          {% include "partials/catalog-item/_gallery.html" %}
+        </div>
+
+        <div class="catalog-item__right">
+          <div class="catalog-item__content">
+            <div class="catalog-item__title-block">
+              <div class="catalog-item__upttl">WeatcherTech®</div>
+
+              <h2 class="catalog-item__title title title--h2 title--ttn">Коврики с бортиком</h2>
+
+              <div class="catalog-item__subttl">Лазерное измерение для идеальной посадки</div>
+
+              {{ mixins.rating(
+                mod = 'rating--index',
+                grade = 5,
+                label = '1558'
+              ) }}
+            </div>
+
+            {% if page === 'search-results' %}
+              {% include "partials/catalog-item/_search-results.html" %}
+              {% else %}
+              <div class="catalog-item__price title title--h2 title--300">2250 UAH - 12890 UAH</div>
+              {% include "partials/catalog-item/_form.html" %}
+            {% endif %}
+
+            <div class="catalog-item__btn">
+              {{ mixins.btn(
+                title = mixins.icon('share', 'btn__icon') + 'поделиться: <img class="js-lazy" src="" alt="" data-src="./img/facebook.svg"/><img class="js-lazy" src="" alt="" data-src="./img/instagram.svg"/>',
+                mod = 'btn--transp-dark'
+              ) }}
+            </div>
+          </div>
+
+          {% include "partials/catalog-item/_links.html" %}
+        </div>
+      </div>
+
+      {% include "partials/catalog-item/_tabs.html" %}
+    </div>
+    <!-- end catalog-item -->
+  </div>
+</section>
+<!-- end section -->
+
+{# <!-- begin catalog-item -->
 <section class="catalog-item">
   <div class="container container--lg">
     <div class="catalog-item__inner">
@@ -71,3 +122,4 @@ products = [
   </div>
 </section>
 <!-- end catalog-item -->
+ #}

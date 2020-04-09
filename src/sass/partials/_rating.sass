@@ -27,14 +27,15 @@
   &__label
     color: #dddddd
     font-size: 0
+    &--checked, &--checked ~ #{$this}__label
+      color: #fdbc0c
 
   &__icon
     font-size: 1.2rem
 
-  &--interactive
-    #{$this}__stars      
-      & > #{$this}__label:hover,
-      & > #{$this}__label:hover ~ #{$this}__label
+  &--interactive      
+      #{$this}__label:hover,
+      #{$this}__label:hover ~ #{$this}__label
         color: #fdbc0c
 
   &--sm
@@ -42,6 +43,9 @@
 
     #{$this}__icon
       font-size: 1rem
+
+  &--index
+    color: #a7b4c8
 
 .rating-block
   display: flex
