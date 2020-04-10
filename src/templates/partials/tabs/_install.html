@@ -1,4 +1,4 @@
-<div class="grid">
+{# <div class="grid">
   {% for i in range(0, 2) %}
   <div class="col col--lg-2-10 col--md-3 col--sm-4 col--xs-6">
     <a
@@ -6,9 +6,18 @@
       class="gallery-item js-lazy"
       data-background-image="./img/video-thumb.jpg"
     ></a>
-{#     <div class="gallery-item">
-      <iframe class="js-lazy" src="" data-src="https://www.youtube.com/embed/MUOv8ksL9zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div> #}
   </div>
+  {% endfor %}
+</div> #}
+
+<div class="video-gallery js-lightgallery">
+  {% for i in range(0, 2) %}
+  {# <div class="col col--lg-2-10 col--md-3 col--sm-4 col--xs-6"> #}
+    <a
+      href="https://www.youtube.com/embed/bHU2ZaS1scM"
+      class="video-gallery__item gallery-item js-lazy"
+      data-background-image="./img/video-thumb.jpg"
+    ></a>
+  {# </div> #}
   {% endfor %}
 </div>

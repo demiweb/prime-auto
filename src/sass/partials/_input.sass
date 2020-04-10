@@ -41,36 +41,26 @@
 
   &--radio
     position: relative
-    padding-left: 1.5em
     user-select: none
-    input[type="radio"]
-      opacity: 0
-      visibility: hidden
-      position: absolute
-      &:checked + span
-        &::after
-          content: ''
-          top: .3em
-          left: .2em
-          position: absolute
-          display: block
 
-          width: em(10)
-          height: em(10)
-          background-color: $accent
-        &::before
-          border-color: $accent
-      & + span
-        &::before
-          content: ''
-          border: 1px solid $lighten
-          width: 1em
-          height: 1em
-          top: .1em
-          left: 0
-          background-color: transparent
-          position: absolute
-          display: block
+    input[type="radio"]
+      width: rem(16)
+      height: rem(16)
+      
+      border: 2px solid $white
+      background: $white
+      box-shadow: 0 0 0 1px $lighten
+
+      position: relative
+      top: .2em
+      margin-right: rem(5)
+
+      appearance: none
+
+      &:checked
+        background-color: $accent
+        box-shadow: 0 0 0 1px $accent
+
 
   &--checkbox
     position: relative

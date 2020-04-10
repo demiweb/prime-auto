@@ -36,22 +36,45 @@
    bottom: rem(30)
    background-color: $accent
 
+.video-gallery
+  display: flex
+  flex-wrap: wrap
+
+  margin-left: rem(-15)
+  margin-right: rem(-15)
+
+  &__item
+    // col col--lg-2-10 col--md-3 col--sm-4 col--xs-6
+    margin-left: rem(15)
+    margin-right: rem(15)
+    margin-bottom: rem(30)
+    width: calc(#{percentage(2 / 10)} - #{rem(30)})
+    +lg
+      width: calc(#{percentage(3 / 12)} - #{rem(30)})
+    +md
+      width: calc(#{percentage(4 / 12)} - #{rem(30)})
+    +sm
+      width: calc(#{percentage(6 / 12)} - #{rem(30)})
+    +xs
+      width: calc(100% - #{rem(30)})
+
 .gallery-item
   +cover
   background-color: $dark
 
   display: block
-  width: 100%
+  // width: 100%
   position: relative
   
-  padding-top: 60%
-  // iframe
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   width: 100%
-  //   height: 100%
-  //   object-fit: cover
+  padding-top: 12%
+  +lg
+    padding-top: 14%
+  +md
+    padding-top: 20%
+  +sm
+    padding-top: 30%
+  +xs
+    padding-top: 60%
 
 .thumbs-gallery
   display: flex

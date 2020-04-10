@@ -8,6 +8,9 @@ import setLazy from './methods/setLazy'
 import addRatingIds from './methods/addRatingIds'
 import setSelects from './methods/setSelects'
 import handleCloseMenu from './methods/handleCloseMenu'
+import setPopups from './methods/setPopups'
+import handleMenuDropdown from './methods/handleMenuDropdown'
+import setGallery from './methods/setGallery'
 
 import { isModernBrowser, setVhProperty } from './helpers'
 
@@ -52,6 +55,9 @@ class App {
       addRatingIds,
       setSelects,
       handleCloseMenu,
+      setPopups,
+      handleMenuDropdown,
+      setGallery,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

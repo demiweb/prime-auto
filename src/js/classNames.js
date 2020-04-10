@@ -4,6 +4,7 @@ export default {
   select: 'js-select',
   gallery: 'js-gallery',
   lightgallery: 'js-lightgallery',
+  dropdown: 'js-dropdown-wrap',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

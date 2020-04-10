@@ -8,6 +8,8 @@
 
     +md
       display: block
+      overflow: auto
+      max-height: calc(100vh - #{$header-height-lg * 2})
 
     > li
       position: relative
@@ -22,14 +24,37 @@
 
         width: rem(511)
         padding: rem(30) rem(20) rem(15)
-        border-top: 1px solid $c-border    
+        border-top: 1px solid $c-border
+
+        +mdmin
+          +ready
+            +tr(opacity .4s, visibility .4s)
+          +hidden
+
+        +md
+          position: relative
+          top: auto
+
+          box-shadow: none 
+          text-align: center
+
+          width: auto
+
+          padding: 0 rem(15)
+          border: 0
+
+          max-height: 0
+          overflow: hidden
+          +ready
+            +tr(max-height .5s $easeOutQuad)    
         
-        +ready
-          +tr(opacity .4s, visibility .4s)
-        +hidden
 
         > li
           margin-bottom: rem(15)
+          +md
+            margin-bottom: 0
+            padding-top: rem(8)
+            padding-bottom: rem(8)
 
           > a
             +tr(color .3s)
@@ -72,9 +97,16 @@
           width: rem(618)
           display: flex
           flex-wrap: wrap
+
+          +md
+            width: auto            
+
           > li
               width: 50%
-              padding-right: rem(10)  
+              padding-right: rem(10)
+              +md
+                padding-left: rem(4)
+                padding-right:  rem(4)
 
   &--footer
     color: inherit

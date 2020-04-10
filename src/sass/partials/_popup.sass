@@ -1,4 +1,6 @@
 .popup
+  $this: &
+
   position: fixed
   z-index: 20
   top: 0
@@ -46,3 +48,22 @@
 
   &--active
     +visible
+
+  &--search
+    padding-top: 0
+
+    #{$this}__inner
+      vertical-align: top
+      max-width: rem(985)     
+      
+      background-color: transparent
+
+      padding: 0
+      padding-right: rem(60)
+
+    #{$this}__close
+      color: #9a9a9a
+      font-size: rem(25)
+      top: 50%
+      transform: translate(0, -50%)
+
