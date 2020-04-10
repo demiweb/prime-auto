@@ -60,14 +60,12 @@ export default class SLider {
         },
       },
       gallery: {
-        // navigation,
         slidesPerView: 1,
         on: {
           init: onInit,
         },
       },
       thumbs: {
-        // navigation,
         slidesPerView: 3,
         slidesPerColumn: 2,
         spaceBetween: 4,
@@ -80,6 +78,25 @@ export default class SLider {
         breakpoints: {
           576: {
             slidesPerView: 4,
+          },
+        },
+      },
+      testimonials: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        spaceBetween: 30,
+        on: {
+          init: onInit,
+        },
+        pagination: {
+          el: pagination,
+          type: 'bullets',
+          clickable: true,
+        },
+        breakpoints: {
+          992: {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
           },
         },
       },
@@ -113,8 +130,8 @@ export default class SLider {
     this.sliders.forEach(sliderObj => {
       const slider = sliderObj
       if (slider.name === 'gallery') {
-        const gallery = slider.container.closest('.js-gallery')
-        const thumbs = gallery.querySelector('.js-slider[data-slider="thumbs"]')
+        const gallery = slider.container.closest(`.${classes.gallery}`)
+        const thumbs = gallery.querySelector(`.${classNames.container}[data-slider="thumbs"]`)
         const [thumbsSlider] = this.sliders.filter(el => el.container === thumbs)
 
         slider.options.thumbs = {

@@ -6,6 +6,7 @@
 
   &__title
     margin-right: rem(20)
+    color: $dark
 
   &__grades
     padding: 0 rem(10)
@@ -26,14 +27,18 @@
 
   &__label
     color: #dddddd
-    font-size: 0
-    &--checked, &--checked ~ #{$this}__label
+    display: flex
+    &[data-checked="true"],
+    &[data-checked="true"] ~ #{$this}__label
       color: #fdbc0c
 
   &__icon
     font-size: 1.2rem
 
-  &--interactive      
+  &--interactive
+      #{$this}__label
+        cursor: pointer
+
       #{$this}__label:hover,
       #{$this}__label:hover ~ #{$this}__label
         color: #fdbc0c

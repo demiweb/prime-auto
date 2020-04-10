@@ -1,5 +1,8 @@
 .input
+  $this: &
+  
   font-size: em(14)
+  text-align: left
 
   #{$text-inputs}
     width: 100%
@@ -29,6 +32,12 @@
       height: rem(50)
       text-transform: uppercase
       font-weight: 500
+
+  &--dark
+    color: $dark
+    #{$this}__label
+      color: inherit
+
 
   &--radio
     position: relative
@@ -95,6 +104,26 @@
           background-color: transparent
           position: absolute
           display: block
+  
+  &--file
+    display: inline-block
+
+    text-transform: uppercase
+    color: $light
+    font-size: em(12)
+
+    input[type="file"]
+      opacity: 0
+      visibility: hidden
+      position: absolute
+
+
+    .icon
+      font-size: 1.3em
+      position: relative
+      top: .2em
+      margin-right: .3em
+
 
   &--select-color
     .custom-select

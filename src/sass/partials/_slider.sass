@@ -33,19 +33,23 @@
       box-sizing: border-box
 
   &__pagination
+    color: $white
     .swiper-pagination-bullet
       display: inline-block    
       width: rem(16)
       height: rem(16)
 
       border-radius: 0
-      border: 2px solid  $white
+      border: 2px solid  currentColor
       background-color: transparent
       +notlast
         margin-right: rem(15)
 
       &.swiper-pagination-bullet-active
-        background-color: $white
+        background-color: currentColor
+
+    &--color
+      color: $accent
 
   &__controls
 
@@ -87,7 +91,14 @@
     &__wrap
       .swiper-container, .swiper-wrapper
         height: 100%
-        
 
+  &--testimonials
+    &__wrap
+      .swiper-container
+        +md
+          margin-bottom: rem(30)
+          
+      .slider
+        &__pagination
+          text-align: center    
 
-    

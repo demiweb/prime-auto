@@ -1,0 +1,47 @@
+{%set
+form = {
+  mod: 'popup__form',
+  btn: {
+    title: 'Оставить отзыв',
+    mod: ' ',
+    wrapMod: 'form__btn'
+  },
+  fields: [
+    {
+      name: 'rating',
+      mod: 'input--dark',
+      label: { first: '<label class="input__label">Оценка</label>'}
+    },
+    {
+      name: 'input',
+      mod: 'input--dark',
+      type: 'text',      
+      label: { first: '<label class="input__label">Общие впечатления</label>' }
+    },
+    {
+      name: 'textarea',
+      mod: 'input--dark',
+      type: '',      
+      label: { first: '<label class="input__label">Подробный отзыв</label>' }
+    },
+    {
+      name: 'file',
+      type: 'file',
+      label: { first: '<span>' + mixins.icon('camera') + 'добавить фото</span>' }
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="review">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+    
+    <div class="popup__title">Оставить отзыв</div>
+    <div class="popup__subttl">Будем рады вашим отзывам</div>
+
+    {% include "partials/_form.html" %}
+  </div>
+</div>
+<!-- end popup -->

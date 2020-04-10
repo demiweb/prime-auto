@@ -34,17 +34,34 @@
   {% for i in form.fields %}
   <div class="form__field{% if i.wrapMod %} {{ i.wrapMod }}{% endif %}">
     {% if i.name %}
-      {{ mixins.input(
-        name = i.name,
-        mod = i.mod,
-        type = i.type,
-        placeholder = i.placeholder,
-        value = i.value,
-        fieldClass = i.fieldClass,
-        fieldAttributes = i.fieldAttributes,
-        label = i.label,
-        options = i.options
-      ) }}
+      {% if i.name === 'rating' %}
+        <!-- begin input -->
+        <div class="input input--rating{% if i.mod %} {{ i.mod }}{% endif %}">
+          {% if i.label.first %}
+            {{ i.label.first | safe }}
+          {% endif %}
+
+          {{ mixins.rating(
+            interactive = true,
+            noGradesLabel = true
+          ) }}
+        </div>
+        <!-- end input -->
+
+        {% else %}
+
+        {{ mixins.input(
+          name = i.name,
+          mod = i.mod,
+          type = i.type,
+          placeholder = i.placeholder,
+          value = i.value,
+          fieldClass = i.fieldClass,
+          fieldAttributes = i.fieldAttributes,
+          label = i.label,
+          options = i.options
+        ) }}
+      {% endif %}
     {% endif %}
   </div>
   {% endfor %}
@@ -54,7 +71,7 @@
   <div class="form__field{% if form.btn.wrapMod %} {{ form.btn.wrapMod }}{% endif %}">
     {{ mixins.btn(
       title = form.btn.title or 'Сохранить',
-      mod = 'btn--full',
+      mod = form.btn.mod or 'btn--full',
       href = false
     ) }}
   </div>

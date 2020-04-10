@@ -1,7 +1,15 @@
 {% from 'mixins/_icon.html' import icon %}
 {% set icon = icon %}
 
-{% macro rating(mod, title, grade, label, interactive = false, starsNmb = 5) %}
+{% macro rating(
+  mod,
+  title,
+  grade,
+  label,
+  noGradesLabel,
+  interactive = false,
+  starsNmb = 5
+) %}
 {% if interactive %}
   <div class="rating{% if mod %} {{ mod }}{% endif %} rating--interactive js-rating">
     {% if title %}
@@ -24,13 +32,15 @@
       {% endfor %}  
     </div>
 
-    <div class="rating__grades">
-      {% if label %}
-        {{ label }}
-      {% else %}
-        {{ grade }} / {{ starsNmb }}
-      {% endif %}
-    </div>
+    {% if not noGradesLabel %}
+      <div class="rating__grades">
+        {% if label %}
+          {{ label }}
+        {% else %}
+          {{ grade }} / {{ starsNmb }}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 
 {% else %}
@@ -43,21 +53,25 @@
     <div class="rating__stars">
       {% for i in range(0, starsNmb) | reverse %}
         <label
-          class="rating__label{% if grade === i + 1 %} rating__label--checked{% endif %}"
+          class="rating__label"
           data-value="{{ i + 1 }}"
+          {% if grade === i + 1 %}data-checked="true"{% endif %}
         >
           {{ icon('star', 'rating__icon') }}
         </label>
       {% endfor %}  
     </div>
+    
 
-    <div class="rating__grades">
-      {% if label %}
-        {{ label }}
-      {% else %}
-        {{ grade }} / {{ starsNmb }}
-      {% endif %}
-    </div>
+    {% if not noGradesLabel %}
+      <div class="rating__grades">
+        {% if label %}
+          {{ label }}
+        {% else %}
+          {{ grade }} / {{ starsNmb }}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 {% endif %}
 {% endmacro %}

@@ -2,6 +2,8 @@ export default {
   lazy: 'js-lazy',
   rating: 'js-rating',
   select: 'js-select',
+  gallery: 'js-gallery',
+  lightgallery: 'js-lightgallery',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

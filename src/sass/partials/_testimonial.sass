@@ -30,7 +30,23 @@
         padding-left: 0
         border-left: 0
 
+  &__slider
+    height: rem(640)
+    .swiper-container, .swiper-wrapper
+      height: 100%
+    .swiper-slide
+      height: calc(50% - 30px)
+
+    +md
+      height: auto
+      .swiper-container, .swiper-wrapper, .swiper-slide
+        height: auto
+
 .testimonial
+  display: flex
+  flex-direction: column
+
+
   background-color: $white
   padding: rem(25) rem(30)
   color: $light-dark
@@ -43,9 +59,20 @@
 
   &__title
     margin-bottom: rem(8)
+    color: $dark
 
   &__text
-    font-size: em(14)
+    flex-grow: 1
+
+    display: -webkit-box
+    -webkit-line-clamp: 4
+    -webkit-box-orient: vertical
+
+    max-height: 5.7em
+    overflow: hidden   
+
+    font-size: em(14)   
+
     +notlast
       margin-bottom: rem(10)
 
