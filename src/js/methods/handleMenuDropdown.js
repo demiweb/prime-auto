@@ -9,6 +9,8 @@ export default () => {
     const wrap = e.target.closest(`.${classNames.dropdown}`)
     if (!wrap) return
 
+    if (e.target.tagName === 'A' && e.target.parentNode !== wrap) return
+
     e.preventDefault()
 
     const dropdown = wrap.querySelector('ul')
