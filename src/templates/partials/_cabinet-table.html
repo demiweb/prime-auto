@@ -10,7 +10,7 @@ table = {
         { mod: 'table__td--status', text: mixins.icon('checked', 'table__color-icon') + 'Доставлен' },
         { mod: 'table__td--cash', text: 'Наличными' },
         { mod: 'table__td--amout', text: '<strong>900 грн</strong>' },
-        { mod: 'table__td--nmb', text: '<button class="table__btn">Детальнее</button>' }
+        { mod: 'table__td--nmb', text: '<button class="table__btn js-accordion-btn" data-accordion-btn="order-01" data-block="table__btn">Детальнее</button>' }
       ]
     },
     {
@@ -22,7 +22,7 @@ table = {
         { mod: 'table__td--status', text: mixins.icon('refresh', 'table__color-icon') + 'Обрабатывается' },
         { mod: 'table__td--cash', text: 'Приват 24 / Online monobank' },
         { mod: 'table__td--amout', text: '<strong>900 грн</strong>' },
-        { mod: 'table__td--nmb', text: '<button class="table__btn">Детальнее</button>' }
+        { mod: 'table__td--nmb', text: '<button class="table__btn js-accordion-btn" data-accordion-btn="order-02" data-block="table__btn">Детальнее</button>' }
       ]
     },
     {
@@ -34,7 +34,7 @@ table = {
         { mod: 'table__td--status', text: mixins.icon('truck', 'table__color-icon') + 'В дороге' },
         { mod: 'table__td--cash', text: 'Картой Visa / Mastercard' },
         { mod: 'table__td--amout', text: '<strong>900 грн</strong>' },
-        { mod: 'table__td--nmb', text: '<button class="table__btn">Детальнее</button>' }
+        { mod: 'table__td--nmb', text: '<button class="table__btn js-accordion-btn" data-accordion-btn="order-03" data-block="table__btn">Детальнее</button>' }
       ]
     }
   ]

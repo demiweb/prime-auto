@@ -1,27 +1,33 @@
 {%set
 tabs = [
-  { title: 'Инфо о товаре', item: 'info', isActive: true },
-  { title: 'Видео', item: 'video', isActive: false },
-  { title: 'Гарантия', item: 'warranty', isActive: false },
-  { title: 'Установка', item: 'install', isActive: false },
-  { title: 'FAQ', item: 'faq', isActive: false },
-  { title: 'Отзывы', item: 'testimonials', isActive: false }
+  { tabName: 'info', title: 'Инфо о товаре', item: 'info', isActive: true },
+  { tabName: 'video', title: 'Видео', item: 'video', isActive: false },
+  { tabName: 'warranty', title: 'Гарантия', item: 'warranty', isActive: false },
+  { tabName: 'install', title: 'Установка', item: 'install', isActive: false },
+  { tabName: 'faq', title: 'FAQ', item: 'faq', isActive: false },
+  { tabName: 'testimonials', title: 'Отзывы', item: 'testimonials', isActive: false }
 ]
 %}
 
 <!-- begin catalog-item-tabs -->
-<div class="catalog-item__tabs tabs">
+<div class="catalog-item__tabs tabs js-tabs">
   <div class="tabs__tabs-wrap">
     <div class="tabs__tabs">
       {% for i in tabs %}
-      <button class="tabs__tab js-tabs-btn{% if i.isActive %} tabs__tab--active{% endif %}">{{ i.title | safe }}</button>
+      <button
+        class="tabs__tab js-tabs-btn{% if i.isActive %} tabs__tab--active{% endif %}"
+        data-tabs-tab="{{ i.tabName }}"
+      >{{ i.title | safe }}</button>
       {% endfor %}
     </div>
   </div>
 
   <div class="tabs__content">
     {% for i in tabs %}
-    <div class="tabs__item js-tabs-item{% if i.isActive %} tabs__item--open{% endif %}">
+    <div
+      class="tabs__item js-tabs-item{% if i.isActive %} tabs__item--active{% endif %}"
+      data-tabs-item="{{ i.tabName }}"
+    >
       {% include "partials/tabs/_" + i.item + ".html" %}
     </div>
     {% endfor %}

@@ -8,6 +8,9 @@
     text-align: left
     background-color: $white
     padding: rem(15) rem(25)
+    padding-right: rem(40)
+
+    +tr(background-color .3s, color .3s)
 
     +before
       +icon-arrow(.5, .5, 0.1, $light, -45, em)
@@ -17,13 +20,32 @@
       top: 50%
       transform: translate(0, -50%) rotate(-45deg)
 
+    +hover
+      &:not(#{$this}__btn--sub)
+        background-color: $accent
+        color: $white
+
     &--sub
       background-color: $lightest
       padding: rem(5) rem(25)
       border-bottom: 1px solid $white
 
+    &--active
+      &:not(#{$this}__btn--sub)
+        background-color: $accent
+        color: $white
+
+      +before
+        transform: translate(0, -50%) rotate(135deg)
+
   &__sublist
     font-size: em(14)
+    max-height: 0
+    overflow: hidden
+    // +tr(max-height .5s $easeOutQuad)
+
+    &--open
+      max-height: none
 
   &__link
     display: block

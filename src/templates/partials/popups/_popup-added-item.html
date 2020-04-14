@@ -1,0 +1,66 @@
+<!-- begin popup -->
+<div
+  class="popup popup--added-item{% if popup.addedItem %} popup--active{% endif %} js-popup"
+  data-popup="added-item"
+>
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    <!-- begin added-item -->
+    <div class="added-item">
+      <div class="added-item__left">
+        <h3 class="added-item__title title title--h3 title--500 title--ttn">
+          {{ mixins.icon('check') }}
+
+          1 товар добавлен в корзину
+        </h3>
+
+        <div class="added-item__item-wrap">
+          {{ mixins.orderItem(
+            mod = 'added-item__item',
+            titleSm = true,
+            metaList = [
+              { dt: 'Кол-во:', dd: '3' },
+              { dt: 'Цена:', dd: '300 грн' }
+            ]
+          ) }}
+        </div>
+
+        <div class="added-item__btns">
+          <div class="added-item__btn">
+            {{ mixins.btn(
+              title = 'Продолжить покупки',
+              mod = 'btn--transp'
+            ) }}
+          </div>
+
+          <div class="added-item__btn">
+            {{ mixins.btn(
+              title = 'Оформить заказ',
+              mod = ''
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="added-item__right">
+        <h3 class="added-item__title title title--h3 title--500 title--ttn">Вам также будет интересно:</h3>
+
+        <div class="added-item__items-list">
+          {% for i in range(0, 5) %}
+          {{ mixins.orderItem(
+            mod = 'added-item__item-in-list',
+            metaList = [
+              { dt: 'Артикул:', dd: '15664CD' },
+              { dt: 'Цвет:', dd: 'Полный комплект (1, 2, та 3  ряд)' },
+              { dt: 'Цена:', dd: '300 грн' }
+            ]
+          ) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- end added-item -->
+  </div>
+</div>
+<!-- end popup -->

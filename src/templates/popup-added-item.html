@@ -1,0 +1,36 @@
+---
+title: catalog-item
+page: catalog-item
+mainClass: 'main--white'
+outClass: 'out--double-header'
+bodyClass: 'no-scroll'
+hero: {
+  breadcrumbs: {
+    list: [
+      { link: 'Prime Auto' },
+      { item: '-' },
+      { link: 'Резиновые коврики' },
+      { item: '-' },
+      { item: 'Weatcher Tech', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+}
+sImg: {
+  mod: 'img-block--white img-block--contain',
+  img: '58.jpg',
+  imgs: true
+}
+popup: {
+  addedItem: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-catalog-item.html" %}
+  {% include "partials/sections/_s-video.html" %}
+  {% include "partials/_img-block.html" %}
+  {% include "partials/sections/_s-two-colored.html" %}
+  {% include "partials/sections/_s-warranty.html" %}
+{% endblock %}

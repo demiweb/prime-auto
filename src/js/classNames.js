@@ -5,6 +5,7 @@ export default {
   gallery: 'js-gallery',
   lightgallery: 'js-lightgallery',
   dropdown: 'js-dropdown-wrap',
+  input: 'js-input-wrap',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
@@ -24,5 +25,15 @@ export default {
       initialized: 'swiper-container-initialized',
       activeSlide: 'swiper-slide-active',
     },
+  },
+  accordion: {
+    wrap: 'js-accordion',
+    item: 'js-accordion-item',
+    btn: 'js-accordion-btn',
+  },
+  tabs: {
+    wrap: 'js-tabs',
+    item: 'js-tabs-item',
+    tab: 'js-tabs-btn',
   },
 }

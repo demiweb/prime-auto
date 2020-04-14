@@ -3,6 +3,7 @@
   
   font-size: em(14)
   text-align: left
+  position: relative
 
   #{$text-inputs}
     width: 100%
@@ -23,6 +24,28 @@
     display: block
     margin-bottom: rem(5)
     color: $light
+
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+
+    position: absolute
+    z-index: 1
+    right: rem(15)
+    bottom: rem(9)
+
+    .icon
+      font-size: 1rem
+
+    +tr(color .3s)
+
+    +hover
+      color: $accent
+
+    &:not(.delete-btn)
+      color: $light
+    
 
   &--lg
     font-size: 1em

@@ -12,6 +12,17 @@
     padding-top: rem(30)
     padding-bottom: rem(30)
 
+  &__item
+    max-height: 0
+    opacity: 1
+    overflow: hidden
+    +tr(opacity .5s)
+
+    &--active
+      max-height: none
+      overflow: visible
+      opacity: 1
+
   &__tab
     display: block
     width: percentage(1 / 6)

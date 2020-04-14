@@ -308,13 +308,13 @@ catalog = [
   <ul class="aside__accordion catalog-accordion js-accordion">
     {% for i in catalog %}
       <li class="catalog-accordion__item">
-        <button class="catalog-accordion__btn title title--h5">{{ i.title | safe }}</button>
+        <button class="catalog-accordion__btn title title--h5 js-accordion-btn">{{ i.title | safe }}</button>
 
-        <ul class="catalog-accordion__sublist">
+        <ul class="catalog-accordion__sublist js-accordion-item">
           {% for j in i.sublist %}
           <li class="catallog-accordion__subitem">
-            <button class="catalog-accordion__btn catalog-accordion__btn--sub">{{ j.title | safe }}</button>
-            <ul class="catalog-accordion__sublist">
+            <button class="catalog-accordion__btn catalog-accordion__btn--sub js-accordion-btn">{{ j.title | safe }}</button>
+            <ul class="catalog-accordion__sublist js-accordion-item">
               {% for k in j.sublist %}
               <li class="catalog-accordion__subitem">
                 <a href="#" class="catalog-accordion__link">{{ k.title | safe }}</a>

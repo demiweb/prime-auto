@@ -1,4 +1,8 @@
-<div class="table__orders-meta orders-meta js-accordion-item">
+<div
+  class="table__orders-meta orders-meta js-accordion-item"
+  data-accordion-item="order-0{{ loop.index }}"
+  data-block="table__orders-meta"
+>
   <div class="orders-meta__left">
     {% for i in range(0, 3) %}
     {{ mixins.orderItem(
@@ -21,7 +25,12 @@
       ) }}
 
       <div class="orders-meta__block">
-        <img class="js-lazy" src="" alt="" data-src="./img/Nova_Poshta_2014_logo.png"/>
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/Nova_Poshta_2014_logo.png"
+        />
 
         {{ mixins.input(
           name = 'input',

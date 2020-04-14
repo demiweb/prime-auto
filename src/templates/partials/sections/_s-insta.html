@@ -16,7 +16,7 @@ items = [
 %}
 
 <!-- begin section -->
-<section class="insta-items">
+<div class="insta-items">
   <div class="insta-items__inner">
     {% for i in items %}
     <a
@@ -26,12 +26,17 @@ items = [
     >
       <span class="insta-item__inner">
         <span class="insta-item__icon">
-          <img class="js-lazy" alt="" src="" data-src="./img/instagram.svg"/>
+          <img
+            class="js-lazy"
+            alt=""
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            data-src="./img/instagram.svg"
+          />
         </span>
         <span class="insta-item__title">Смотреть в инстаграм</span>
       </span>
     </a>
     {% endfor %}
   </div>
-</section>
+</div>
 <!-- end section -->

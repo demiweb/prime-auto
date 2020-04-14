@@ -6,11 +6,18 @@
     width: 100%
     text-align: left
 
-    font-size: em918
+    font-size: em(18)
 
     padding: rem(15) rem(20)
 
   &__content
     padding: 0 rem(15)
     color: $light-dark
+
+    max-height: 0
+    overflow: hidden
+
+    &--open
+      max-height: none
+      padding-bottom: rem(15)
     

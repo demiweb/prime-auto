@@ -1,0 +1,71 @@
+.added-item
+  display: flex
+  flex-wrap: wrap
+
+  text-align: left
+  
+  &__left,
+  &__right
+    padding: rem(40) rem(50)
+
+    +xl
+      padding-left: rem(20)
+      padding-right: rem(20)
+
+    +lg
+      width: 100%
+
+  &__left
+    display: flex
+    flex-direction: column
+
+    width: percentage(585 / 1290)
+
+  &__right
+    width: percentage((1290 - 585) / 1290)
+    background-color: $lightest
+
+  &__title    
+    display: flex
+    align-items: center
+
+    margin-bottom: rem(25)
+
+    .icon
+      margin-right: .5em
+      font-size: rem(24)
+
+  &__items-list,
+  &__item-wrap
+    overflow: auto
+    max-height: rem(420)
+
+  &__item-wrap
+    border-bottom: 1px solid  $lightest
+    margin-bottom: rem(40)
+    flex-grow: 1
+
+  &__item
+
+  &__item-in-list
+    background-color: $white
+    padding: rem(20) rem(30)
+    border-bottom: 1px solid  $lightest
+
+    +lg
+      padding: rem(20)
+
+    +md
+      padding: rem(15)
+
+  &__btns
+    display: flex
+    +xs
+      display: block
+
+  &__btn
+    +notlast
+      margin-right: rem(10)
+      +xs
+        margin-right: 0
+        margin-bottom: rem(10)

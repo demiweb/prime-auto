@@ -16,8 +16,9 @@ import { isModernBrowser, setVhProperty } from './helpers'
 
 import SLider from './components/Slider/Slider'
 import Menu from './components/Menu/Menu'
-
-// import { NO_SCROLL } from './constants'
+import Input from './components/Input/Input'
+import Accordion from './components/Accordion/Accordion'
+import Tabs from './components/Tabs/Tabs'
 
 class App {
   constructor() {
@@ -26,9 +27,6 @@ class App {
     this.dom = {
       body: document.body,
     }
-    // this.state = {
-    //   hasMenuOpen: false,
-    // }
 
     this.menu = new Menu({
       classNames: {
@@ -37,14 +35,20 @@ class App {
       },
     })
     this.slider = new SLider(`.${classNames.slider.container}`)
+    this.input = new Input(`.${classNames.input}`)
+    this.accordion = new Accordion({
+      classNames: {
+        btn: 'catalog-accordion__btn',
+        item: 'catalog-accordion__sublist',
+      },
+    })
+    this.tabs = new Tabs({
+      classNames: {
+        btn: 'tabs__tab',
+        item: 'tabs__item',
+      },
+    })
   }
-
-  // updateState(state) {
-  //   this.state = {
-  //     ...this.state,
-  //     ...state,
-  //   }
-  // }
 
   initMethods() {
     this.methods = {
@@ -67,40 +71,11 @@ class App {
     this.initMethods()
 
     this.menu.init()
-    // this.menu.onToggle = this.onMenuToggle.bind(this)
-    // this.menu.onClose = this.onMenuClose.bind(this)
-
     this.slider.init()
+    this.input.init()
+    this.accordion.init()
+    this.tabs.init()
   }
-
-  // onMenuToggle() {
-  //   let { hasMenuOpen } = { ...this.state }
-  //   hasMenuOpen = !hasMenuOpen
-  //   this.updateState({ hasMenuOpen })
-
-  //   App.toggleScroll(this, this.state.hasMenuOpen)
-  // }
-
-  // onMenuClose() {
-  //   this.updateState({ hasMenuOpen: false })
-  //   App.toggleScroll(this, this.state.hasMenuOpen)
-  // }
-
-  // static preventScroll(app) {
-  //   app.dom.body.classList.add(NO_SCROLL)
-  // }
-
-  // static allowScroll(app) {
-  //   app.dom.body.classList.remove(NO_SCROLL)
-  // }
-
-  // static toggleScroll(app, condition) {
-  //   if (condition) {
-  //     App.preventScroll(app)
-  //   } else {
-  //     App.allowScroll(app)
-  //   }
-  // }
 }
 
 const init = () => {

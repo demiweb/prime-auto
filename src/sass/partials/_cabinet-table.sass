@@ -102,6 +102,15 @@
         transform: rotate(135deg)
         margin-top: .1em
 
+  &__orders-meta
+    max-height: 0
+    overflow: hidden
+    // +tr(max-height .5s $easeOutQuad)
+
+    &--open
+      border-top: 1px solid $lighten
+      max-height: none
+
   &--cart
     #{$this}__td, #{$this}__th
       width: percentage(220 / 1650)

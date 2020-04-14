@@ -46,7 +46,20 @@
 
             <div class="catalog-item__btn">
               {{ mixins.btn(
-                title = mixins.icon('share', 'btn__icon') + 'поделиться: <img class="js-lazy" src="" alt="" data-src="./img/facebook.svg"/><img class="js-lazy" src="" alt="" data-src="./img/instagram.svg"/>',
+                title = mixins.icon('share', 'btn__icon') +
+                  'поделиться:
+                    <img
+                      class="js-lazy"
+                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                      alt=""
+                      data-src="./img/facebook.svg"
+                    />
+                    <img
+                      class="js-lazy"
+                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                      alt=""
+                      data-src="./img/instagram.svg"
+                    />',
                 mod = 'btn--transp-dark'
               ) }}
             </div>
@@ -62,48 +75,3 @@
   </div>
 </section>
 <!-- end section -->
-
-{# <!-- begin catalog-item -->
-<section class="catalog-item">
-  <div class="container container--lg">
-    <div class="catalog-item__inner">
-      {% include "partials/catalog-item/_hero.html" %}
-
-      <div class="catalog-item__gallery">
-        {% include "partials/catalog-item/_gallery.html" %}
-      </div>
-      
-      <div class="catalog-item__left-block">
-        {% if page === 'search-results' %}
-          {% include "partials/catalog-item/_search-results.html" %}
-          {% else %}
-          {% include "partials/catalog-item/_form.html" %}
-        {% endif %}
-      </div>      
-    </div>
-
-    {% if page === 'search-results' %}
-      <h2 class="section__title title title--h2 text-center">также рекомендуем</h2>
-      
-      <div class="section__block section__block--md">
-        <div class="grid">
-          {% for i in products %}
-          <div class="col col--lg-2-10 col--md-3 col--sm-4 col--xs-6">
-            {{ mixins.card(
-              title = i.title,
-              subttl = i.subttl,
-              img = i.img,
-              button = true
-            ) }}
-          </div>
-          
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
-
-    {% include "partials/catalog-item/_tabs.html" %}
-  </div>
-</section>
-<!-- end catalog-item -->
- #}

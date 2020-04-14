@@ -62,7 +62,12 @@ scndBlock = [
             <input class="search-radio__input" type="radio" name="kit" {% if i.checked %}checked{% endif %}>
             <span class="search-radio__content">
               <span class="search-radio__img">
-                <img class="js-lazy" src="" alt="" data-src="./img/38.png"/>
+                <img
+                  class="js-lazy"
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  alt=""
+                  data-src="./img/38.png"
+                />
               </span>
 
               <span class="search-radio__title">{{ i.title | safe }}</span>
@@ -89,7 +94,12 @@ scndBlock = [
                 class="search-radio__img"
                 {% if i.color %}style="background-color: {{ i.color }}"{% endif %}>
                   {% if i.img %}
-                    <img class="js-lazy" src="" alt="" data-src="./img/{{ i.img }}"/>
+                    <img
+                      class="js-lazy"
+                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                      alt=""
+                      data-src="./img/{{ i.img }}"
+                    />
                   {% endif %}
                 </span>
 
