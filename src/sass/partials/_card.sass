@@ -40,8 +40,8 @@
     right: 0
     bottom: 0
     padding: rem(20)
-    +lg
-      padding: rem(15)
+    +xxl
+      padding: rem(10)
 
   &__btn
     display: block
@@ -85,10 +85,6 @@
       height: 6.8rem
       overflow: hidden
       +tr(height .3s)
-
-      +lg
-        // -webkit-line-clamp: 3
-        // height: 4.2rem
 
   &--center
     +hover
@@ -142,10 +138,16 @@
     display: block
     margin-bottom: rem(15)
 
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    height: 2.2rem
+    overflow: hidden
+
   &__text
     margin-bottom: rem(20)
     display: block
-    flex-grow: 1
+    // flex-grow: 1
 
     display: -webkit-box
     -webkit-line-clamp: 5

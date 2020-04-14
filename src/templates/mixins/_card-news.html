@@ -10,7 +10,7 @@
 
   <span class="card-news__content">
     {% if title %}
-      <span class="card-news__title title title--h4">{{ title | safe }}</span>
+      <span class="card-news__title title title--h4" title="{{ title }}">{{ title | safe }}</span>
     {% endif %}
 
     {% if text %}

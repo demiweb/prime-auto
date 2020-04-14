@@ -10,7 +10,7 @@
     {% endif %}
 
     {% if title %}
-    <span class="card__title title title--h3 title--ttn">{{ title | safe }}</span>
+    <span class="card__title title title--h3 title--ttn" title="{{ title }}">{{ title | safe }}</span>
     {% endif %}
 
     {% if subttl %}
