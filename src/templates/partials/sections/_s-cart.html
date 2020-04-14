@@ -66,7 +66,7 @@ table = {
         </div>
         
         {% for i in table.rows %}
-        <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %} js-accordion">
+        <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
           <div class="table__tr-inner">
             {% for j in i.cols %}
             <div class="table__td">{{ j.text | safe }}</div>
