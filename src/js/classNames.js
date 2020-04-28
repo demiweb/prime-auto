@@ -6,6 +6,7 @@ export default {
   lightgallery: 'js-lightgallery',
   dropdown: 'js-dropdown-wrap',
   input: 'js-input-wrap',
+  auxHeader: 'js-aux-header',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

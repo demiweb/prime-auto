@@ -11,6 +11,7 @@ import handleCloseMenu from './methods/handleCloseMenu'
 import setPopups from './methods/setPopups'
 import handleMenuDropdown from './methods/handleMenuDropdown'
 import setGallery from './methods/setGallery'
+import toggleCatalogHeader from './methods/toggleCatalogHeader'
 
 import { isModernBrowser, setVhProperty } from './helpers'
 
@@ -26,6 +27,7 @@ class App {
     this.classNames = classNames
     this.dom = {
       body: document.body,
+      layout: document.querySelector('.out'),
     }
 
     this.menu = new Menu({
@@ -62,6 +64,7 @@ class App {
       setPopups,
       handleMenuDropdown,
       setGallery,
+      toggleCatalogHeader,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

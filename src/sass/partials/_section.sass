@@ -1,4 +1,6 @@
 .section
+  $this: &
+
   position: relative
   z-index: 1
 
@@ -85,7 +87,7 @@
 
   &__aside-toggle
     margin-bottom: rem(30)
-    +rmin(1750)
+    +xlmin
       display: none
 
   &__add-comment
@@ -101,6 +103,11 @@
       width: 100%
       height: 100%
       object-fit: cover
+
+  &__filters
+    @extend #{$this}__block
+    max-width: rem(1280)
+
 
   &--mt-neg
     padding-top: 0 !important

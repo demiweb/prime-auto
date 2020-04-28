@@ -11,8 +11,8 @@
       ><button class="side-btns__btn">{{ mixins.icon('user') }}</button
     >{% include "partials/side-tooltips/_cabinet.html" %}</li>
     <li class="side-btns__item"
-      ><button class="side-btns__btn">{{ mixins.icon('shopping-cart') }}</button
-    >{% include "partials/side-tooltips/_cart.html" %}</li>
+      ><button class="side-btns__btn js-popup-open" data-popup-target="added-item">{{ mixins.icon('shopping-cart') }}</button
+    ></li>
     <li class="side-btns__item"
       ><button class="side-btns__btn">{{ mixins.icon('phone-call') }}</button
     >{% include "partials/side-tooltips/_contacts.html" %}</li>

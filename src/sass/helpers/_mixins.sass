@@ -33,6 +33,11 @@
   .no-touch &:hover
     @content
 
+=hover-focus
+  .no-touch &:hover,
+  .no-touch &:focus,
+    @content
+
 =ready
   .is-ready &
     @content

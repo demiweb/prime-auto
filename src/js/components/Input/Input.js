@@ -2,8 +2,6 @@ export default class Input {
   constructor(className) {
     this.className = className
     this.inputs = []
-
-    this.isClickHandling = false
   }
 
   getCurrentInputMeta(container) {
@@ -11,10 +9,9 @@ export default class Input {
   }
 
   updateCurrentMeta(container, newData) {
-    this.inputs = this.inputs.map(meta => {
-      const newMeta = meta.container === container ? { ...meta, ...newData } : meta
-      return newMeta
-    })
+    this.inputs = this.inputs.map(meta =>
+      meta.container === container ? { ...meta, ...newData } : meta
+    )
   }
 
   createClearButton(container) {
@@ -43,7 +40,7 @@ export default class Input {
     this.updateCurrentMeta(container, { passwordButton: button })
   }
 
-  toggleClearButtonVIsibility(container) {
+  toggleClearButtonVisibility(container) {
     const { input, clearButton } = this.getCurrentInputMeta(container)
 
     if (input.value.length > 0) {
@@ -53,13 +50,23 @@ export default class Input {
     }
   }
 
+  changeFileLabelName(container) {
+    const { input } = this.getCurrentInputMeta(container)
+    const title = container.querySelector('.input__file-title')
+    const [file] = input.files
+    if (!file || !title) return
+
+    title.innerHTML = file.name
+  }
+
   handleInput(e) {
     const input = e.target
     const container = input.closest(this.className)
     if (!container) return
     const { type } = this.getCurrentInputMeta(container)
 
-    if (type === 'clear-button') this.toggleClearButtonVIsibility(container)
+    if (type === 'clear-button') this.toggleClearButtonVisibility(container)
+    if (type === 'file') this.changeFileLabelName(container)
   }
 
   handleClick(e) {
@@ -83,14 +90,12 @@ export default class Input {
 
     handleButtonClick(clearButtons, ({ container, input }) => {
       this.clearInputField(input)
-      this.toggleClearButtonVIsibility(container)
+      this.toggleClearButtonVisibility(container)
     })
 
     handleButtonClick(passwordButtons, ({ input }) => {
       this.togglePasswordInputType(input)
     })
-
-    // if (!this.isClickHandling) return
   }
 
   clearInputField(input) {
@@ -119,7 +124,7 @@ export default class Input {
       if (type === 'clear-button') {
         this.createClearButton(container)
 
-        setTimeout(this.toggleClearButtonVIsibility.bind(this, container))
+        setTimeout(this.toggleClearButtonVisibility.bind(this, container))
       }
 
       if (type === 'show-password-button') {

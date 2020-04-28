@@ -1,0 +1,23 @@
+{{ mixins.btn(
+  title = mixins.icon('share', 'btn__icon') +
+    'поделиться:
+      <a href="#">
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/facebook.svg"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/instagram.svg"
+        />
+      </a>',
+  mod = btnShare.mod,
+  isInline = true,
+  href = false
+) }}

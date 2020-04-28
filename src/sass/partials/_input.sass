@@ -15,6 +15,10 @@
     +text-overflow
     +placeholder
       color: inherit
+    +tr(border-color .3s)
+
+    &:focus
+      border-color: $accent
 
   textarea
     min-height: rem(175)
@@ -124,6 +128,8 @@
     text-transform: uppercase
     color: $light
     font-size: em(12)
+
+    cursor: pointer
 
     input[type="file"]
       opacity: 0

@@ -1,8 +1,8 @@
 <!-- begin section -->
-<section class="section section--lightest z-9">
-  {% if page === 'catalog-item' %}
+<section class="section section--lightest z--9">
+  {# {% if page === 'catalog-item' %} #}
     {% include "partials/catalog-item/_header.html" %}
-  {% endif %}  
+  {# {% endif %}   #}
 
   <div class="container container--lg-right-gap">
     {% if page === 'search-results' %}
@@ -45,23 +45,8 @@
             {% endif %}
 
             <div class="catalog-item__btn">
-              {{ mixins.btn(
-                title = mixins.icon('share', 'btn__icon') +
-                  'поделиться:
-                    <img
-                      class="js-lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                      alt=""
-                      data-src="./img/facebook.svg"
-                    />
-                    <img
-                      class="js-lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                      alt=""
-                      data-src="./img/instagram.svg"
-                    />',
-                mod = 'btn--transp-dark'
-              ) }}
+              {% set btnShare = { mod: 'btn--transp-dark btn--no-hover'} %}
+              {% include "partials/_share-btn.html" %}              
             </div>
           </div>
 

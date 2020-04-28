@@ -4,9 +4,12 @@
     <!-- begin slider -->
     <div class="slider__wrap slider--row__wrap">
       <div class="swiper-container js-slider" data-slider="row">
-        <div class="swiper-wrapper slider slider--row">
+        <div class="swiper-wrapper slider slider--row js-lightgallery">
           {% for i in range(0, 10) %}
-          <a href="#" class="swiper-slide img-item js-lazy" data-background-image="./img/catalog-kovriki-01.jpg"></a>
+          <a
+            href="./img/catalog-kovriki-01.jpg"
+            class="swiper-slide img-item js-lazy"
+            data-background-image="./img/catalog-kovriki-01.jpg"></a>
           {% endfor %}
         </div>
       </div>

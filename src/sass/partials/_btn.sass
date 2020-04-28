@@ -17,7 +17,7 @@
   min-width: rem(230)
   +tr(background-color .3s, border-color .3s, color .3s)
 
-  +hover
+  +hover-focus
     &:not(#{$this}--no-hover)
       background-color: transparent
       color: $accent
@@ -27,10 +27,13 @@
     min-width: 0
     width: 100%
 
-  img
-    width: 1.2em
+  a
+    display: inline-flex
     margin-left: .3em
     margin-right: .3em
+
+  img
+    width: 1.2em    
 
   &__icon
     margin-right: .8em
@@ -53,15 +56,11 @@
     border-color: $c-border
     border-width: 1px
     color: $dark
-    // +hover
-    //   &:not(#{$this}--no-hover)
-
-
 
   &--transp
     background-color: transparent
     color: $accent
-    +hover
+    +hover-focus
       &:not(#{$this}--no-hover)
         background-color: $accent
         color: $white

@@ -9,6 +9,9 @@
     background-color: $white
 
     +r(1749)
+      width: 20%
+
+    +xl
       position: fixed
       z-index: 10
       top: $header-height
@@ -34,6 +37,8 @@
   &__content
     width: percentage((1650 - 255) / 1650)
     +r(1749)
+      width: 80%
+    +xl
       width: 100%
 
 .aside
@@ -58,5 +63,9 @@
     position: relative
     top: auto
     right: auto
+
+    +xlmin
+      display: none
+
     +hover
       color: $c-text

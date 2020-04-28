@@ -60,6 +60,10 @@ body
   &--lg-right-gap
     @extend #{$this}--lg
     padding-right: $container--lg-padding * 2
+    +r(1749)
+      padding-right: $container--lg-padding + rem(15)
+    +lg
+      // padding-right: $container-padding
 
 .page-inner
   max-width: 1650px
@@ -201,9 +205,13 @@ body
     margin-bottom: rem(10)
 
 .link-block
+  display: block
   border: 1px solid  $c-border
   border-radius: 3px
   padding: rem(20)
+
+  height: 100%
+  min-height: vw(185)
 
   &__title
     display: block

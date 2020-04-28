@@ -10,6 +10,9 @@
     width: percentage(733 / 1575)
     padding-right: rem(15)
 
+    +r(1749)
+      width: 31%
+
     +lg
       width: 100%
       order: 1
@@ -21,6 +24,9 @@
 
     width: percentage((1575 - 733) / 1575)
     padding-left: rem(15)
+
+    +r(1749)
+      width: 69%
 
     +lg
       width: 100%
@@ -49,15 +55,16 @@
   &__content
     @extend .col
     width: percentage(5 / 7)
-    +r(1714)
+    +xl
       width: 100%
       padding-left: 0
       padding-right: 0
 
   &__links
     @extend .col
+    padding-right: 0
     width: percentage(2 / 7)
-    +r(1714)
+    +xl
       width: 100%
       padding-left: 0
       padding-right: 0

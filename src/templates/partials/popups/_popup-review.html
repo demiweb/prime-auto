@@ -27,7 +27,9 @@ form = {
     {
       name: 'file',
       type: 'file',
-      label: { first: '<span>' + mixins.icon('camera') + 'добавить фото</span>' }
+      mod: 'js-input-wrap',
+      attributes: { 'data-input': 'file' },
+      label: { first: '<span>' + mixins.icon('camera') + '<span class="input__file-title">добавить фото</span></span>' }
     }
   ]
 }

@@ -157,16 +157,40 @@
 
 
 .product-card
+  $this: &
+
   display: flex
   flex-direction: column
 
   height: 100%
 
-  &__img
-    +cover
-    background-color: $light
+  +hover
+    #{$this}__title
+      color: $accent
+
+    #{$this}__btn
+      .btn
+        background-color: $accent
+        color: $white
+
+    #{$this}__img-bg
+      +scale(1.1)
+
+  &__img    
+    display: block    
+
     padding-top: 120%
     position: relative
+    overflow: hidden
+
+  &__img-bg
+    display: block
+    +coverdiv
+    z-index: 0
+    +cover
+    background-color: $light
+
+    +tr(transform .5s)
 
   &__label
     display: block
@@ -189,6 +213,11 @@
 
     padding: rem(10) 0 0
 
+  &__upttl,
+  &__price,
+  &__subttl
+    display: block
+
   &__upttl, &__price
     font-size: em(24)
     font-weight: 300
@@ -198,6 +227,7 @@
   &__title
     @extend .block__title
     margin-bottom: 0 !important
+    +tr(color .3s)
 
   &__subttl
     margin-bottom: rem(10)

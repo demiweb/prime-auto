@@ -3,7 +3,7 @@
 
   display: flex
   flex-direction: column
-  +windowHeight()
+  +windowMinHeight()
 
   padding-top: $header-height
 
@@ -17,6 +17,9 @@
     top: 0
     left: 0
     right: 0
+    
+    +tr(transform .3s)
+    transform: translate(0, 0)
   
     +before
       +coverdiv
@@ -48,29 +51,33 @@
       width: 100%
 
   &__aux-header
-    @extend #{$this}__header
+    position: fixed
+    z-index: 10
+    top: 0
+    left: 0
+    right: 0
+
     box-shadow: 0px 2px 4px 0px rgba(43, 37, 35, 0.35)
+    background-color: $white
+
+    +tr(transform .3s)
+    
+
+    transform: translate(0, -100%)
 
     +md
       display: none
 
   &--double-header
-    padding-top: $header-height * 2
-
-    +lg
-      padding-top: $header-height-lg * 2
-
-    +md
-      padding-top: $header-height-lg
-
-    #{$this}__header
-      top: $header-height
-      +lg
-        top: $header-height-lg
-      +md
-        top: 0
-
     #{$this}__aux-header
-      top: 0 !important
+      transform: translate(0, 0)
 
+    #{$this}__header      
+      transform: translate(0, #{$header-height})
+
+      +lg
+        transform: translate(0, #{$header-height-lg})
+
+      +md
+        transform: translate(0, 0)
     

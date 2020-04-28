@@ -7,12 +7,14 @@ colors = [
 ]
 %}
 
-<!-- begin  -->
-<div class="product-card">
-  <span
-    class="product-card__img js-lazy"
-    data-background-image="./img/products/01.jpg"
-  >
+<!-- begin product-card -->
+<a href="#" class="product-card">
+  <span class="product-card__img">
+    <span
+      class="product-card__img-bg js-lazy"
+      data-background-image="./img/products/01.jpg"
+    ></span>
+
     {% if i.label %}
       <span class="product-card__label" style="background-color: {{ i.label.color }}">{{ i.label.title | safe }}</span>
     {% endif %}
@@ -30,13 +32,13 @@ colors = [
     ) }}
 
     <!-- begin colors -->
-    <div class="product-card__colors colors colors--sm">
+    <span class="product-card__colors colors colors--sm">
       {% for color in colors %}
-        <div class="colors__item search-radio search-radio--sm">
+        <span class="colors__item search-radio search-radio--sm">
           <span class="search-radio__img" style="background-color: {{ color }};"></span>
-        </div>
+        </span>
       {% endfor %}  
-    </div>
+    </span>
     <!-- end colors -->
 
     <span class="product-card__price">
@@ -46,9 +48,11 @@ colors = [
     <span class="product-card__btn">
       {{ mixins.btn(
         title = 'Перейти к товарам',
-        mod = 'btn--full btn--transp'
+        mod = 'btn--full btn--transp btn--no-hover',
+        isInline = true,
+        href = false
       ) }}
     </span>
   </span>
-</div>
-<!-- end  -->
+</a>
+<!-- end product-card -->
