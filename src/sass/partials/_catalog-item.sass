@@ -89,26 +89,47 @@
     padding-top: rem(6)
     padding-bottom: rem(6)
 
+    +xl
+      padding: rem(6) 0
+
     +lg
       height: $header-height-lg
 
   &__left
     display: flex
     align-items: center
+    max-width: 40%
+    width: 100%
+    padding-right: rem(10)
+    +xs
+      max-width: 50%
 
   &__img
     display: flex
-    width: em(100)   
+    width: em(100)
+    flex-shrink: 0
+    +md
+      display: none
 
   &__left-content
     width: calc(100% - #{em(100)})
     padding-left: em(25)
 
+    +xl
+      padding-left: 0
+    
+    +md
+      width: 100%
+
   &__right
     display: flex
     align-items: center
     justify-content: flex-end
-    flex-grow: 1
+    flex-grow: 1    
+
+    +xs
+      display: block
+      text-align: center
 
   &__upttl
     font-size: em(20)
@@ -117,11 +138,29 @@
   &__title
     font-size: em(28)
     font-weight: 700
+    +text-overflow
 
   &__price
     font-size: em(28)
     font-weight: 300
     margin-right: em(30)
+
+    +lg
+      font-size: em(21)
+    
+    +xs
+      margin-right: 0
+      font-size: em(16)
+
+  &__btn
+    min-width: rem(230)
+    +xl
+      min-width: rem(180)
+    
+    +xs
+      .btn
+        padding: rem(5)
+
 
 .catalog-links
   display: flex

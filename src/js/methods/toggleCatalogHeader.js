@@ -5,14 +5,19 @@ import { BEMblock } from '../helpers'
 export default ({ dom }) => {
   const { layout } = dom
   const header = document.querySelector(`.${classNames.auxHeader}`)
-  if (!header || !window.matchMedia('(min-width: 992px)').matches) return
+  if (!header) return
+
+  let lastScrollTop = 0
 
   const scrollHandler = () => {
-    if (window.pageYOffset > 50) {
+    const st = window.pageYOffset
+    if (st > lastScrollTop) {
       BEMblock(layout, 'out').addMod('double-header')
     } else {
       BEMblock(layout, 'out').removeMod('double-header')
     }
+
+    lastScrollTop = st <= 0 ? 0 : st
   }
 
   const onScroll = throttle(66, scrollHandler)

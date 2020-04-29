@@ -61,23 +61,16 @@
     background-color: $white
 
     +tr(transform .3s)
-    
-
-    transform: translate(0, -100%)
-
-    +md
-      display: none
+    transform: translate(0, calc(-100% - #{rem(15)}))
 
   &--double-header
     #{$this}__aux-header
       transform: translate(0, 0)
 
     #{$this}__header      
-      transform: translate(0, #{$header-height})
+      transform: translate(0, #{-$header-height - rem(15)})
 
       +lg
-        transform: translate(0, #{$header-height-lg})
+        transform: translate(0, #{-$header-height-lg - rem(15)})
 
-      +md
-        transform: translate(0, 0)
     
