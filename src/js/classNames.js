@@ -3,7 +3,10 @@ export default {
   rating: 'js-rating',
   select: 'js-select',
   gallery: 'js-gallery',
-  lightgallery: 'js-lightgallery',
+  lightgallery: {
+    gallery: 'js-lightgallery',
+    trigger: 'js-lightgallery-trigger',
+  },
   dropdown: 'js-dropdown-wrap',
   input: 'js-input-wrap',
   auxHeader: 'js-aux-header',

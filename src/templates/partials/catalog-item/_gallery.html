@@ -1,3 +1,32 @@
+{%set
+gallery = [
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  },
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  },
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  },
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  },
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  },
+  { video: true  },
+  { video: false  },
+  { video: false  },
+  { video: true  }
+]
+%}
+
 <!-- begin gallery -->
 <div class="gallery js-gallery">
   <div class="gallery__slider slider__wrap slider--gallery__wrap">
@@ -7,11 +36,25 @@
 
     <div class="swiper-container js-slider" data-slider="gallery">
       <div class="swiper-wrapper slider slider--gallery">
-        {% for i in range(0, 16) %}
-        <div
-          class="swiper-slide slide gallery__img js-lazy"
-          data-background-image="./img/gallery-img.jpg"
-        ></div>
+        {% for i in gallery %}
+          {% if i.video %}
+          <div class="swiper-slide slide">
+            <span class="gallery__img">
+              <iframe class="js-lazy" src="" data-src="https://www.youtube.com/embed/bHU2ZaS1scM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </span>
+          </div>
+          {% else %}          
+            <a
+              href="./img/gallery-img.jpg"
+              class="swiper-slide slide js-lightgallery-trigger"
+              data-image="./img/gallery-img.jpg"
+            >
+              <span
+                class="gallery__img js-lazy"
+                data-background-image="./img/gallery-img.jpg"
+              ></span>
+            </a>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -20,11 +63,18 @@
   <div class="gallery__thumbs slider__wrap slider--thumbs__wrap">
     <div class="swiper-container js-slider" data-slider="thumbs">
       <div class="swiper-wrapper slider slider--thumbs">
-        {% for i in range(0, 16) %}
-        <button
-          class="swiper-slide slide gallery__thumb js-lazy"
-          data-background-image="./img/gallery-thumb.jpg"
-        ></button>
+        {% for i in gallery %}
+          {% if i.video %}
+            <button
+              class="swiper-slide slide gallery__thumb js-lazy"
+              data-background-image="./img/video-thumb.jpg"
+            ></button>
+          {% else %}
+            <button
+              class="swiper-slide slide gallery__thumb js-lazy"
+              data-background-image="./img/gallery-thumb.jpg"
+            ></button>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
